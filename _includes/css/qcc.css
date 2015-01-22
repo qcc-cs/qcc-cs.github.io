@@ -1,0 +1,37 @@
+<style>
+@font-face{ 
+    font-family: 'OpenSansRegular';
+    src: url('http://www.qcc.cuny.edu/_common/fonts/opensans_light/OpenSans-Light-webfont.eot');
+    src: url('http://www.qcc.cuny.edu/_common/fonts/opensans_light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.qcc.cuny.edu/_common/fonts/opensans_light/OpenSans-Light-webfont.woff') format('woff'),
+         url('http://www.qcc.cuny.edu/_common/fonts/opensans_light/OpenSans-Light-webfont.ttf') format('truetype'),
+    	 url('http://www.qcc.cuny.edu/_common/fonts/opensans_light/OpenSans-Light-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+#qccfooter {
+    clear: both;
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 2px solid #DDD;
+    background-color: #BACFDB;
+    height: 100%;
+    text-align:center;
+    line-height:175%;
+    font-family: OpenSansRegular, Arial, Helvetica, sans-serif;
+    font-size:1.35em;
+    font-style: normal;
+    -webkit-font-smoothing: initial;
+    
+}
+#qccfooter a {
+    color: #808080;
+    font-weight: bold;
+    text-decoration: none;
+}
+#qccfooter a:hover {
+    color: #808080;
+    font-weight: bold;
+    border-bottom: 1px dotted #999;
+}                
+</style>
