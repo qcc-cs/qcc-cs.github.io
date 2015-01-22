@@ -35,3 +35,15 @@ colors:
   turquoise: '#0fbfcf'
   c11: white
   c12: black
+  c21: blue
+  c22: white
+  c31: orange
+  c32: black
+  c41: purle
+  c42: white
+  c51: turquoise
+  c52: white
+icons:
+ i3: bullhorn
+ i4: files-o
+ i5: link
