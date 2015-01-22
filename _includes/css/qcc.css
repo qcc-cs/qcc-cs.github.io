@@ -1,10 +1,10 @@
-
 @font-face{ 
     font-family: 'OpenSansRegular';
-    src: url('_includes/css/OpenSans-Light-webfont.eot') format('eot'),
-    src: url('_includes/css/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('_includes/css/OpenSans-Light-webfont.woff') format('woff'),
-         url('_includes/css/OpenSans-Light-webfont.ttf') format('truetype');
+    src: url('/_common/fonts/opensans_light/OpenSans-Light-webfont.eot');
+    src: url('/_common/fonts/opensans_light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/_common/fonts/opensans_light/OpenSans-Light-webfont.woff') format('woff'),
+         url('/_common/fonts/opensans_light/OpenSans-Light-webfont.ttf') format('truetype'),
+    	 url('/_common/fonts/opensans_light/OpenSans-Light-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
