@@ -44,6 +44,7 @@ colors:
   c51: turquoise
   c52: white
 icons:
+ i2: users
  i3: bullhorn
  i4: files-o
  i5: link
