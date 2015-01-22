@@ -33,16 +33,16 @@ colors:
   purple:    '#c869bf'
   orange:    '#fab125'
   turquoise: '#0fbfcf'
-  c11: white
-  c12: black
-  c21: blue
-  c22: white
-  c31: orange
-  c32: black
-  c41: purle
-  c42: white
-  c51: turquoise
-  c52: white
+  c11: site.colors.white
+  c12: site.colors.black
+  c21: site.colors.blue
+  c22: site.colors.white
+  c31: site.colors.orange
+  c32: site.colors.black
+  c41: site.colors.purle
+  c42: site.colors.white
+  c51: site.colors.turquoise
+  c52: site.colors.white
 icons:
  i2: users
  i3: bullhorn
