@@ -1,9 +1,9 @@
 @font-face{ 
     font-family: 'OpenSansRegular';
     src: url('_includes/css/OpenSans-Light-webfont.eot');
-    src: url('_includes/css/opensans_light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('_includes/css/opensans_light/OpenSans-Light-webfont.woff') format('woff'),
-         url('_includes/css/opensans_light/OpenSans-Light-webfont.ttf') format('truetype');
+    src: url('_includes/css/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('_includes/css/OpenSans-Light-webfont.woff') format('woff'),
+         url('_includes/css/OpenSans-Light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
