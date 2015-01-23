@@ -3,7 +3,7 @@
   <ul class="nav nav-tabs" role="tablist">
     {% for year in site.data.seminars %}
       <p>year[1]:{{year[1]}}</p>
-      <p>seminars[0]:{{site.data.seminars[0]}}</p>
+      <p>seminars:{{site.data.seminars}}</p>
       <li role="presentation" class="{%if false %}active{%endif%}">
         <a href="#seminar-{{year[0]}}" aria-controls="{{year[0]}}" role="tab" data-toggle="tab">
           {{year[0]}}
