@@ -11,8 +11,14 @@ z-index:2;
 <div class="bio" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
   <div class="exec-bio clearfix" id="dickc">
     <h3><a href="{{member.schoolurl}}">{{member.name}}, {{member.kwang}}</a></h3>
-    <a href="{{member.schoolurl}}" target="_blank"> <img src="{{member.imgurl}}" width="200" height="200" alt="" class="bio-left"></a>
-    {{member.description|markdownfy}}
+    <div class="container">
+      <div class="col-md-3">
+        <a href="{{member.schoolurl}}" target="_blank"> <img src="{{member.imgurl}}" width="200" height="200" alt="" class="bio-left"></a>
+      </div>
+      <div class="col-md-9">
+        {{member.description|markdownfy}}
+      </div>
+    </div>
   </div>
 </div>
 {%endfor%}
