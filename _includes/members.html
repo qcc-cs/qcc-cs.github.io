@@ -2,7 +2,7 @@
 img.bio-left
 {  
 float: left;
-margin:; 20px 20px 20px 20px;
+margin: 20px 20px 20px 20px;
 position:relative;
 z-index:2;
 }
@@ -10,12 +10,12 @@ z-index:2;
 {%for member in site.data.members %}
 <div class="bio" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
   <div class="exec-bio clearfix" id="dickc">
-    <h3><a href="{{member.schoolurl}}">{{member.name}}, {{member.kwang}}</a></h3>
-    <div class="container row">
-      <div class="col-md-3">
+    <h3><a href="{{member.schoolurl}}">{{member.name}}, {{member.role}}</a></h3>
+    <div class="container">
+      <div class="col-md-4">
         <a href="{{member.schoolurl}}" target="_blank"> <img src="{{member.imgurl}}" width="100" height="100" alt="" class="bio-left"></a>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8">
         {{member.description|markdownfy}}
       </div>
     </div>
