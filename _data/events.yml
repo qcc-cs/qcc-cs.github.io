@@ -1,7 +1,7 @@
 - year : 2014
   events:
-                - first: true 
-                  date: 5-20
+                
+                - date: 5-20
                   start: 13:05
                   end: 14:00
                   location: S-213
