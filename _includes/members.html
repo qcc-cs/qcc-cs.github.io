@@ -1,7 +1,7 @@
 <style>
-img.align-right
+img.bio-left
 {  
-float: right;
+float: left;
 margin 10px 0 10px 10px;
 position:relative;
 z-index:2;
@@ -10,8 +10,8 @@ z-index:2;
 {%for member in site.data.members %}
 <div class="bio" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
 <div class="exec-bio clearfix" id="dickc">
-<h3><a href="/company/leadership#dickc">Dick Costolo, Chief Executive Officer</a></h3>
-<a href="http://www.flickr.com/photos/twitteroffice/10449946005/in/set-72157635305977624" target="_blank"> <img src="https://g.twimg.com/about/feature-corporate/image/costolo.jpg" width="229" height="320" alt="" class="align-right"></a>
+<h3><a href="{{member.schoolurl}}">{{member.name}}, {{member.kwang}}</a></h3>
+<a href="{{member.schoolurl}}" target="_blank"> <img src="https://g.twimg.com/about/feature-corporate/image/costolo.jpg" width="229" height="320" alt="" class="bio-right"></a>
 <p>Dick Costolo (COS-tow-low) is the CEO of Twitter, where he is responsible for the growth and management of the global business. Since he became CEO in 2010, the global active user base has quadrupled to more than 284 million monthly active users; the company has tripled in size, and has opened offices around the world. Under Dick’s leadership, Twitter introduced “Promoted Tweets” — contextual advertising based on user interests displayed in Tweets — to increase revenue for the company. Besides its growing effectiveness as a business, Twitter is today renowned as a real-time platform that enables people and organizations to publicly share brief messages instantly around the world, a vital tool in an increasingly global society.</p>
 <p>Dick joined Twitter in 2009 as Chief Operating Officer, responsible for both monetization and day-to-day operations. Previously, he was co-founder and CEO of FeedBurner, a digital content syndication platform that was acquired by Google in 2007. Prior to that, Dick founded two digital media companies in Chicago: SpyOnIt, a web page monitoring service, and Burning Door Networked Media, a web design and development consulting company. He was also an improv performer with the acclaimed Annoyance Theater. He graduated from the University of Michigan with a B.S. in Computer Science and has been recognized by UM with an honorary Doctor of Laws degree. He is <a href="https://twitter.com/intent/user?screen_name=dickc">@dickc</a> on Twitter.</p>
 </div>
