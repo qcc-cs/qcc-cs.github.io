@@ -3,14 +3,15 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     {% for year in site.data.seminars%}
-      <li role="presentation" class="{%if year[0]==site.data.seminars.years[0]|first %}active{%endif%}"><a href="#home" aria-controls="{{year}}" role="tab" data-toggle="tab">{{year}}</a></li>
+      <li role="presentation" class="{%if year[0]==site.data.seminars[0]|first %}active{%endif%}">
+        <a href="#home" aria-controls="{{year[0]}}" role="tab" data-toggle="tab">
+          !{{year[0]}}
+        </a>
+      </li>
     {% endfor %}
   </ul>
   <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
-      {% include seminar.html %}  
-    </div>
-  </div>
+  {% include seminar.html %} 
+  
 
 </div>
