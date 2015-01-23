@@ -1,11 +1,13 @@
-<div class="bio" id="k">
+{%for member in site.data.members %}
+<div class="bio" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
   <h4>
-    <a href="qcc">KWANG, committee chair</a>
+    <a href="{{member.schoolurl}}">KWANG, committee chair</a>
   </h4>
   <p>
-    <a href="qcc">
+    <a href="{{member.schoolurl}}">
       <img src="" width="100" height="150" class="align-left">
     </a>
-    description.. blabla.
+      {{member.description| markdownify}}
   </p>
 </div>
+{%endfor}
