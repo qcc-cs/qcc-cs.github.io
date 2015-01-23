@@ -16,7 +16,7 @@
 </head>
 <body>
   <div id="main">
-    <nav>
+    <nav class="navscroller">
       <ul>
         {% for node in site.posts reversed %}
          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
