@@ -33,15 +33,11 @@ colors:
   purple:    '#c869bf'
   orange:    '#fab125'
   turquoise: '#0fbfcf'
-pagecolors:
-  c11: white
-  c12: black
-  c21: blue
-  c22: white
-  c31: orange
-  c32: black
-  c41: purle
-  c42: white
-  c51: turquoise
-  c52: white
-###icons:["user","bullhorn","files-o","link"]
+
+committee:
+  name: "Professional Development"
+  short: "PDC"
+  dept:  "Mathematics and Computer Science"
+
+
+  
