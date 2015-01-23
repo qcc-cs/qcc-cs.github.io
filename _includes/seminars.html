@@ -2,9 +2,9 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     {% for seminarsyear in site.data.seminars %}
-      <li role="presentation" class="{%if seminarsyear.year==site.data.seminars[0].year %}active{%endif%}">
-        <a href="#seminar-{{seminarsyear.year}}" aria-controls="{{seminarsyear.year}}}" role="tab" data-toggle="tab">
-          {{seminarsyear.year}}}
+      <li role="presentation" class="{%if year==site.data.seminars[0][0] %}active{%endif%}">
+        <a href="#seminar-{{year[0]}}" aria-controls="{{year[0]}}" role="tab" data-toggle="tab">
+          {{year[0]}}
         </a>
       </li>
     {% endfor %} 
