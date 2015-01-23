@@ -44,5 +44,4 @@ pagecolors:
   c42: white
   c51: turquoise
   c52: white
-icons:[user,bullhorn,files-o,link]
-
+icons:["user","bullhorn","files-o","link"]
