@@ -35,9 +35,9 @@ colors:
   turquoise: '#0fbfcf'
 
 committee:
-  name: "Professional Development"
-  short: "PDC"
-  dept:  "Mathematics and Computer Science"
+  name: 'Professional Development'
+  short: 'PDC'
+  dept:  'Mathematics and Computer Science'
 
 
   
