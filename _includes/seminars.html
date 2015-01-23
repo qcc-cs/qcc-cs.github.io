@@ -1,6 +1,12 @@
+<script type="text/javascript">
+  $('#event-by-year-tab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
 <div role="tabpanel">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs" role="tablist" id="event-by-year-tab">
     {% for events in site.data.events %}
       <li role="presentation" class="{%if forloop.first %}active{%endif%}">
         <a href="#seminar-{{events.year}}" aria-controls="{{events.year}}" role="tab" data-toggle="tab">
