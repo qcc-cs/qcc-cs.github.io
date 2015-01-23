@@ -4,10 +4,15 @@
     <a href="{{member.schoolurl}}">KWANG, committee chair</a>
   </h4>
   <p>
+    <td>
     <a href="{{member.schoolurl}}">
-      <img src="{{member.imgurl}}" width="100" height="150" class="align-left">
+      <img src="{{member.imgurl}}" width="100" height="150" class="align-right">
     </a>
+    </td>
+    <td>
       {{member.description| markdownify}}
+    </td>
+      
   </p>
 </div>
 {%endfor%}
