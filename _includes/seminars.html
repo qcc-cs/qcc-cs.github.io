@@ -2,7 +2,7 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     {% for events in site.data.events %}
-      <li role="presentation" class="{%if forloop.first %}active{%endif%}">
+      <li role="presentation" class="{%if forloop.first %}active in{%endif%}">
         <a href="#seminar-{{events.year}}" aria-controls="{{events.year}}" role="tab" data-toggle="tab">
           {{events.year}}
         </a>
