@@ -72,7 +72,7 @@ $.extend($.easing,
 
 $(document).ready(function (){
 
-    $('navscroll nav li a').navScroller();
+    $(' nav li a').navScroller();
 
     //section divider icon click gently scrolls to reveal the section
 	$(".sectiondivider").on('click', function(event) {
