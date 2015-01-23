@@ -80,7 +80,7 @@ $(document).ready(function (){
 	});
 
     //links going to other sections nicely scroll
-	$(".container a").each(function(){
+	$(".container a .scroller").each(function(){
         if ($(this).attr("href").charAt(0) == '#'){
             $(this).on('click', function(event) {
         		event.preventDefault();
