@@ -1,12 +1,10 @@
 <div role="tabpanel">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    {% for year in site.data.seminars %}
-      <p>year[0]:{{ year[0] }}</p>
-      <p></p>seminars[0]:{{ site.data.seminars[0] }}</pr>
-      <li role="presentation" class="{%if year[0]==site.data.seminars[0][0] %}active{%endif%}">
-        <a href="#seminar-{{year[0]}}" aria-controls="{{year[0]}}" role="tab" data-toggle="tab">
-          {{year[0]}}
+    {% for seminarsyear in site.data.seminars %}
+      <li role="presentation" class="{%if seminarsyear.year==site.data.seminars[0].year %}active{%endif%}">
+        <a href="#seminar-{{seminarsyear.year}}" aria-controls="{{seminarsyear.year}}}" role="tab" data-toggle="tab">
+          {{seminarsyear.year}}}
         </a>
       </li>
     {% endfor %} 
