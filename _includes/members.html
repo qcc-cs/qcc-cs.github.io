@@ -1,19 +1,10 @@
 {%for member in site.data.members %}
 <div class="bio" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
   <h4>
-    <a href="{{member.schoolurl}}">KWANG, committee chair</a>
+    <a href="{{member.schoolurl}}">{{member.name}} {{member.role}}</a>
   </h4>
-  <p>
-    <tr>
-    <td>
-    <a href="{{member.schoolurl}}">
-      <img src="{{member.imgurl}}" width="200" height="300" class="align-right">
-    </a>
-    </td>
-    <td>
-      {{member.description| markdownify}}
-    </td>
-    </tr>  
-  </p>
+  <div>
+    <img src="https://g.twimg.com/about/feature-corporate/image/costolo.jpg" width="229" height="320" alt="" class="align-right">
+  </div>
 </div>
 {%endfor%}
