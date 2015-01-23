@@ -1,17 +1,17 @@
-{% for year in site.data.seminars %}
+{% for events in site.data.events %}
 <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="seminar-{{year[0]}}">
-        {% for seminar in year[1] %}
+    <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="seminar-{{events.year}}">
+        {% for event in events.events %}
             <td>
                 <p>
                 <tr>
-                    <td>Date:{{seminar.date}}</td><td>Location:{{seminar.location}}</td>   
+                    <td> Date:{{event.date}}</td><td> Location:{{event.location}}</td>   
                 </tr>
                 <tr>
-                    <td>Title:{{seminar.title}}</td>
+                    <td>Title:{{event.title}}</td>
                 </tr>
                 <tr>
-                    <td>Speaker:{{seminar.speaker}}</td>
+                    <td>Speaker:{{event.speaker}}</td>
                 </tr>
                 </p>
             </td>
