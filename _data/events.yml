@@ -1,4 +1,5 @@
-- 2014 :
+- year : 2014
+  events:
                 - first: true 
                   date: 5-20
                   start: 13:05
@@ -26,7 +27,8 @@
                     -201411122.jpg
                     -201411122.jpg
                   note: nothing 
-- 2013 :
+- year: 2013
+  events :
                 - date: 6-20
                   start: 13:05
                   end: 14:00
