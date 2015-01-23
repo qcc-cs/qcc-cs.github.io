@@ -9,10 +9,13 @@
                   affiliation: PS46
                   title: hello
                   abstract: WE will study the addition
-                  pic:
-                    -201411121.jpg
-                    -201411122.jpg
-                    -201411122.jpg
+                  pics:
+                    - url : 201411121.jpg
+                      caption: hi
+                    - url : 201411122.jpg
+                      caption : bye
+                    - url : 201411122.jpg
+                      caption : good
                   note: nothing
                 - date: 5-18
                   start: 13:05
@@ -22,10 +25,13 @@
                   affliation: PS46
                   title: hello
                   abstract: WE will study the addition
-                  pic:
-                    -201411121.jpg
-                    -201411122.jpg
-                    -201411122.jpg
+                  pics:
+                    - url : 201411121.jpg
+                      caption: hi
+                    - url : 201411122.jpg
+                      caption : bye
+                    - url : 201411122.jpg
+                      caption : good
                   note: nothing 
 - year: 2013
   events :
@@ -37,8 +43,11 @@
                   affiliation: PS46
                   title: hello
                   abstract: WE will study the addition
-                  pic:
-                    -201411121.jpg
-                    -201411122.jpg
-                    -201411122.jpg
+                  pics:
+                    - url : 201411121.jpg
+                      caption: hi
+                    - url : 201411122.jpg
+                      caption : bye
+                    - url : 201411122.jpg
+                      caption : good
                   note: nothing  
