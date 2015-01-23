@@ -1,0 +1,41 @@
+2014:
+  - date: 5-20
+    start: 13:05
+    end: 14:00
+    location: S-213
+    speaker: IAN KIM
+    affliation: PS46
+    title: hello
+    abstract: WE will study the addition
+    pic:
+      -201411121.jpg
+      -201411122.jpg
+      -201411122.jpg
+    note: nothing
+  - date: 5-18
+    start: 13:05
+    end: 14:00
+    location: S-213
+    speaker: JI KIM
+    affliation: PS46
+    title: hello
+    abstract: WE will study the addition
+    pic:
+      -201411121.jpg
+      -201411122.jpg
+      -201411122.jpg
+    note: nothing  
+  2013:
+  - date: 6-20
+    start: 13:05
+    end: 14:00
+    location: S-213
+    speaker: KWANG KIM
+    affliation: PS46
+    title: hello
+    abstract: WE will study the addition
+    pic:
+      -201411121.jpg
+      -201411122.jpg
+      -201411122.jpg
+    note: nothing  
