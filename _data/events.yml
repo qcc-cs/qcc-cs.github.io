@@ -24,7 +24,7 @@
                   start: "14:05"
                   end: "15:00"
                   location: "S-314"
-                  speaker: "DR. Jeehoon Park"
+                  speaker: "Dr. Jeehoon Park"
                   affiliation: POSTECH
                   title: "Effective computation of the Griffiths period integrals"
                   abstract: "The goal of the talk is to provide an effective algorithm to compute the Griffiths period integrals of a smooth projective hypersurface X. Its idea is based on a new cochain level realization, equipped with a binary product, of the middle dimensional cohomology of X and its associated homotopy Lie algebra theory, so called, $L_/infty$ algebra theory."
