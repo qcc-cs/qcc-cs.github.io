@@ -27,7 +27,7 @@
             <li data-target="#carousel-event-{{events.year}}-{{event.date}}-{{event-start}}" data-slide-to="{{forloop.index0}}" class="{% if forloop.first %}active{% endif %}"></li>
             {% endfor %}
           </ol>
-          <div class="carousel-inner" role="listbox">
+          <div class="col-me-6 carousel-inner" role="listbox">
             {% for pic in event.pics %}
             <div class=" item {% if forloop.first %}active{% endif %}">
               <img  src="img/events/{{pic.url}}">
