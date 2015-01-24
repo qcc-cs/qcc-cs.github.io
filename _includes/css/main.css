@@ -116,7 +116,7 @@ hr {
 /* kwang */
 .toptitle{
   border-top:0px solid;
-  padding: 0px 0;
+  padding-top:0;
   font-size:18px;
   color:#49A7E9;
   text-align:left;
