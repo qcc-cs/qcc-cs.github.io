@@ -52,21 +52,3 @@
                     - url : "2014-03-19 12.15.10.jpg"
                       caption: 
                   note: "nothing" 
-- year: 2013
-  events :
-                - date: "6-20"
-                  start: "13:05"
-                  end: "14:00"
-                  location: "S-213"
-                  speaker: "KWANG KIM"
-                  affiliation: "PS46"
-                  title: "hello"
-                  abstract: "WE will study the addition"
-                  pics:
-                    - url : 201411121.jpg
-                      caption: hi
-                    - url : 201411122.jpg
-                      caption : bye
-                    - url : 201411122.jpg
-                      caption : good
-                  note: nothing  
