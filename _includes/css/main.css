@@ -113,7 +113,11 @@ hr {
 
 {% assign navborder = 3 %}
 {% assign navborder_active = 6 %}
-
+/* kwang */
+.toptitle{
+  color:#49A7E9;
+}
+/* kwang-end */	
 nav {
   font-size:15px;
   width:100%;
