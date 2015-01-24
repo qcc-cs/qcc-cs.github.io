@@ -26,8 +26,8 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             {% for pic in event.pics %}
-            <div class="item {% if forloop.first %}active{% endif %}">
-              <img src="img/events/{{pic.url}}">
+            <div class="col-md-8 item {% if forloop.first %}active{% endif %}">
+              <img  src="img/events/{{pic.url}}">
               <div class="carousel-caption">
                 {{pic.caption}}
               </div>
