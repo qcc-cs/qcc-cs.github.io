@@ -4,6 +4,7 @@
   dept : Mathematics and Computer Science
   affiliation : QCC
   schoolurl : http://www.qcc.cuny.edu/mathCS/people/KKim.html
+  schoolemail :
   homeurl :
   imgurl: img/members/KWANG-KIM.jpg
   description : :Hi. I am Kwang Hyun."
@@ -13,6 +14,17 @@
   dept : Mathematics and Computer Science
   affiliation : QCC
   schoolurl : http://www.qcc.cuny.edu/mathcs/people/BWang.html
+  schoolemail : BiWang@qcc.cuny.edu
   homeurl :
   imgurl: 
   description : "Hi. I am Biao."
+- name : Shima Debnath
+  role : member
+  rank : substitute lecturer
+  dept : Mathematics and Computer Science
+  affiliation : QCC
+  schoolurl : http://www.qcc.cuny.edu/mathCS/people/SDebnath.html
+  schoolemail : SDebnath@qcc.cuny.edu
+  homeurl : 
+  imgurl: 
+  description : "Hi. I am Shima."
