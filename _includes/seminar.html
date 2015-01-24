@@ -3,15 +3,15 @@
     <div role="tabpanel" class="tab-pane {% if forloop.first %}active in{% endif %}" id="seminar-{{events.year}}">
         {% for event in events.events %}
         <div class="container">
-        <p>
-            <tr>
-                <td> Date:{{event.date}} </td>
-                <td>Location:{{event.location}} </td>   
-                <td>Title:{{event.title}} </td>
-                 <td>Speaker:{{event.speaker}}</td>
-            </tr>
-            </br>
-        </p>
+        <div class="row">
+         <h4>When:{{event.date}} at {{event.start}}</h4>
+          Location:{{event.location}} 
+          Title:{{event.title}} 
+          Speaker:{{event.speaker}
+        </div>
+        <div class="row">
+           {{event.abstract|markdownify}}
+        </div>
         <!-- carousel start-->
         <div class="container">
               <div id="carousel-event-{{events.year}}-{{event.date}}" class="carousel slide" data-ride="carousel">
