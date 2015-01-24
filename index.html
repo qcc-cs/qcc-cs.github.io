@@ -18,10 +18,10 @@
 <body>
   <div id="main">
     <nav>
-      <ul class="text-left inlineblock" style="width=20%;">
+      <ul class="text-left inlineblock">
         <li id="committee-name" class="toptitle">{{site.committee.name}}<br>COMMITTEE</li>
       </ul>
-      <ul class="inlineblock" style="width=80%;>
+      <ul class="inlineblock">
         {% for node in site.posts reversed %}
          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
          <li class="p-{{id}} text-center"><a class="navscroller" href="#{{id}}">{{node.title}}</a></li>
