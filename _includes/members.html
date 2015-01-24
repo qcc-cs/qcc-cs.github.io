@@ -8,17 +8,15 @@ z-index:2;
 }
 </style>
 {%for member in site.data.members %}
-<div class="bio" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
-  <div class="exec-bio clearfix" id="dickc">
+<div class="bio clearfix" id="{{member.name| replace: ' ','-'|replace: '.','-'}}">
     <h4><a href="{{member.schoolurl}}">{{member.name}}, {{member.role}}</a></h4>
     <div class="container">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <a href="{{member.schoolurl}}" target="_blank"> <img src="{{member.imgurl}}" width="150" height="150" alt="" class="bio-left"></a>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-9">
         {{member.description|markdownfy}}
       </div>
-    </div>
   </div>
 </div>
 {%endfor%}
