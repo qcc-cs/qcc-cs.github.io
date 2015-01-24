@@ -115,9 +115,9 @@ hr {
 {% assign navborder_active = 6 %}
 /* kwang */
 .toptitle, .toptitle:hover{
-  border-top:{{navborder_active}}px solid;
-  padding-top:{{navborder_active}}px;
-  padding-bottom:{{navborder_active}}px;
+  border-top:{{navborder}}px solid;
+  padding-top:{{navborder}}px;
+  padding-bottom:{{navborder}}px;
   border-top-width: 0px;
   font-size:18px;
   color:#49A7E9;
