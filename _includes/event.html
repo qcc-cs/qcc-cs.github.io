@@ -7,8 +7,8 @@
         {% capture event_date %}{{events.year}}-{{event.date}} {% endcapture %}
         <p>Date: {{event_date|date: "%b %d, %y"}} at {{event.start}} ({{event.location}})<br>
            Speaker:{{event.speaker}}</p>
-        <p>Title: {{event.title}}</p>
-        <h4>Abstract</h4>
+        <h4><strong>{{event.title}}</strong></h4>
+        <h5>Abstract</h5>
         <p>{{event.abstract|markdownify}}</p>
       </div>  
     </div>
