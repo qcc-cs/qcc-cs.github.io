@@ -120,6 +120,7 @@ hr {
   font-size:18px;
   color:#49A7E9;
   text-align:left;
+  line-height:initial;
 }
 .toptitle{
   border-top:0px solid;
