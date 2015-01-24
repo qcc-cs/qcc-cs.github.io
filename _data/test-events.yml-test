@@ -1,67 +1,67 @@
 - year : 2014
   events:
-                - date: 5-7
-                  start: 14:05
-                  end: 13:00
-                  location: S-430
-                  speaker: Dr. Caner Koca
-                  affliation: Vanderbilt University
-                  title: Einstein's Equations on Compact Complex Surfaces.
+                - date: "5-7"
+                  start: "14:05"
+                  end: "13:00"
+                  location: "S-430"
+                  speaker: "Dr. Caner Koca"
+                  affliation: "Vanderbilt University"
+                  title: "Einstein's Equations on Compact Complex Surfaces."
                   abstract: "After a brief review of Einstein's Equations in General Relativity and Riemannian Geometry, I will talk about two of my recent results: 1) The only positively curved Hermitian solution to Einstein's Equations (in vacuo) is the Fubini--Study metric on the complex projective plane. 2) All extremal Kahler metrics on compact complex surfaces satisfy a conformally invariant version of the classical Einstein--Maxwell Equations, called Bach--Maxwell Equations."
                   pics:
-                    - url : 2014-05-07 14.14.40.jpg
+                    - url : "2014-05-07 14.14.40.jpg"
                       caption: 
-                    - url : 2014-05-07 14.18.18.jpg
+                    - url : "2014-05-07 14.18.18.jpg"
                       caption : 
-                    - url : 2014-05-07 14.28.38.jpg
+                    - url : "2014-05-07 14.28.38.jpg"
                       caption :
-                    - url : 2014-05-07 14.31.49.jpg
+                    - url : "2014-05-07 14.31.49.jpg"
                       caption :
-                    - url : 2014-05-07 14.56.46.jpg
+                    - url : "2014-05-07 14.56.46.jpg"
                       caption :
-                  note: nothing 
-                - date: 4-23
-                  start: 14:05
-                  end: 15:00
-                  location: S-314
-                  speaker: DR. Jeehoon Park
+                  note: "nothing" 
+                - date: "4-23"
+                  start: "14:05"
+                  end: "15:00"
+                  location: "S-314"
+                  speaker: "DR. Jeehoon Park"
                   affiliation: POSTECH
-                  title: Effective computation of the Griffiths period integrals
-                  abstract: The goal of the talk is to provide an effective algorithm to compute the Griffiths period integrals of a smooth projective hypersurface X. Its idea is based on a new cochain level realization, equipped with a binary product, of the middle dimensional cohomology of X and its associated homotopy Lie algebra theory, so called, $L_/infty$ algebra theory.
+                  title: "Effective computation of the Griffiths period integrals"
+                  abstract: "The goal of the talk is to provide an effective algorithm to compute the Griffiths period integrals of a smooth projective hypersurface X. Its idea is based on a new cochain level realization, equipped with a binary product, of the middle dimensional cohomology of X and its associated homotopy Lie algebra theory, so called, $L_/infty$ algebra theory."
                   pics:
-                    - url : 2014-04-23 14.09.58.jpg
+                    - url : "2014-04-23 14.09.58.jpg"
                       caption: 
-                    - url : 2014-04-23 14.13.34.jpg
+                    - url : "2014-04-23 14.13.34.jpg"
                       caption : 
-                    - url : 2014-04-23 14.26.26.jpg
+                    - url : "2014-04-23 14.26.26.jpg"
                       caption : 
-                    - url : 2014-04-23 14.35.36.jpg
+                    - url : "2014-04-23 14.35.36.jpg"
                       caption :
-                    - url : 2014-04-23 14.46.53.jpg
+                    - url : "2014-04-23 14.46.53.jpg"
                       caption :
-                  note: nothing
-                - date: 3-19
-                  start: 12:05
-                  end: 13:00
-                  location: S-213
-                  speaker: Dr. Andrew Bulawa
-                  affliation: QCC
-                  title: Symmetry Reduced Relativity
-                  abstract: General relativity describes gravity in terms of the geometry of space-time. It also describes which spatial geometries are admissible and how these geometries evolve through time. Although knowledge differential geometry is required to understand GR in its full generality, we will step around this requirement by imposing symmetry conditions on the space-time geometry to simplify the analysis while preserving key aspects of the theory. This presentation will begin with a brief introduction to the theory of general relativity and the concept of space-time geometry. We will then impose symmetry assumptions to produce examples that are easy to derive and visualize. These examples include the Robertson-Walker cosmological model, which describes the expansion of the universe, and the Schwarzschild solution, which describes isolated gravitational fields around planets and black holes. We will end with a discussion of Einstein-Rosen waves, which describe gravitational radiation.
+                  note: "nothing"
+                - date: "3-19"
+                  start: "12:0"5
+                  end: "13:00"
+                  location: "S-213"
+                  speaker: "Dr. Andrew Bulawa"
+                  affliation: "QCC"
+                  title: "Symmetry Reduced Relativity'
+                  abstract: "General relativity describes gravity in terms of the geometry of space-time. It also describes which spatial geometries are admissible and how these geometries evolve through time. Although knowledge differential geometry is required to understand GR in its full generality, we will step around this requirement by imposing symmetry conditions on the space-time geometry to simplify the analysis while preserving key aspects of the theory. This presentation will begin with a brief introduction to the theory of general relativity and the concept of space-time geometry. We will then impose symmetry assumptions to produce examples that are easy to derive and visualize. These examples include the Robertson-Walker cosmological model, which describes the expansion of the universe, and the Schwarzschild solution, which describes isolated gravitational fields around planets and black holes. We will end with a discussion of Einstein-Rosen waves, which describe gravitational radiation."
                   pics:
-                    - url : 2014-03-19 12.15.10.jpg
-                      caption: andrew
-                  note: nothing 
+                    - url : "2014-03-19 12.15.10.jpg"
+                      caption: "andrew"
+                  note: "nothing" 
 - year: 2013
   events :
-                - date: 6-20
-                  start: 13:05
-                  end: 14:00
-                  location: S-213
-                  speaker: KWANG KIM
-                  affiliation: PS46
-                  title: hello
-                  abstract: WE will study the addition
+                - date: "6-20"
+                  start: "13:05"
+                  end: "14:00"
+                  location: "S-213"
+                  speaker: "KWANG KIM"
+                  affiliation: "PS46"
+                  title: "hello"
+                  abstract: "WE will study the addition"
                   pics:
                     - url : 201411121.jpg
                       caption: hi
