@@ -125,6 +125,7 @@ hr {
 .toptitle{
   border-top:0px solid;
   padding-top:0;
+  padding-right:10px;
   font-size:18px;
   color:#49A7E9;
   text-align:left;
