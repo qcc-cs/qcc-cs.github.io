@@ -4,8 +4,8 @@
     {% for event in events.events %}
     <div class="container">
       <div class="row">
-        {% capture eventdate %}{{events.year}}-{{event.date}} {% end capture %}
-        <p>Date: {{eventdate}} at {{event.start}} ({{event.location}})<br>
+        {% capture event_date %}{{events.year}}-{{event.date}} {% endcapture %}
+        <p>Date: {{event_date}} at {{event.start}} ({{event.location}})<br>
            Speaker:{{event.speaker}}</p>
         <p>Title: {{event.title}}</p>
         <h4>Abstract</h4>
