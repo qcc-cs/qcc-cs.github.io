@@ -126,6 +126,9 @@ hr {
   padding-right:10px;
   padding-left:10px;
 }
+nav ul div{
+  display:inline-block;	
+}
 /* kwang-end */	
 nav {
   font-size:15px;
