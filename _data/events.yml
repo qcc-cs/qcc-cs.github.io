@@ -41,12 +41,12 @@
                       caption :
                   note: "nothing"
                 - date: "3-19"
-                  start: "12:0"5
+                  start: "12:05"
                   end: "13:00"
                   location: "S-213"
                   speaker: "Dr. Andrew Bulawa"
                   affliation: "QCC"
-                  title: "Symmetry Reduced Relativity'
+                  title: "Symmetry Reduced Relativity"
                   abstract: "General relativity describes gravity in terms of the geometry of space-time. It also describes which spatial geometries are admissible and how these geometries evolve through time. Although knowledge differential geometry is required to understand GR in its full generality, we will step around this requirement by imposing symmetry conditions on the space-time geometry to simplify the analysis while preserving key aspects of the theory. This presentation will begin with a brief introduction to the theory of general relativity and the concept of space-time geometry. We will then impose symmetry assumptions to produce examples that are easy to derive and visualize. These examples include the Robertson-Walker cosmological model, which describes the expansion of the universe, and the Schwarzschild solution, which describes isolated gravitational fields around planets and black holes. We will end with a discussion of Einstein-Rosen waves, which describe gravitational radiation."
                   pics:
                     - url : "2014-03-19 12.15.10.jpg"
