@@ -19,7 +19,7 @@
   <div id="main">
     <nav>
       <ul>
-        <li id="committee-name">{{site.committee.name}}</li>
+        <li id="committee-name" class="toptitle">{{site.committee.name}}</li>
         {% for node in site.posts reversed %}
          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
          <li class="p-{{id}}"><a class="navscroller" href="#{{id}}">{{node.title}}</a></li>
