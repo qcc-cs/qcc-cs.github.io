@@ -1,20 +1,19 @@
 <div class="tab-content">
- {% for events in site.data.events %}
-    <div role="tabpanel" class="tab-pane {% if forloop.first %}active in{% endif %}" id="seminar-{{events.year}}">
-        {% for event in events.events %}
-        <div class="container">
-        <div class="row">
-         <h4>When:{{event.date}} at {{event.start}}</h4>
-          Location:{{event.location}} 
-          Title:{{event.title}} 
-          Speaker:{{event.speaker}
-        </div>
-        <div class="row">
-           {{event.abstract|markdownify}}
-        </div>
-        <!-- carousel start-->
-        <div class="container">
-              <div id="carousel-event-{{events.year}}-{{event.date}}" class="carousel slide" data-ride="carousel">
+  {% for events in site.data.events %}
+  <div role="tabpanel" class="tab-pane {% if forloop.first %}active in{% endif %}" id="seminar-{{events.year}}">
+    {% for event in events.events %}
+    <div class="container">
+      <div class="row">
+        <h4>When:{{event.date}} at {{event.start}}</h4>
+        <p>Location:{{event.location}} Speaker:{{event.speaker}</p>
+        <p>Title:{{event.title}}</p>
+      </div>
+      <div class="row">
+        {{event.abstract|markdownify}}
+      </div>
+      <!-- carousel start-->
+      {% if event.pics!=empty %}
+      <div id="carousel-event-{{events.year}}-{{event.date}}" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           {% for pic in event.pics %}
@@ -27,7 +26,7 @@
           <div class="item {% if forloop.first %}active{% endif %}">
             <img src="img/events/{{pic.url}}">
             <div class="carousel-caption">
-              {{pic.caption}}        
+              {{pic.caption}}
             </div>
           </div>
           {% endfor %}
@@ -42,11 +41,10 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      </div>
-<!-- carousel end--> 
-        </div>
-        {% endfor %}
+      {%end if%}
+      <!-- carousel end-->
     </div>
- {% endfor %}
+    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
-
