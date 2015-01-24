@@ -12,7 +12,7 @@ z-index:2;
     <h4><a href="{{member.schoolurl}}">{{member.name}}, {{member.role}}</a></h4>
     <div class="container">
       <div class="col-md-3">
-        <a href="{{member.schoolurl}}" target="_blank">{% if member.imgurl %}<img src="{{member.imgurl}}" width="150" height="150" alt="" class="bio-left">{%else%}<i class="fa fa-user" style="font-size=150px"></i>{%endif%}</a>
+        <a href="{{member.schoolurl}}" target="_blank">{% if member.imgurl %}<img src="{{member.imgurl}}" width="150" height="150" alt="" class="bio-left">{%else%}<i class="fa fa-user" style="font-size=150px;"></i>{%endif%}</a>
       </div>
       <div class="col-md-9">
         {{member.description|markdownfy}}
