@@ -115,20 +115,14 @@ hr {
 {% assign navborder_active = 6 %}
 /* kwang */
 .toptitle, .toptitle:hover{
-  border-top:{{navborder}}px solid;
-  padding-top:0;
+  border-top:{{navborder_active}}px solid;
+  padding-top:{{navborder_active}}px;
   font-size:18px;
   color:#49A7E9;
   text-align:left;
   line-height:initial;
-}
-.toptitle{
-  border-top:0px solid;
-  padding-top:0;
   padding-right:10px;
-  font-size:18px;
-  color:#49A7E9;
-  text-align:left;
+  padding-left:10px;
 }
 /* kwang-end */	
 nav {
