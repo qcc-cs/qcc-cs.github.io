@@ -52,3 +52,18 @@
                     - url : "2014-03-19 12.15.10.jpg"
                       caption: 
                   note: "nothing" 
+- year : 2013
+  events:
+                - date: "11-6"
+                  start: "13:00"
+                  end: "13:00"
+                  location: "S-213"
+                  speaker: "Dr.  Zhendong Sun"
+                  affliation: "South China University of Technology"
+                  title: "Performance analysis of switched linear systems"
+                  abstract: "The switched linear system consists of several linear time-invariant subsystems and a switching law that supervise the switches among the subsystems. In this talk, fundamental performance analysis for continuous-time switched linear systems will be presented.  We will extend the well-known spectral method from linear systems to switched linear systems, and reveal several interesting properties of the extended spectral abscissa. Computational issues are also addressed to approximate the spectral abscissa by means of the least matrix set measure approach.
+"
+                  pics:
+                    - url : 
+                      caption: 
+                  note: "nothing"                   
