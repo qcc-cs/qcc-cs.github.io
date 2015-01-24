@@ -15,7 +15,8 @@
         <p class="text-center">Abstract</p>
         <p class="text-justify">{{event.abstract}}</p>
       </div>
-      <div class="row col-md-8">
+      <div class="row">
+        <div class="col-md-8">
         <!-- carousel start-->
         {% if event.pics %}
         <div id="carousel-event-{{events.year}}-{{event.date}}-{{event-start}}" class="carousel slide" data-ride="carousel">
@@ -26,7 +27,7 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             {% for pic in event.pics %}
-            <div class="col-md-8 item {% if forloop.first %}active{% endif %}">
+            <div class="col-md-6 item {% if forloop.first %}active{% endif %}">
               <img  src="img/events/{{pic.url}}">
               <div class="carousel-caption">
                 {{pic.caption}}
@@ -45,6 +46,7 @@
         </div>
         {%endif%}
         <!-- carousel end-->
+        </div>
       </div>
     </div>
     {% endfor %}
