@@ -3,11 +3,11 @@
   <div role="tabpanel" class="tab-pane {% if forloop.first %}active in{% endif %}" id="seminar-{{events.year}}">
     {% for event in events.events %}
     <div class="container">
-      <div class="row text-left">
-        <p>Date:{{event.date}} at {{event.start}}</p>
-        <p>Location:{{event.location}} Speaker:{{event.speaker}}</p>
-        <p>Title:{{event.title}}</p>
-        <h5 class="text-center">Abstract</h5>
+      <div class="row">
+        <p>Date: {{event.date}} at {{event.start}}</p>
+        <p>Location: {{event.location}} Speaker:{{event.speaker}}</p>
+        <p>Title: {{event.title}}</p>
+        <h5>Abstract</h5>
         <p>{{event.abstract}}</p>
       </div>  
     </div>
