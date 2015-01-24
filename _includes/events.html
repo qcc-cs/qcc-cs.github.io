@@ -1,6 +1,11 @@
+<style>
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+  background-color: inherit;
+}  
+</style>
 <div role="tabpanel">
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist" id="event-by-year-tab" style="background-color: inherit;">
+  <ul class="nav nav-tabs" role="tablist" id="event-by-year-tab" >
     {% for events in site.data.events %}
       <li role="presentation" class="{%if forloop.first %}active{%endif%}">
         <a href="#seminar-{{events.year}}" aria-controls="{{events.year}}" role="tab" data-toggle="tab">
