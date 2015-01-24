@@ -157,8 +157,8 @@ nav ul li {
   line-height:normal;
   letter-spacing:normal;
   text-transform:uppercase;
-  min-width:120px;
-  line-height:50px;
+  min-width:120px; /*KWANG*/
+  line-height:40px; /*KWANG*/
   margin:0;
 }
 
