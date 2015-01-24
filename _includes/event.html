@@ -18,7 +18,7 @@
       <div class="row center-block" style="padding:0 5%;" >
         <div >
         <!-- carousel start-->
-        {% if event.pics %}
+        {% if event.pics[0].url %}
         <div id="carousel-event-{{events.year}}-{{event.date}}-{{event-start}}" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             {% for pic in event.pics %}
