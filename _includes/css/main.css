@@ -114,13 +114,19 @@ hr {
 {% assign navborder = 3 %}
 {% assign navborder_active = 6 %}
 /* kwang */
+.toptitle, .toptitle:hover{
+  border-top:0px solid;
+  padding-top:0;
+  font-size:18px;
+  color:#49A7E9;
+  text-align:left;
+}
 .toptitle{
   border-top:0px solid;
   padding-top:0;
   font-size:18px;
   color:#49A7E9;
   text-align:left;
-  border-top-width:0 px;
 }
 /* kwang-end */	
 nav {
