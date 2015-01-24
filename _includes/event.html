@@ -4,7 +4,7 @@
     {% for event in events.events %}
     <div class="container">
       <div class="row">
-        <p>Date: {{event.date|date_to_string}} at {{event.start}} ({{event.location}})<br>
+        <p>Date: {{event.year-event.date|date_to_string}} at {{event.start}} ({{event.location}})<br>
            Speaker:{{event.speaker}}</p>
         <p>Title: {{event.title}}</p>
         <h4>Abstract</h4>
