@@ -8,7 +8,7 @@
         <p>Location: {{event.location}} Speaker:{{event.speaker}}</p>
         <p>Title: {{event.title}}</p>
         <h5>Abstract</h5>
-        <p>{{event.abstract}}</p>
+        <p>{{event.abstract|markdownify}}</p>
       </div>  
     </div>
     {% endfor %}
