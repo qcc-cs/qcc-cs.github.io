@@ -126,7 +126,7 @@ hr {
   padding-right:10px;
   padding-left:10px;
 }
-nav ul div{
+nav ul.inlineblock;{
   display:inline-block;	
 }
 /* kwang-end */	
