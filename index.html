@@ -17,8 +17,11 @@
 </head>
 <body>
   <div id="main">
-    <nav>
+    <nav class="container">
       <ul>
+        <div>
+          <li>{{commitee.short}}</li>
+        </div>
         {% for node in site.posts reversed %}
          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
          <li class="p-{{id}}"><a class="navscroller" href="#{{id}}">{{node.title}}</a></li>
