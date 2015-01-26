@@ -1,4 +1,4 @@
-**Communication**
+####Communication
 
 We will use 3 separate websites for this course. You need to sign-up using your [**tigermail**](https://tigermail.qcc.cuny.edu/) and id part of your tigermail as your username. (Ex. hello12 from hello12@tigermail.qcc.cuny.edu.)
 
