@@ -4,3 +4,4 @@ Not empty!
 {% elsif {{include.rlink}}!=empty %}
 {%capture my_markdown%}{%include_relative {{include.rlink}} %}{%endcapture%}
 {%endif%}
+testing {{include.link}}
