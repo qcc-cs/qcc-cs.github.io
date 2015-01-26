@@ -1,5 +1,5 @@
-{%include instructor.md}
+{%include instructor.md%}
 
-{%include officehours.md}
+{%include officehours.md%}
 
-{%include textbooks.md}
+{%include textbooks.md%}
