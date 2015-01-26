@@ -1,18 +1,17 @@
 <div class="text-left"> 
- {%include md link=instructor.md%}
+ {%include md link="instructor.md" %}
   <table class="table">
   <tbody>
   <tr>
    <td class="col-md-5 text-left">
-     {%include md link=class_hours.md %} 
+     {%include md link="class_hours.md" %} 
    </td> 
    <td class="col-md-5 text-left">
-     {%include md link=office_hours.md %} 
+     {%include md link="office_hours.md" %} 
    </td> 
   </tr>
   </tbody>
   </table> 
-  {% capture my_include %}{%include textbooks.md%}{% endcapture%} {{my_include| markdownify}}
   {% include md link="textbooks.md" %}
 </div>
 
