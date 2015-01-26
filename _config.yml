@@ -34,6 +34,7 @@ course:
   semester: '2015S'
   section: 'D124' 
   instructor: 'KWANG KIM'
+  iinstructor_email: "kkim@qcc.cuny.edu"
   dept:  'Mathematics and Computer Science'
   depturl: http://www.qcc.cuny.edu/mathCS/
   contactchair: mailto:kkim@qcc.cuny.edu
