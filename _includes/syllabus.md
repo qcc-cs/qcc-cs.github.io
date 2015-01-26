@@ -4,9 +4,9 @@
 </div>
 <div class="row text-left">
   <div class="col-md-6 ">
-    {%include classmeets.md%}
+    {%capture md%}{%include classmeets.md%}{%endcapture%}{{md|markdownify .textleft}}
   </div>
   <div class="col-md-6 ">
-    {%include officehours.md%}
+    {%capture md%}{%include officehours.md%}{%endcapture%}{{md|markdownify .textleft}}
   </div>
 </div>
