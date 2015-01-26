@@ -1,5 +1,5 @@
 <div class="container">
-<div class="row text-left markdown='0'">
+<div class="row text-left">
   {%include instructor.md%}
 </div>
 <div class="row text-left">
