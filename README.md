@@ -1,4 +1,4 @@
-QCC Professional development committee of Mathematics and CS website.
+QCC CS203
 ======================
 
 It is modified from [t413.com/SinglePaged](http://t413.com/SinglePaged)
