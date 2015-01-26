@@ -3,7 +3,7 @@
 
  * [Github student Developer Pack](https://education.github.com/pack)
 
-##How to setup your tigermail with smartphone
+###How to setup your tigermail with smartphone
 {:.left}
 - iphone : http://www.qcc.cuny.edu/qccOnline/iphoneInst.html
 - android : http://www.qcc.cuny.edu/qccOnline/androidInst.html
