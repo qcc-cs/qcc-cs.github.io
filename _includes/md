@@ -1,8 +1,8 @@
 {%assign link={{include.link}} %}
 {%assign rlink={{include.rlink}} %}
-{% if link != null %}
-{%capture my_markdown%}{% include {{link}} %}{%endcapture%}
+{% if link  %}
+{%capture my_markdown%}{% include {{link}} %}{%endcapture%}{{my_markdown}}
 {% elsif rlink %}
-{%capture my_markdown%}{%include_relative {{rlink}} %}{%endcapture%}
+{%capture my_markdown%}{%include_relative {{rlink}} %}{%endcapture%}{{my_markdown}}
 {%endif%}
-{%capture my_markdown%}{% include {{link}} %}{%endcapture%}
+
