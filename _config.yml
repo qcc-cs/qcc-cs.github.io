@@ -9,13 +9,13 @@ highlighter: pygments
 
 
 ### content configuration ###
-title:       "Peofessional Development Committee"
-keywords:    "QCC, mathematics, computer science,seminar,colloquium"
-description: "eofessional Development Committee homepage"
-source_link: "https://kwangkim.github.com/committee"
+title:       "CS203"
+keywords:    "QCC, CS203"
+description: "CS203"
+source_link: "https://qcc-cs203.github.com/qcc-cs203.github.io"
 favicon:     "img/favicon.ico"
 touch_icon:  "img/apple-touch-icon.png"
-google_analytics_key: UA-49607422-1 ## put YOUR key here to enable tracking! (blank to disable)
+#google_analytics_key: UA-49607422-1 ## put YOUR key here to enable tracking! (blank to disable)
 
 
 ### template colors, used site-wide via css ###
@@ -29,8 +29,8 @@ colors:
   turquoise: '#0fbfcf'
 
 committee:
-  name: 'Professional Development'
-  short: 'PDC'
+  name: 'CS203'
+  short: 'CS203'
   dept:  'Mathematics and Computer Science'
   depturl: http://www.qcc.cuny.edu/mathCS/
   contactchair: mailto:kkim@qcc.cuny.edu
