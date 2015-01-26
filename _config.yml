@@ -28,8 +28,9 @@ colors:
   orange:    '#fab125'
   turquoise: '#0fbfcf'
 
-committee:
+course:
   name: 'CS203'
+  section: 'D124'
   short: 'CS203'
   dept:  'Mathematics and Computer Science'
   depturl: http://www.qcc.cuny.edu/mathCS/
