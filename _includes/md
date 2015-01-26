@@ -1,7 +1,8 @@
-{% if {{include.link}}!=empty %}
+{%assign link={{include.link}} %}
+{%assign rlink={{include.rlink}} %}
+{% if link %}
 {%capture my_markdown%}{%include {{include.link}} %}{%endcapture%}
-Not empty!
-{% elsif {{include.rlink}}!=empty %}
+{% elsif rlink %}
 {%capture my_markdown%}{%include_relative {{include.rlink}} %}{%endcapture%}
 {%endif%}
-testing {{include.link}}
+
