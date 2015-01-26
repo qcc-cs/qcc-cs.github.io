@@ -28,9 +28,12 @@ colors:
   orange:    '#fab125'
   turquoise: '#0fbfcf'
 
-committee:
-  name: 'CS203'
+course:
+  name: 'CS203 - Algorithmic Problem Solving II'
   short: 'CS203'
+  semester: '2015S'
+  section: 'D124' 
+  instructor: 'KWANG KIM'
   dept:  'Mathematics and Computer Science'
   depturl: http://www.qcc.cuny.edu/mathCS/
   contactchair: mailto:kkim@qcc.cuny.edu
