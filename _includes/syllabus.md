@@ -3,9 +3,9 @@
 </div>
 <div class="row text-left">
   <div class="col-md-6 ">
-    {%include officehours.md%}
+    {%include classmeets.md%}
   </div>
   <div class="col-md-6 ">
-    {%include textbooks.md%}
+    {%include officehours.md%}
   </div>
 </div>
