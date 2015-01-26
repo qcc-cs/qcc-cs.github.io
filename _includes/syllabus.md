@@ -1,5 +1,11 @@
-{%include instructor.md%}
-
-{%include officehours.md%}
-
-{%include textbooks.md%}
+<div class="row text-left">
+  {%include instructor.md%}
+</div>
+<div class="row text-left">
+  <div class="col-md-6 ">
+    {%include officehours.md%}
+  </div>
+  <div class="col-md-6 ">
+    {%include textbooks.md%}
+  </div>
+</div>
