@@ -4,10 +4,10 @@
 </div>
 <div class="row text-left">
   <div class="col-md-6 ">
-    {%include classmeets.md%}
+    {% capture my_include %}{%include classmeets.md%}{% endcapture%} {{my_include| markdownify}}
   </div>
   <div class="col-md-6 ">
-    {%include officehours.md%}
+    {% capture my_include %}{%include officehours.md%}{% endcapture%} {{my_include| markdownify}}
   </div>
 </div>
 </div>
