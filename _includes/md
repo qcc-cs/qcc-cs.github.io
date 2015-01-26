@@ -1,5 +1,6 @@
 {% if {{include.link}}!=empty %}
 {%capture my_markdown%}{%include {{include.link}} %}{%endcapture%}
+Not empty!
 {% elsif {{include.rlink}}!=empty %}
 {%capture my_markdown%}{%include_relative {{include.rlink}} %}{%endcapture%}
 {%endif%}
