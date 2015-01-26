@@ -11,4 +11,4 @@
   </div>
 </div>
 </div>
-  {%capture md%}{%include officehours.md%}{%endcapture%}{{md|markdownify}}
+  {%capture md%}{%include officehours.md%}{%endcapture%}{{md}}
