@@ -1,5 +1,6 @@
 <div class="row text-left">
-  {%include instructor.md |markdownify %}
+  {%capture md%}{%include instructor.md%}{%endcapture%}
+  {{md|markdownify}}
 </div>
 <div class="row text-left">
   <div class="col-md-6 ">
