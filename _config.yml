@@ -32,6 +32,7 @@ course:
   name: 'CS203'
   section: 'D124'
   short: 'CS203'
+  instructor": "KWANG KIM"
   dept:  'Mathematics and Computer Science'
   depturl: http://www.qcc.cuny.edu/mathCS/
   contactchair: mailto:kkim@qcc.cuny.edu
