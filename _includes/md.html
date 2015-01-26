@@ -1,0 +1,5 @@
+{% if {{include.link}} %}
+{%capture my_markdown%}{%include {{include.link}} %}{%endcapture%}
+{% elseif {{include.rlink}} %}
+{%capture my_markdown%}{%include_relative {{include.rlink}} %}{%endcapture%}
+{%endif%}
