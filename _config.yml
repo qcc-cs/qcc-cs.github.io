@@ -4,7 +4,7 @@ exclude: [CNAME, README.md, .gitignore]
 permalink: / ## disables post output
 timezone: null
 lsi: false
-markdown: maruku
+markdown: kramdown
 highlighter: pygments
 excerpt_separator: ""
 
