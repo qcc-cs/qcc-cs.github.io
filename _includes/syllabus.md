@@ -11,4 +11,4 @@
   </div>
 </div>
 </div>
-    {% capture my_include %}{%include officehours.md%}{% endcapture%} {{my_include| markdownify}}
+{% capture my_include %}{%include officehours.md%}{% endcapture%} {{my_include| markdownify}}
