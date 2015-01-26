@@ -1,6 +1,6 @@
 <div class="container">
 <div class="row text-left">
-  {%include instructor.md %}
+  {%include instructor.md%}
 </div>
 <div class="row text-left">
   <div class="col-md-6 ">
