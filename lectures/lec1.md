@@ -14,8 +14,7 @@ int main() {
 //
 //
 //
-return 0;
-}
+  return 0;
 }
 ```
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
