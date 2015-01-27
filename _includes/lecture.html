@@ -1,6 +1,8 @@
 <!-- from booty http://www.bootply.com/111508 -->
 <script type="text/javascript">
-  function updatetab(url,pane){
+  
+  $(document).ready(function() {
+    function updatetab(url,pane){
     // From http://stackoverflow.com/a/651735
       var ext=url.split('.').pop().toLowerCase();
       var ismd= true;
@@ -17,8 +19,6 @@
         pane.tab('show');
       });
   }
-
-  $(document).ready(function() {
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
