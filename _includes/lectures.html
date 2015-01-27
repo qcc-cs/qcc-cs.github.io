@@ -16,7 +16,7 @@
       </li>
       {% for lecture in site.data.lectures %}
       {% assign parentloop=forloop %}
-      {% for url in lecture.lecs %}
+      {% for url in lecture.lecs.url %}
       {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
       {%if forloop.length == 1%}
       {%capture date %}{{lecture.date | date: %b %d}}{% endcapture %}
