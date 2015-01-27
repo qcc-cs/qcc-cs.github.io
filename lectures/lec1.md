@@ -20,7 +20,7 @@ return 0;
 ```
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default bg-purple"><a   href="http://runnable.com/VMdcefZPp39Aqk68/cs203-review-check-1-for-c%2B%2B" target="_blank"> TRY FIRST.</a></button>
+   <a  class="btn btn-default bg-purple"  href="http://runnable.com/VMdcefZPp39Aqk68/cs203-review-check-1-for-c%2B%2B" target="_blank"> TRY FIRST.</a>
   </div>
   <!--
   <div class="btn-group" role="group">
@@ -28,7 +28,7 @@ return 0;
   </div>
   -->
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default bg-blue"><a   href="http://runnable.com/VMdhBgwrvLI4e1VA/cs203-review-check-1-sample-answer-for-c%2B%2B" target="_blank"> SAMPLE ANSWER</a></button>
+    <a  class="btn btn-default bg-blue" href="http://runnable.com/VMdhBgwrvLI4e1VA/cs203-review-check-1-sample-answer-for-c%2B%2B" target="_blank"> SAMPLE ANSWER</a>
   </div>
 </div>
 
