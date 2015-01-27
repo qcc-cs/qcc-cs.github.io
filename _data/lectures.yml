@@ -1,7 +1,9 @@
 - date: "2015-1-29"
   lecs:
     - url : lec1.md
+      json : lec1.json
     - url : lec2.md
+    
 - date: "2015-2-2"
   lecs:
     - url : lec3.md
