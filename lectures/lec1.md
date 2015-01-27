@@ -9,7 +9,7 @@ Check 1. Complete a program that prints number 1 to n.
 using namespace std; 
 int main() {
 int i,n;
-cout ≪”Type an ending number which is greater than 1:”;
+cout ≪"Type an ending number which is greater than 1:";
 cin ≫n;
 //
 //  Complete.
