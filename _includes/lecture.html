@@ -28,12 +28,12 @@
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
-      var js=$(this).attr("js-url");
+      var json=$(this).attr("json-url");
       //var href = this.hash;
       var pane = $(this);
       
        //ajax get from data-url convert md to html
-      updatetab(url,js,pane);
+      updatetab(url,json,pane);
     
     });
     // load first tab content
