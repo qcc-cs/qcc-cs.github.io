@@ -18,6 +18,7 @@ cin>>n;
 return 0;
 }
 ```
+[Runnable](http://runnable.com/VMdcefZPp39Aqk68/cs203-review-check-1-for-c%2B%2B)
 Check 2. Make a function g(n) such that
 
 $$
