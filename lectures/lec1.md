@@ -1,6 +1,7 @@
 <script scr="/js/runnablebutton.js"></script>
 <script id="urls" type="application/json">
- [ {try:"VMdcefZPp39Aqk68",ans:"VMdhBgwrvLI4e1VA",id:"rbutton-1-1-1"},{try:"VMfUxbSaqhl5tXMJ",ans:"VMgN7HnnkR5Nl7fs",id:"rbutton-1-2-1"},{try:" ",ans:" ",id:""},{try:" ",ans:" ",id:""}]
+ [ {try:"VMdcefZPp39Aqk68",ans:"VMdhBgwrvLI4e1VA",id:"rbutton-1-1-1"},{try:"VMfUxbSaqhl5tXMJ",ans:"VMgN7HnnkR5Nl7fs",id:"rbutton-1-2-1"},{try:"VMgPIoFjlw9TxK4a",ans:"VMgPuRaubcVGrlkv",id:""}]
+ //,{try:" ",ans:" ",id:""}
 </script>
 ## Review
 
@@ -41,8 +42,8 @@ int g(int n) {
 //
  return 0;
 }
-
 ```
+<div id="rbutton1-1-2-1"></div>
 #### Check 3. Make above function \\( g(x)\\) without the recursion.
 ```c++
 #include<iostream> 
@@ -57,5 +58,5 @@ int g(int n) {
 }
 
 ```
-
+<div id="rbutton1-1-3-1"></div>
 
