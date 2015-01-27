@@ -1,3 +1,7 @@
+<script scr="/js/runnablebutton.js"></script>
+<script id="urls" type="application/json">
+ [ {try:"VMdcefZPp39Aqk68",ans:"VMdhBgwrvLI4e1VA",id:"rbutton-1-1-1"},{try:"VMfUxbSaqhl5tXMJ",ans:"VMgN7HnnkR5Nl7fs",id:"rbutton-1-2-1"},{try:" ",ans:" ",id:""},{try:" ",ans:" ",id:""}]
+</script>
 ## Review
 
 Today, we will quickly review CS101.
@@ -17,19 +21,7 @@ int main() {
   return 0;
 }
 ```
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-   <a  class="btn btn-default bg-purple"  href="http://runnable.com/VMdcefZPp39Aqk68/cs203-review-check-1-for-c%2B%2B" target="_blank"> TRY FIRST.</a>
-  </div>
-  <!--
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Middle</button>
-  </div>
-  -->
-  <div class="btn-group" role="group">
-    <a  class="btn btn-default bg-blue" href="http://runnable.com/VMdhBgwrvLI4e1VA/cs203-review-check-1-sample-answer-for-c%2B%2B" target="_blank"> SAMPLE ANSWER</a>
-  </div>
-</div>
+<div id="rbutton1-1-1-1"></div>
 
 ####Check 2. Make a function g(n) such that
 
@@ -47,7 +39,7 @@ int g(int n) {
 //  Complete.
 //
 //
-return 0;
+ return 0;
 }
 
 ```
@@ -61,7 +53,7 @@ int g(int n) {
 //  Complete.
 //
 //
-return 0;
+ return 0;
 }
 
 ```
