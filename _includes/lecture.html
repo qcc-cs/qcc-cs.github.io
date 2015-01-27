@@ -2,7 +2,7 @@
 <script type="text/javascript">
   
   $(document).ready(function() {
-    function updatetab(url,pane){
+    function updatetab(url,js,pane){
     // From http://stackoverflow.com/a/651735
       var ext=url.split('.').pop().toLowerCase();
       var ismd= true;
@@ -16,21 +16,23 @@
           $('#my-pagination-content').html(data);
           MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
         }
+        if(typeof js !== 'undefined'){$.getscript(js);}
         pane.tab('show');
       });
   }
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
+      var js=$(this).attr("js-url");
       //var href = this.hash;
       var pane = $(this);
       
        //ajax get from data-url convert md to html
-      updatetab(url,pane);
+      updatetab(url,js,pane);
     
     });
     // load first tab content
-    updatetab($('#event-tab .active a').attr("data-url"),$('#event-tab .active a'));
+    updatetab($('#event-tab .active a').attr("data-url"),$('#event-tab .active a').attr("js-url"),$('#event-tab .active a'));
   });
 
 </script>
