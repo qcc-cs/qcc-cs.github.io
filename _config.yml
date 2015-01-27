@@ -5,6 +5,8 @@ permalink: / ## disables post output
 timezone: null
 lsi: false
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
 highlighter: pygments
 excerpt_separator: ""
 
