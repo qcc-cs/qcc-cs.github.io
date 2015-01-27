@@ -9,12 +9,16 @@
   <!-- Nav papignation-->
   <div class="text-center">
     <ul class="pagination bg-{{color}}" role="tablist" id="event-tab">
-      <!--<li>
+      
+      <li>
+      <!--
         <a href="#" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
         </a>
+       -->  
       </li>
-      -->
+     
+    
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign index=0 %}
       {% for lecture in site.data.lectures reverse %}
@@ -35,12 +39,14 @@
       {% cycle '','','','<br>'%}
       {% endfor %}
       {% endfor %}
-      <!--<li>
+      
+      <li>
+      <!--
         <a href="#" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
         </a>
+      -->  
       </li>
-      -->
     </ul>
   </div>
   <!-- Tab panes -->
