@@ -15,6 +15,6 @@ bootstrap navbar
 http://www.tutorialspoint.com/bootstrap/bootstrap_navbar.htm
 
 
-dynamic pagination ajax
+dynamic pagination 
 
 http://botmonster.com/jquery-bootpag/#docs 
