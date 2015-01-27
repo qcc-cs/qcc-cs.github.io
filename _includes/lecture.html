@@ -13,14 +13,12 @@
       });
     });
     // load first tab content
-    $('#my-pagination-content .container').load($('#event-tab .active a').attr("data-url"), function(result) {
+    $('#my-pagination-content').load($('#event-tab .active a').attr("data-url"), function(result) {
       $('#event-tab .active a').tab('show');
     });
   });
 </script>
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
-    <div class="container">
-    </div>
   </div>
 </div>
