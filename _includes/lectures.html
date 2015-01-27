@@ -17,10 +17,15 @@
       {% for lecture in site.data.lectures %}
       {% assign parentloop=forloop %}
       {% for url in lecture.lecs %}
-      {%capture id %}{{lecture.date | replace : '/','-'}}{%if ! forloop.first %}-{{forloop.index0}}{%endif%}{% endcapture %}
+      {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
+      {%if forloop.length == 1%}
+      {%capture date %}{{lecture.date | date: %b %d}}{% endcapture %}
+      {%else%}
+      {%capture date %}{{lecture.date | date: %b %d}}-{{forloop}}{% endcapture %}
+      {%endif%}
       <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}">
         <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{url}}" data-toggle="tab">
-          {{id}}
+          {{date}}
         </a>
       </li>
       {% endfor %}
