@@ -23,6 +23,7 @@ Check 2. Make a function g(n) such that
 $$
 g(x)=1^2+2^2+3^2+\ldots+n^2
 $$
+using the recursion.
 Assume \\(n\geq1\\).
 ```c++
 #include<iostream> 
@@ -37,3 +38,4 @@ return 0;
 }
 
 ```
+Check 3. Make above function \\( g(x)\\) without the recursion.
