@@ -1,6 +1,6 @@
 <script type="text/javascript" scr="/js/runnablebutton.js"></script>
 <script  type="text/javascript">
- var urls=[ {try:"VMdcefZPp39Aqk68",ans:"VMdhBgwrvLI4e1VA",id:"rbutton-1-1-1"},{try:"VMfUxbSaqhl5tXMJ",ans:"VMgN7HnnkR5Nl7fs",id:"rbutton-1-2-1"},{try:"VMgPIoFjlw9TxK4a",ans:"VMgPuRaubcVGrlkv",id:""}];
+ var urls=[ {try:"VMdcefZPp39Aqk68",ans:"VMdhBgwrvLI4e1VA",id:"rbutton-1-1-1"},{try:"VMfUxbSaqhl5tXMJ",ans:"VMgN7HnnkR5Nl7fs",id:"rbutton-1-2-1"},{try:"VMgPIoFjlw9TxK4a",ans:"VMgPuRaubcVGrlkv",id:"rbutton-1-3-1"}];
  makerbutton(urls);
  //,{try:" ",ans:" ",id:""}
 </script>
@@ -23,6 +23,7 @@ int main() {
   return 0;
 }
 ```
+
 <div id="rbutton1-1-1-1"></div>
 
 ####Check 2. Make a function g(n) such that
@@ -44,6 +45,7 @@ int g(int n) {
  return 0;
 }
 ```
+
 <div id="rbutton1-1-2-1"></div>
 
 #### Check 3. Make above function \\( g(x)\\) without the recursion.
@@ -60,5 +62,6 @@ int g(int n) {
  return 0;
 }
 ```
+
 <div id="rbutton1-1-3-1"></div>
 
