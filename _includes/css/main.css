@@ -370,10 +370,10 @@ nav ul li:hover, nav ul li.active {
   }
 }
 /* KWANG MATHJAX FIX */
-.mi{
+.mi span{
 	color:inherit !important;	
 }
-.mo{
+.mo span{
 	color:inherit !important;	
 }
 /* END KWANG *?
