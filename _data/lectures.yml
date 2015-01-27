@@ -1,0 +1,11 @@
+- date: "2015/1/29"
+  lecs:
+    -url : lec1.md
+    -url : lec2.md
+- date: "2015/2/1"
+  lecs:
+    -url : lec3.md
+- date: "2015/2/3"
+  lecs:
+    -url : lec4.md
+    -url : lec5.md
