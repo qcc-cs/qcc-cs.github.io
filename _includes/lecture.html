@@ -16,6 +16,7 @@
           MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
         }
         if(typeof json !== 'undefined'){
+          console.log("json!");
           $.get(json,function(data){
             var jsonurls=SON && JSON.parse(data) || $.parseJSON(data); //From http://stackoverflow.com/a/4935684
             makebutton(jsonurls);
