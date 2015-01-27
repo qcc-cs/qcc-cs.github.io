@@ -9,7 +9,7 @@ html { box-sizing: border-box; }
 
 {% for c in site.colors %}
 .border-{{c[0]}} { border-color: {{ c[1] }} !important; }
-.text-{{c[0]}}   { color: {{ c[1] }}; !important; } /*KWANG added !important */
+.text-{{c[0]}}   { color: {{ c[1] }};  } 
 .text-{{c[0]}} a { color: {{ c[1] }}; }
 .text-{{c[0]}} span { color: {{ c[1] }}; }
 .bg-{{c[0]}}     { background-color: {{ c[1] }} !important; }
