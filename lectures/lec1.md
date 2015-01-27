@@ -18,4 +18,22 @@ cin ≫n;
 return 0;
 }
 ```
+Check 2. Make a function g(n) such that
 
+$$
+g(x)=1^2+2^2+3^2+\ldots+n^2
+$$
+Assume $n\geq1$.
+```c++
+#include<iostream> 
+using namespace std; 
+int g(int n) {
+//
+//
+//  Complete.
+//
+//
+return 0;
+}
+
+```
