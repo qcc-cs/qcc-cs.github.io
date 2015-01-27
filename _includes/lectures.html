@@ -20,7 +20,8 @@
       {% for lecture in site.data.lectures reverse %}
       {% assign parentloop=forloop %}
       {% for lec in lecture.lecs %}
-      {% assign index={{index|plus:1}}%}
+      {{index|plus:1}}
+      {% assign index=%}
       {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
       {%if forloop.length == 1%}
       {%capture date %}{{lecture.date| date: "%b, %d" }}{% endcapture %}
@@ -33,7 +34,7 @@
           {{date}}
         </a>
       </li>
-      {%if {{ index | modulo:5 }}==0 %}<br>{%endif%}
+      {% cycle '','','','','<br>'}
       {% endfor %}
       {% endfor %}
       <!--<li>
