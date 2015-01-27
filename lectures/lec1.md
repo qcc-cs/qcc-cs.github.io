@@ -1,2 +1,21 @@
-### Lecture 1
-Hi.
+## Review
+
+Today, we will quickly review CS101.
+
+Check 1. Complete a program that prints number 1 to n.
+
+```
+#include<iostream> 
+using namespace std; 
+int main() {
+int i,n;
+cout ≪”Type an ending number which is greater than 1:”;
+cin ≫n;
+//
+//  Complete.
+//
+//
+￼￼￼￼￼￼￼￼return 0; }
+
+```
+
