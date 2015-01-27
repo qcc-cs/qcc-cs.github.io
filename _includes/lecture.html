@@ -2,7 +2,7 @@
 <script type="text/javascript">
   
   $(document).ready(function() {
-    function updatetab(url,js,pane){
+    function updatetab(url,pane,json){
     // From http://stackoverflow.com/a/651735
       var ext=url.split('.').pop().toLowerCase();
       var ismd= true;
@@ -16,7 +16,12 @@
           $('#my-pagination-content').html(data);
           MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
         }
-        if(typeof js !== 'undefined'){$.getscript(js);}
+        if(typeof json !== 'undefined'){
+          $.get(json,function(data){
+            var urls=SON && JSON.parse(json) || $.parseJSON(json); //From http://stackoverflow.com/a/4935684
+            makebutton(urls);
+          });
+        }
         pane.tab('show');
       });
   }
