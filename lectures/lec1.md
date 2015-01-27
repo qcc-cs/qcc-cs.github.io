@@ -1,4 +1,4 @@
-<script type="text/javascript" scr="/js/runnablebutton.js"></script>
+<script type="text/javascript" scr="js/runnablebutton.js"></script>
 <script  type="text/javascript">
  var urls=[ {try:"VMdcefZPp39Aqk68",ans:"VMdhBgwrvLI4e1VA",id:"rbutton-1-1-1"},{try:"VMfUxbSaqhl5tXMJ",ans:"VMgN7HnnkR5Nl7fs",id:"rbutton-1-2-1"},{try:"VMgPIoFjlw9TxK4a",ans:"VMgPuRaubcVGrlkv",id:"rbutton-1-3-1"}];
  makerbutton(urls);
