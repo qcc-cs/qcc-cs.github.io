@@ -11,12 +11,12 @@
         if(ismd) {
           console.log('true');
           console.log(data);
-          $('#my-pagination-content').HTML=marked(data);
+          $('#my-pagination-content').HTML(marked(data));
         }
         else {
           console.log('false');
           console.log(data);
-          $('#my-pagination-content').HTML=data;
+          $('#my-pagination-content').HTML(data);
         }
         pane.tab('show');
       });
