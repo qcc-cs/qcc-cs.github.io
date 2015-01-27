@@ -8,14 +8,14 @@ Today, we will quickly review CS101.
 #include<iostream> 
 using namespace std; 
 int main() {
-int i,n;
-cout <<"Type an ending number which is greater than 1:";;
-cin>>n;
+  int i,n;
+  cout <<"Type an ending number which is greater than 1:";;
 //
-//  Complete.
+//
 //
 //
 return 0;
+}
 }
 ```
 <a  href="http://runnable.com/VMdcefZPp39Aqk68/cs203-review-check-1-for-c%2B%2B" target="_blank"> CODE</a>
