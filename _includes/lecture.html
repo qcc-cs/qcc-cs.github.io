@@ -5,7 +5,7 @@
       var ext=url.split('.').pop().toLowerCase();
       var ismd= true;
       if($.inArray(ext, ['md','markdown','mdown','mkdn','mkd','mdtxt','mdtext']) == -1) {ismd=false;}
-      $.post(url, function(data) {
+      $.get(url, function(data) {
         if(ismd) {
           $('#my-pagination-content').HTML=marked(data);
         }
