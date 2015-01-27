@@ -9,15 +9,18 @@
   <!-- Nav papignation-->
   <div class="text-center">
     <ul class="pagination bg-{{color}}" role="tablist" id="event-tab">
-      <li>
+      <!--<li>
         <a href="#" aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
+      -->
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
-      {% for lecture in site.data.lectures %}
+      {% assign index=0 %}
+      {% for lecture in site.data.lectures reverse %}
       {% assign parentloop=forloop %}
       {% for lec in lecture.lecs %}
+      {% assgin index={{index|plus:1}}%}
       {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
       {%if forloop.length == 1%}
       {%capture date %}{{lecture.date| date: "%b, %d" }}{% endcapture %}
@@ -25,11 +28,13 @@
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
-      <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}">
+      <!--<li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}">
         <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab">
           {{date}}
         </a>
       </li>
+      -->
+      {%if {{index | modulo:5}}==0 %}<br>{%endif%}
       {% endfor %}
       {% endfor %}
       <li>
