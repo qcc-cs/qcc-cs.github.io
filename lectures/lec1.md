@@ -45,7 +45,9 @@ int g(int n) {
 }
 ```
 <div id="rbutton1-1-2-1"></div>
+
 #### Check 3. Make above function \\( g(x)\\) without the recursion.
+
 ```c++
 #include<iostream> 
 using namespace std; 
@@ -57,7 +59,6 @@ int g(int n) {
 //
  return 0;
 }
-
 ```
 <div id="rbutton1-1-3-1"></div>
 
