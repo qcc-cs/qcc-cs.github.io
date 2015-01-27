@@ -9,3 +9,8 @@
   lecs:
     - url : lec4.md
     - url : lec5.md
+
+- date: "2015-2-5"
+  lecs:
+    - url : lec6.md
+    - url : lec7.md
