@@ -10,9 +10,11 @@
       $.get(url, function(data) {
         if(ismd) {
           $('#my-pagination-content').html(marked(data));
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
         }
         else {
           $('#my-pagination-content').html(data);
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
         }
         pane.tab('show');
       });
