@@ -4,7 +4,7 @@ Today, we will quickly review CS101.
 
 Check 1. Complete a program that prints number 1 to n.
 
-```
+```c++
 #include<iostream> 
 using namespace std; 
 int main() {
