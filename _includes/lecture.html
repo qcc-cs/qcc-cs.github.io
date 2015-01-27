@@ -1,24 +1,21 @@
+<!-- from booty http://www.bootply.com/111508 -->
 <script type="text/javascript">
-  // from booty http://www.bootply.com/111508
   $(document).ready(function() {
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
       //var href = this.hash;
       var pane = $(this);
-      // add tap-content
 
       // ajax load from data-url
-      $('#my-pagenation-content .container').load(url, function(result) {
+      $('#my-pagination-content .container').load(url, function(result) {
         pane.tab('show');
       });
     });
     // load first tab content
-    $('#my-pagenation-content .container').load($('#event-tab .active a').attr("data-url"), function(result) {
+    $('#my-pagination-content .container').load($('#event-tab .active a').attr("data-url"), function(result) {
       $('#event-tab .active a').tab('show');
     });
-
-
   });
 </script>
 <div class="tab-content">
