@@ -15,7 +15,8 @@ cin ≫n;
 //  Complete.
 //
 //
-￼￼￼￼￼￼￼￼return 0; }
+￼￼￼￼￼￼￼￼re
+turn 0; }
 
 ```
 
