@@ -13,3 +13,8 @@ http://wsnippets.com/responsive-date-pagination-ajax-mysqltwitter-bootstrap-php/
 bootstrap navbar
 
 http://www.tutorialspoint.com/bootstrap/bootstrap_navbar.htm
+
+
+dynamic pagination ajax
+
+http://botmonster.com/jquery-bootpag/#docs 
