@@ -20,7 +20,7 @@
       {% for lec in lecture.lecs %}
       {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
       {%if forloop.length == 1%}
-      {%capture date %}{{lecture.date | date: %b, %d}}{% endcapture %}
+      {%capture date %}{{lecture.date | date: "%b, %d"}}{% endcapture %}
       {%else%}
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date | date: "%b %d"}}{{ch}}{% endcapture %}
