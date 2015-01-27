@@ -18,8 +18,8 @@
         }
         if(typeof json !== 'undefined'){
           $.get(json,function(data){
-            var urls=SON && JSON.parse(json) || $.parseJSON(json); //From http://stackoverflow.com/a/4935684
-            makebutton(urls);
+            var jsonurls=SON && JSON.parse(data) || $.parseJSON(data); //From http://stackoverflow.com/a/4935684
+            makebutton(jsonurls);
           });
         }
         pane.tab('show');
