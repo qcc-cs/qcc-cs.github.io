@@ -1,21 +1,36 @@
 <!-- from booty http://www.bootply.com/111508 -->
 <script type="text/javascript">
+  function updatetap(url,pane){
+    // From http://stackoverflow.com/a/651735
+      var ext=url.split('.').pop().toLowerCase();
+      var ismd= true;
+      if($.inArray(ext, ['md','markdown','mdown','mkdn','mkd','mdtxt','mdtext']) == -1) {ismd=false;}
+      $.get(url, function(data) {
+        if(ismd) {
+          $('#my-pagination-content').inneHTML=marked(data);
+        }
+        else {
+          $('#my-pagination-content').inneHTML=data;
+        }
+        pane.tab('show');
+      });
+  }
+
   $(document).ready(function() {
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
       //var href = this.hash;
       var pane = $(this);
-      // ajax load from data-url
-      $('#my-pagination-content').load(url, function(result) {
-        pane.tab('show');
-      });
+      
+       //ajax get from data-url convert md to html
+      updatetab(url,pane);
+    
     });
     // load first tab content
-    $('#my-pagination-content').load($('#event-tab .active a').attr("data-url"), function(result) {
-      $('#event-tab .active a').tab('show');
-    });
+    updatetab($('#event-tab .active a').attr("data-url"),$('#event-tab .active a'));
   });
+
 </script>
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
