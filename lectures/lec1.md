@@ -66,5 +66,5 @@ return 0;
 }
 
 ```
-
+<a href="http://example.com/bar.html#disqus_thread">Link</a>
     
