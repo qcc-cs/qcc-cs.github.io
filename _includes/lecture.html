@@ -9,12 +9,12 @@
       if($.inArray(ext, ['md','markdown','mdown','mkdn','mkd','mdtxt','mdtext']) == -1) {ismd=false;}
       $.get(url, function(data) {
         if(ismd) {
-          console.log('true');
+          console.log('ha');
           console.log(data);
           $('#my-pagination-content').HTML(marked(data));
         }
         else {
-          console.log('false');
+          console.log('bi');
           console.log(data);
           $('#my-pagination-content').HTML(data);
         }
