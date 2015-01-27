@@ -65,6 +65,5 @@ return 0;
 }
 
 ```
-<a href="http://qcc-cs203.github.io/#disqus_thread">Link</a>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
