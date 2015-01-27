@@ -20,10 +20,10 @@
       {% for lec in lecture.lecs %}
       {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
       {%if forloop.length == 1%}
-      {%capture date %}{{lecture.date }}{% endcapture %}
+      {%capture date %}{{lecture.date| date: "%b, %d" }}{% endcapture %}
       {%else%}
       {% assign ch=char[forloop.index0]%}
-      {%capture date %}{{lecture.date}}{{ch}}{% endcapture %}
+      {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
       <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}">
         <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab">
