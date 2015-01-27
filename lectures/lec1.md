@@ -34,7 +34,7 @@ int main() {
 ####Check 2. Make a function g(n) such that
 
 $$
-g(x)=1^2+2^2+3^2+\ldots+n^2
+g(n)=1^2+2^2+3^2+\ldots+n^2
 $$
 using the recursion.
 Assume \\(n\geq1\\).
