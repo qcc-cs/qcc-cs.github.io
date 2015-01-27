@@ -37,6 +37,16 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
+      style: {
+        ".MathJax .merror": {
+    "background-color": "#FFFF88",
+    color:   inherit,
+    border:  "1px solid #CC0000",
+    padding: "1px 3px",
+    "font-style": "normal",
+    "font-size":  "90%"
+  }
+      }
       jax: ["input/TeX", "output/HTML-CSS"],
       tex2jax: {
         inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
