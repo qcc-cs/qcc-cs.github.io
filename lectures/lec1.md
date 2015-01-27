@@ -39,3 +39,16 @@ return 0;
 
 ```
 Check 3. Make above function \\( g(x)\\) without the recursion.
+```c++
+#include<iostream> 
+using namespace std; 
+int g(int n) {
+//
+//
+//  Complete.
+//
+//
+return 0;
+}
+
+```
