@@ -30,9 +30,11 @@ var Rbutton =React.createClass({
 var makerbutton=function(urls){
   for( i=0; i<urls.length;i++){
     var tryurl="http://runnable.com/"+urls[i].try;
+    console.log("try:"+tryurl);
     var ansurl="http://runnable.com/"+urls[i].ans;
+    console.log("ans:"+ansurl);
     var mybutton=<Rbutton tryurl={tryurl } ansurl={ansurl} />;
     React.render(mybutton,document.getElementById(urls[i].id));
   }
 }
-// var url=[{try:" ",ans:"",id:" "},...];
+
