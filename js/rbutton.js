@@ -15,7 +15,7 @@ var Answerbutton = React.createClass({displayName: "Answerbutton",
 var Rbutton =React.createClass({displayName: "Rbutton",
   render: function(){
     return (
-      React.createElement("div", {className: "text-center container"}, 
+      React.createElement("div", {className: "text-center row"}, 
         React.createElement(Trybutton, {tryurl: this.props.tryurl}), 
         React.createElement(Answerbutton, {ansurl: this.props.ansurl})
       )
