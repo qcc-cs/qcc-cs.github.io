@@ -8,7 +8,7 @@
       if ($.inArray(ext, ['md', 'markdown', 'mdown', 'mkdn', 'mkd', 'mdtxt', 'mdtext']) == -1) {
         ismd = false;
       }
-      console.log(url);
+ 
       $.get(url, function(data) {
         if (ismd) {
           $('#my-pagination-content').html(marked(data));
@@ -25,8 +25,10 @@
             url: json,
             data: data,
             success: function(data){
+              console.log("data:"+data);
               result=JSON.parse(data);
               makerbutton(result);
+              nsole.log("result:"+result);
             }
           });
         }
@@ -37,7 +39,6 @@
       e.preventDefault();
       var url = $(this).attr("data-url");
       var json = $(this).attr("json-url");
-      console.log("j:"+json);
       //var href = this.hash;
       var pane = $(this);
 
