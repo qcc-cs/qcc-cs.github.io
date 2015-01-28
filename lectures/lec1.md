@@ -19,7 +19,7 @@ int main() {
 }
 ```
 
-<div id="rbutton-1-1-1" class="text-justify btn-toolbar" role="toolbar"></div>
+<div id="rbutton-1-1-1"></div>
 
 ####Check 2. Make a function g(n) such that
 
@@ -41,7 +41,7 @@ int g(int n) {
 }
 ```
 
-<div id="rbutton-1-2-1" class="text-justify btn-toolbar" role="toolbar"></div>
+<div id="rbutton-1-2-1"></div>
 
 #### Check 3. Make above function \\( g(x)\\) without the recursion.
 
@@ -58,5 +58,22 @@ int g(int n) {
 }
 ```
 
-<div id="rbutton-1-3-1" class="text-justify btn-toolbar" role="toolbar"></div>
+<div id="rbutton-1-3-1"></div>
+
+#### Check 4. Print all elements of array A with the size n.
+```c++
+#include<iostream> 
+using namespace std;
+int main() {
+  int n=5;
+  int a[n]={1,3,4,5,7};
+//
+// Print all elements.
+//
+//
+//  
+  return 0;
+}
+
+```
 
