@@ -25,5 +25,10 @@ http://botmonster.com/jquery-bootpag/#docs
 
 put two buttton each side pull-left or pull-right 
 
+react jsx converter
+
+http://facebook.github.io/react/jsx-compiler.html
+
+
 http://stackoverflow.com/a/20962593
 
