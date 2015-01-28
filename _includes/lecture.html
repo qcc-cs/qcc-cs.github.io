@@ -19,7 +19,7 @@
         }
         var data;
         var result;
-        if (json !== "lectures/") {
+        if (json != "lectures/") {
           $.ajax({
             dataType: "json",
             url: json,
@@ -37,7 +37,7 @@
       e.preventDefault();
       var url = $(this).attr("data-url");
       var json = $(this).attr("json-url");
-      console.log("json-"+json);
+      console.log("j:"+json);
       //var href = this.hash;
       var pane = $(this);
 
