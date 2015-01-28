@@ -25,7 +25,7 @@
           $.ajax({
             url: json,
             dataType: "jsonp",
-            jsonpCallback: "a/b:c"
+            jsonpCallback: "a/b:c",
             success: function(data) {
               console("data:"+data);
               makerbutton(data);
