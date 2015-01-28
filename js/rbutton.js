@@ -22,7 +22,7 @@ var Rbutton =React.createClass({
     );
   }
 });
-window.makerbutton= function(urls){ //http://stackoverflow.com/a/2223341
+function makerbutton(urls){ //http://stackoverflow.com/a/2223341
   for(var i=0; i<urls.length;i++){
     var tryurl="http://runnable.com/"+urls[i].try;
     console.log("try:"+tryurl);
