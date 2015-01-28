@@ -1,45 +1,50 @@
 <!-- from booty http://www.bootply.com/111508 -->
-<script type="text/javascript">  
+<script type="text/javascript">
   $(document).ready(function() {
-    function updatetab(url,pane,json){
-    // From http://stackoverflow.com/a/651735
-      var ext=url.split('.').pop().toLowerCase();
-      var ismd= true;
-      if($.inArray(ext, ['md','markdown','mdown','mkdn','mkd','mdtxt','mdtext']) == -1) {ismd=false;}
+    function updatetab(url, pane, json) {
+      // From http://stackoverflow.com/a/651735
+      var ext = url.split('.').pop().toLowerCase();
+      var ismd = true;
+      if ($.inArray(ext, ['md', 'markdown', 'mdown', 'mkdn', 'mkd', 'mdtxt', 'mdtext']) == -1) {
+        ismd = false;
+      }
       $.get(url, function(data) {
-        if(ismd) {
+        if (ismd) {
           $('#my-pagination-content').html(marked(data));
-          MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
-        }
-        else {
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+        } else {
           $('#my-pagination-content').html(data);
-          MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
         }
-        if(json !== null){
-          $.getJSON(json,function(data){ //http://stackoverflow.com/a/22743739
-            console.log(data.data); //array form is not good for json.
-            var result=JSON.parse(data); //From http://stackoverflow.com/a/4935684
-            console.log(result.data);
-            //makerbutton(jsonurls);
+        var data;
+        var result;
+        if (json !== null) {
+          $.ajax({
+            dataType: "json",
+            url: json,
+            data: data,
+            success: function(data){
+              result=JSON.parse(data);
+              makerbutton(result);
+            }
           });
         }
       });
       pane.tab('show');
-  }
+    }
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
-      var json=$(this).attr("json-url");
+      var json = $(this).attr("json-url");
       //var href = this.hash;
       var pane = $(this);
-      
-       //ajax get from data-url convert md to html
-      updatetab(url,pane,json);
+
+      //ajax get from data-url convert md to html
+      updatetab(url, pane, json);
     });
     // load first tab content
-    updatetab($('#event-tab .active a').attr("data-url"),$('#event-tab .active a'),$('#event-tab .active a').attr("json-url"));
+    updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'), $('#event-tab .active a').attr("json-url"));
   });
-
 </script>
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
