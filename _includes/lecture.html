@@ -16,7 +16,6 @@
         } else {
           $('#my-pagination-content').html(data);
           MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
-          makerbutton(lecbuttons);
         }
         
         /*
@@ -34,6 +33,7 @@
           })
         }*/
       });
+      window.makerbutton(lecbuttons);
       pane.tab('show');
     }
     $('#event-tab a').click(function(e) {
