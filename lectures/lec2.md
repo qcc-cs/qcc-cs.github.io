@@ -19,6 +19,7 @@ Two good references
 [** Try git **](https://try.github.io/levels/1/challenges/1)
 
 [** Git tutorial 101 **](https://www.atlassian.com/git/)
+![Main components](https://www.atlassian.com/git/images/tutorials/advanced/resetting-checking-out-and-reverting/01.svg)
 
 ```
 git init
@@ -28,9 +29,7 @@ git init
 git status
 ```
 
-```
-git commit -m " Your message"
-```
+
 
 ```
 git remote add [remote name] [remote url]
@@ -42,6 +41,10 @@ git remote -v
 [Adding a remote](https://help.github.com/articles/adding-a-remote/)
 
 ```
+git commit -m " Your message"
+```
+
+```
 git push -u [remote name] [branch]
 
 git push -u origin master
@@ -50,6 +53,8 @@ git push -u origin master
 
 [Pusing to a remote](https://help.github.com/articles/pushing-to-a-remote/)
 ![Before/After pushing](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/04.svg)
+
+
 
 ```
 git pull origin master
@@ -72,14 +77,37 @@ Assume new commits in master is mine.
 ![Rebase](https://www.atlassian.com/git/images/tutorials/getting-started/rewriting-history/02.svg)
 
 
-```
-git diff [pointer]
-```
+#### Centralized Workflow
+![Centralized](https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/centralized-workflow/01.svg)
 
-### Forking -official and others 
+#### Forking -official and others 
 ![Foking](https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/01.svg)
-
+![project maintaining](https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/07.svg)
 #### [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
  Requesting that another developer (e.g., the project maintainer) pulls a branch from your repository into their repository.
 
+#### [branching](https://www.atlassian.com/git/tutorials/using-branches)
 
+
+#### [reset/checkout/revert](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+
+Reset: **Remove** commits from the current branch.
+![Reset](https://www.atlassian.com/git/images/tutorials/advanced/resetting-checking-out-and-reverting/02.svg)
+
+```
+git reset HEAD-2  //Backwards by two commits.(Change the satage).
+```
+Checkout: Change the branches/ Change the Head.
+![Checkout](https://www.atlassian.com/git/images/tutorials/advanced/resetting-checking-out-and-reverting/05.svg)
+
+```
+git checkout [branch] 
+git checkout HEAD-2  //(Change the working). If you want to change, make a new branch.
+```
+Revert:  Undo a commit by creating a new commit.
+![Revert](https://www.atlassian.com/git/images/tutorials/advanced/resetting-checking-out-and-reverting/06.svg)
+
+```
+git checkout HEAD-2   // alter the existing commit history
+```
+<table data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2"><thead data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0"><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0"><th data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0.0"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0.0.0">Command</span></th><th data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0.1.0">Scope</span></th><th data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.0.0.2.0">Common use cases</span></th></tr></thead><thead data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1"><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0"><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0.0"><code data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0.0.0">git reset</code></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0.1.0">Commit-level</span></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.0.2.0">Discard commits in a private branch or throw away uncommited changes</span></td></tr><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1"><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1.0"><code data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1.0.0">git reset</code></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1.1.0">File-level</span></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.1.2.0">Unstage a file</span></td></tr><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2"><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2.0"><code data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2.0.0">git checkout</code></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2.1.0">Commit-level</span></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.2.2.0">Switch between branches or inspect old snapshots</span></td></tr><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3"><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3.0"><code data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3.0.0">git checkout</code></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3.1.0">File-level</span></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.3.2.0">Discard changes in the working directory</span></td></tr><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4"><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4.0"><code data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4.0.0">git revert</code></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4.1.0">Commit-level</span></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.4.2.0">Undo commits in a public branch</span></td></tr><tr data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5"><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5.0"><code data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5.0.0">git revert</code></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5.1"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5.1.0">File-level</span></td><td data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5.2"><span data-reactid=".0.4.0.0.$=1$tutorials:0.$=1$/git/tutorials/resetting-checking-out-and-reverting:0.0.1.0.0.3.1:2.1.5.2.0">(N/A)</span></td></tr></thead></table>
