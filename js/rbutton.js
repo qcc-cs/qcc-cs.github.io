@@ -1,4 +1,4 @@
-vvar Trybutton = React.createClass({displayName: "Trybutton",
+var Trybutton = React.createClass({displayName: "Trybutton",
   render: function(){
     return (
         React.createElement("a", {className: "btn btn-info pull-left", href: this.props.tryurl, target: "_blank"}, " TRY FIRST.")
