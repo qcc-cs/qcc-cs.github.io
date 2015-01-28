@@ -4,17 +4,11 @@
   </div>
 </div>
 <script>
-// $(document).ready(function() {
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
-      //var href = this.hash;
       var pane = $(this);
-
-    
       updatetab(url, pane);
     });
-    // load first tab content
-     updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
- // });
+    updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
 </script> 
