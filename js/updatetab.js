@@ -30,6 +30,9 @@ function updatetab(url, pane, json) {
           })
         }*/
       });
-      makerbutton(lecbuttons);
+      if (json !== "lectures/") {
+            console("run makerbutton");
+            makerbutton(lecbuttons);
+      }
       pane.tab('show');
     }
