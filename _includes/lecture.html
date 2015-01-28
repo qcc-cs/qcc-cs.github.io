@@ -34,10 +34,10 @@
       var pane = $(this);
       
        //ajax get from data-url convert md to html
-      updatetab(url,json,pane);
+      updatetab(url,pane,json);
     });
     // load first tab content
-    updatetab($('#event-tab .active a').attr("data-url"),$('#event-tab .active a').attr("json-url"),$('#event-tab .active a'));
+    updatetab($('#event-tab .active a').attr("data-url"),$('#event-tab .active a'),$('#event-tab .active a').attr("json-url"));
   });
 
 </script>
