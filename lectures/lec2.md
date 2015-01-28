@@ -14,9 +14,12 @@ We will use 3 separate websites for this course. You need to sign-up using your 
 * [**http://www.github.com**](http://www.github.com) - Source management system for projects.
   
 #### Git introduction
+Two good references
 
 [** Try git **](https://try.github.io/levels/1/challenges/1)
+
 [** Git tutorial 101 **](https://www.atlassian.com/git/)
+
 ```
 git init
 ```
@@ -43,24 +46,40 @@ git push -u [remote name] [branch]
 
 git push -u origin master
 ```
-[Pusing to a remote](https://help.github.com/articles/pushing-to-a-remote/)
+**-u** option automatically sets uo tracking between local and remote branch. [Ref](http://mislav.uniqpath.com/2010/07/git-tips/)
 
+[Pusing to a remote](https://help.github.com/articles/pushing-to-a-remote/)
+![Before pushing](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/04.svg)
+![After pushing](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/04.svg)
 ```
 git pull origin master
 ```
-##### pull=fetch( Get all of branches from the repository) + merge
+#### pull=fetch( Get all of branches from the repository) + [merge](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
+
 [**Pull**](https://www.atlassian.com/git/tutorials/syncing/git-pull)
 ![EX](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/02.svg)
 
+####Conflicts in merging
+
+[Before Merging](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/08.svg)
+** 3-way-merge**:the two branch tips and their common ancestor.
+[After Merging](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/08.svg)
+
 [Merge vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/)
+Assume new commits in master is mine.
 ![Merge/Rebasing](https://www.atlassian.com/git/images/tutorials/advanced/merging-vs-rebasing/01.svg)
 
+![Rebase](https://www.atlassian.com/git/images/tutorials/getting-started/rewriting-history/02.svg)
 
 
 ```
 git diff [pointer]
 ```
 
+### Forking -official and others 
+![Foking](https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/01.svg)
 
+#### [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request)
+ Requesting that another developer (e.g., the project maintainer) pulls a branch from your repository into their repository.
 
 
