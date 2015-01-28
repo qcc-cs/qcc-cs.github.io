@@ -1,14 +1,14 @@
 var Trybutton = React.createClass({displayName: "Trybutton",
   render: function(){
     return (
-        React.createElement("a", {className: "btn btn-info pull-left", href: this.props.tryurl, target: "_blank"}, " TRY FIRST.")
+        React.createElement("a", {className: "btn btn-info pull-left", href: this.props.tryurl, target: "_blank"}, "TRY.")
     );
   }
 });
 var Answerbutton = React.createClass({displayName: "Answerbutton",
   render: function(){
     return (
-        React.createElement("a", {className: "btn btn-success pull-right", href: this.props.ansurl, target: "_blank"}, " SAMPLE ANSWER.")
+        React.createElement("a", {className: "btn btn-success pull-right", href: this.props.ansurl, target: "_blank"}, "ANSWER.")
     );
   }
 });
