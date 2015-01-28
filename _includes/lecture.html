@@ -17,7 +17,7 @@
         }
         if(json !== null){
           $.getJSON(json,function(data){
-            console(data);
+            console.log(data);
             var jsonurls=JSON.parse(data); //From http://stackoverflow.com/a/4935684
             console.log(jsonurls);
             makerbutton(jsonurls);
