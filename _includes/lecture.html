@@ -22,7 +22,7 @@
         console.log("json1:"+json);
         if (json !== "lectures/") {
           console.log("json2:"+json);
-          $.getJSON(json,function(data){
+          $.getJSON(json,function(data){ //http://www.danielx.net/gh-pages-jsonp
               console.log("data:"+data);
               result=JSON.parse(data);
               makerbutton(result);
