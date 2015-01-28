@@ -31,7 +31,7 @@ function updatetab(url, pane, json) {
         }*/
       });
       if (json !== "lectures/") {
-            console("run makerbutton");
+            console.log("run makerbutton");
             makerbutton(lecbuttons);
       }
       pane.tab('show');
