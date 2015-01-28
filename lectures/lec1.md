@@ -19,7 +19,7 @@ int main() {
 }
 ```
 
-<div id="rbutton-1-1-1"></div>
+<div id="rbutton-1-1-1" class="text-center"></div>
 
 ####Check 2. Make a function g(n) such that
 
