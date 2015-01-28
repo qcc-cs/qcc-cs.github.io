@@ -29,15 +29,15 @@ function makerbutton(){ //http://stackoverflow.com/a/2223341
   //http://stackoverflow.com/a/5181740
   //http://www.sitepoint.com/jquery-each-examples/
   //http://stackoverflow.com/a/7364307
-  var id,try,ans,tryurl,ansurl;
+  var id,tryurl,ansurl;
   $('#my-pagination-content [id^="rbutton-"]').each(
     function(index1, value1) {
       id = $(this).attr("id");
-      try= $(this).attr("data-try");
-      ans= $(this).attr("data-ans");
-        tryurl = "http://runnable.com/" + try;
+      tryurl= $(this).attr("data-try");
+      ansurl= $(this).attr("data-ans");
+        tryurl = "http://runnable.com/" + tryurl;
         console.log("try:" + tryurl);
-        ansurl = "http://runnable.com/" + ans;
+        ansurl = "http://runnable.com/" + ansurl;
         console.log("ans:" + ansurl);
         var mybutton = < Rbutton tryurl = {tryurl} ansurl = {ansurl}/>;
         React.render(mybutton, document.getElementById(id))
