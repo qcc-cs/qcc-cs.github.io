@@ -11,8 +11,12 @@ function updatetab(url, pane, json) {
           $('#my-pagination-content').html(marked(data));
           MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
         } else {
-          $('#my-pagination-content').html(data);
-          MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+            $('#my-pagination-content').html(data);
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+            if (json !== "lectures/") {
+                  console.log("run makerbutton");
+                  makerbutton(lecbuttons);
+            }
         }
         
         /*
@@ -30,10 +34,7 @@ function updatetab(url, pane, json) {
           })
         }*/
       });
-      if (json !== "lectures/") {
-            console.log("run makerbutton");
-            makerbutton(lecbuttons);
-      }
+
       pane.tab('show');
 }
 
