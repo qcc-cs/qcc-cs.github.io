@@ -19,7 +19,7 @@ int main() {
 }
 ```
 
-<div id="rbutton1-1-1-1"></div>
+<div id="rbutton-1-1-1"></div>
 
 ####Check 2. Make a function g(n) such that
 
@@ -41,7 +41,7 @@ int g(int n) {
 }
 ```
 
-<div id="rbutton1-1-2-1"></div>
+<div id="rbutton-1-2-1"></div>
 
 #### Check 3. Make above function \\( g(x)\\) without the recursion.
 
@@ -58,5 +58,5 @@ int g(int n) {
 }
 ```
 
-<div id="rbutton1-1-3-1"></div>
+<div id="rbutton-1-3-1"></div>
 
