@@ -1,21 +1,21 @@
-var Trybutton = React.createClass({displayName: "Trybutton",
+vvar Trybutton = React.createClass({displayName: "Trybutton",
   render: function(){
     return (
-        React.createElement("a", {role: "button", classMame: "btn btn-default bg-purple", href: this.props.tryurl, target: "_blank"}, " TRY FIRST.")
+        React.createElement("a", {className: "btn btn-info pull-left", href: this.props.tryurl, target: "_blank"}, " TRY FIRST.")
     );
   }
 });
 var Answerbutton = React.createClass({displayName: "Answerbutton",
   render: function(){
     return (
-        React.createElement("a", {role: "button", clasNname: "btn btn-default bg-blue", href: this.props.ansurl, target: "_blank"}, " SAMPLE ANSWER.")
+        React.createElement("a", {className: "btn btn-success pull-right", href: this.props.ansurl, target: "_blank"}, " SAMPLE ANSWER.")
     );
   }
 });
 var Rbutton =React.createClass({displayName: "Rbutton",
   render: function(){
     return (
-      React.createElement("div", {className: "btn-group btn-group-justified", role: "group", "aria-label": "..."}, 
+      React.createElement("div", {className: "text-center container"}, 
         React.createElement(Trybutton, {tryurl: this.props.tryurl}), 
         React.createElement(Answerbutton, {ansurl: this.props.ansurl})
       )
