@@ -23,13 +23,37 @@ var Rbutton =React.createClass({
   }
 });
 function makerbutton(urls){ //http://stackoverflow.com/a/2223341
-  for(var i=0; i<urls.length;i++){
-    var tryurl="http://runnable.com/"+urls[i].try;
-    console.log("try:"+tryurl);
-    var ansurl="http://runnable.com/"+urls[i].ans;
-    console.log("ans:"+ansurl);
-    var mybutton=<Rbutton tryurl={tryurl} ansurl={ansurl} />;
-    React.render(mybutton,document.getElementById(urls[i].id));
-  }
+  //rbutton-1-3-1
+  //http://stackoverflow.com/a/5616842
+  //http://stackoverflow.com/a/3239600
+  //http://stackoverflow.com/a/5181740
+  //http://www.sitepoint.com/jquery-each-examples/
+  //http://stackoverflow.com/a/7364307
+  $('#my-pagination-content [id^="rbutton-"]').each(
+    function(index1, value1) {
+      myid = $(this).attr("id");
+      result = $.grep(lecbuttons, function(e) {
+        return e.id === myid;
+      });
+      if (result.length == 0) {
+        console.log("No match");
+      } else if (result.length == 1) {
+        var tryurl = "http://runnable.com/" + result.try;
+        console.log("try:" + tryurl);
+        var ansurl = "http://runnable.com/" + result.ans;
+        console.log("ans:" + ansurl);
+        var mybutton = < Rbutton tryurl = {
+          tryurl
+        }
+        ansurl = {
+          ansurl
+        }
+        />;
+        React.render(mybutton, document.getElementById(result.id));
+      } else {
+        console.log("Mutiple matches.");
+      }
+    }
+  );
 }
 
