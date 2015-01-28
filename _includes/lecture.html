@@ -19,8 +19,9 @@
         }
         var data;
         var result;
-        console.log("json:"=json);
+        console.log("json1:"+json);
         if (json !== "lectures/") {
+          console.log("json2:"+json);
           $.ajax({
             dataType: "json",
             url: json,
