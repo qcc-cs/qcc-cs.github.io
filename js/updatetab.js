@@ -15,8 +15,9 @@ function updatetab(url, pane) {
             }
             console.log('makerbutton');
             makerbutton(); //Update buttons.
+            pane.tab('show');
       }
-      pane.tab('show');
+      
 }
 
 
