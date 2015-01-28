@@ -32,3 +32,7 @@ http://facebook.github.io/react/jsx-compiler.html
 
 http://stackoverflow.com/a/20962593
 
+good layout
+
+http://stackoverflow.com/a/19929843
+
