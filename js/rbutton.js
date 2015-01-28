@@ -22,8 +22,7 @@ var Rbutton =React.createClass({
     );
   }
 });
-
-var makerbutton=function(urls){
+function makerbutton(urls){ 
   for(var i=0; i<urls.length;i++){
     var tryurl="http://runnable.com/"+urls[i].try;
     console.log("try:"+tryurl);
