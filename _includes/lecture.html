@@ -22,17 +22,13 @@
         console.log("json1:"+json);
         if (json !== "lectures/") {
           console.log("json2:"+json);
-          $.ajax({
-            dataType: "json",
-            url: json,
-            data: data,
-            success: function(data){
+          $.getJSON(json,function(data){
               console.log("data:"+data);
               result=JSON.parse(data);
               makerbutton(result);
-              nsole.log("result:"+result);
+              console.log("result:"+result);
             }
-          });
+          );
         }
       });
       pane.tab('show');
