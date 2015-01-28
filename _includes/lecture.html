@@ -18,7 +18,7 @@
         if(json !== null){
           console.log(json);
           $.getJSON(json,function(data){
-            var jsonurls=JSON && JSON.parse(data) || $.parseJSON(data); //From http://stackoverflow.com/a/4935684
+            var jsonurls=$.parseJSON(data); //From http://stackoverflow.com/a/4935684
             console.log(jsonurls);
             makerbutton(jsonurls);
           });
