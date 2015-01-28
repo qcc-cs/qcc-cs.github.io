@@ -1,14 +1,14 @@
 var Trybutton = React.createClass({
   render: function(){
     return (
-        <a  className="btn btn-info pull-left"   href={this.props.tryurl}  target="_blank"> TRY FIRST.</a>
+        <a  className="btn btn-info pull-left"   href={this.props.tryurl}  target="_blank">TRY.</a>
     );
   }
 });
 var Answerbutton = React.createClass({
   render: function(){
     return (
-        <a   className="btn btn-success pull-right"   href={this.props.ansurl} target="_blank"> SAMPLE ANSWER.</a>
+        <a   className="btn btn-success pull-right"   href={this.props.ansurl} target="_blank">ANSWER</a>
     );
   }
 });
