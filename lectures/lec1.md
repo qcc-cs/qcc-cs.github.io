@@ -60,15 +60,16 @@ int g(int n) {
 
 <div id="rbutton-1-3-1"></div>
 
-#### Check 4. Print all elements of array A with the size n.
+#### Check 4. Get n inputs (assume integers) and store them into an array. Calculate the average.
 ```c++
 #include<iostream> 
 using namespace std;
 int main() {
-  int n=5;
-  int a[n]={1,3,4,5,7};
+  int n=0;
+  cout<<"Type the number of items:";
+  cin>>n;
 //
-// Print all elements.
+// 
 //
 //
 //  
