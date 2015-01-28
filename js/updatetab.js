@@ -36,7 +36,7 @@ function updatetab(url, pane, json) {
       }
       pane.tab('show');
 }
- $(document).ready(function() {
+// $(document).ready(function() {
     $('#event-tab a').click(function(e) {
       e.preventDefault();
       var url = $(this).attr("data-url");
@@ -49,5 +49,5 @@ function updatetab(url, pane, json) {
     });
     // load first tab content
     updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'), $('#event-tab .active a').attr("json-url"));
-  });
+ // });
 
