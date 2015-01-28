@@ -17,8 +17,6 @@
         </a>
        -->  
       </li>
-     
-    
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign index=0 %}
       {% for lecture in site.data.lectures reverse %}
@@ -36,10 +34,9 @@
           {{date}}
         </a>
       </li>
-      {% cycle '','','','<br>'%}
+      {% cycle '','','','','<br>'%}
       {% endfor %}
       {% endfor %}
-      
       <li>
       <!--
         <a href="#" aria-label="Next">
