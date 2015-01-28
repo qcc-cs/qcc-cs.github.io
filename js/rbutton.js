@@ -29,31 +29,18 @@ function makerbutton(){ //http://stackoverflow.com/a/2223341
   //http://stackoverflow.com/a/5181740
   //http://www.sitepoint.com/jquery-each-examples/
   //http://stackoverflow.com/a/7364307
-  var urls=lecbuttons;
+  var id,tryurl,ansurl;
   $('#my-pagination-content [id^="rbutton-"]').each(
     function(index1, value1) {
-      myid = $(this).attr("id");
-      result = $.grep(lecbuttons, function(e) {
-        return e.id === myid;
-      });
-      if (result.length == 0) {
-        console.log("No match");
-      } else if (result.length == 1) {
-        var tryurl = "http://runnable.com/" + result.try;
+      id = $(this).attr("id");
+      tryurl= $(this).attr("data-try");
+      ansurl= $(this).attr("data-ans");
+        tryurl = "http://runnable.com/" + tryurl;
         console.log("try:" + tryurl);
-        var ansurl = "http://runnable.com/" + result.ans;
+        ansurl = "http://runnable.com/" + ansurl;
         console.log("ans:" + ansurl);
-        var mybutton = React.createElement(Rbutton, {tryurl: 
-          tryurl, 
-        
-        ansurl: 
-          ansurl
-        }
-        );
-        React.render(mybutton, document.getElementById(result.id));
-      } else {
-        console.log("Mutiple matches.");
-      }
+        var mybutton = React.createElement(Rbutton, {tryurl: tryurl, ansurl: ansurl});
+        React.render(mybutton, document.getElementById(id))
     }
   );
 }
