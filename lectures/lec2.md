@@ -48,9 +48,14 @@ git push -u origin master
 ```
 git pull origin master
 ```
-##### pull=fetch( Get all of branches from the repository) + merge(
-[**Pull**]()
-[EX](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/02.svg)
+##### pull=fetch( Get all of branches from the repository) + merge
+[**Pull**](https://www.atlassian.com/git/tutorials/syncing/git-pull)
+![EX](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/02.svg)
+
+[Merge vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/)
+![Merge/Rebasing](https://www.atlassian.com/git/images/tutorials/advanced/merging-vs-rebasing/01.svg)
+
+
 
 ```
 git diff [pointer]
