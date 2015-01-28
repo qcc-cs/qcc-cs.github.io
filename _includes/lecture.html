@@ -18,8 +18,8 @@
         if(json !== null){
           $.getJSON(json,function(data){ //http://stackoverflow.com/a/22743739
             console.log(data.data); //array form is not good for json.
-            //var result=JSON.parse(data); //From http://stackoverflow.com/a/4935684
-            //console.log(jsonurls);
+            var result=JSON.parse(data); //From http://stackoverflow.com/a/4935684
+            console.log(result.data);
             //makerbutton(jsonurls);
           });
         }
