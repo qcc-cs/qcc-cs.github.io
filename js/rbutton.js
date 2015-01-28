@@ -21,7 +21,7 @@ var Rbutton =React.createClass({
     return (
       <div classname="btn-r" class="btn-group btn-group-justified" role="group" aria-label="...">
         <Trybutton tryurl={this.props.tryurl}/>
-        <Answerbutton ansurl={this.pros.ansurl}/>
+        <Answerbutton ansurl={this.props.ansurl}/>
       </div>
     );
   }
