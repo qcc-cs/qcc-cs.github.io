@@ -13,6 +13,7 @@ function updatetab(url, pane) {
                   $('#my-pagination-content').html(data);
                   MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
             }
+            console.log('makerbutton');
             makerbutton(); //Update buttons.
       }
       pane.tab('show');
