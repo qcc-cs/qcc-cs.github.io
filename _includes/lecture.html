@@ -22,13 +22,15 @@
         console.log("json1:"+json);
         if (json !== "lectures/") {
           console.log("json2:"+json);
-          $.getJSON(json,function(data){ //http://www.danielx.net/gh-pages-jsonp
-              console.log("data:"+data);
-              result=JSON.parse(data);
-              makerbutton(result);
-              console.log("result:"+result);
+          $.ajax({
+            url: json,
+            dataType: "jsonp",
+            jsonpCallback: "a/b:c"
+            success: function(data) {
+              console("data:"+data);
+              makerbutton(data);
             }
-          );
+          })
         }
       });
       pane.tab('show');
