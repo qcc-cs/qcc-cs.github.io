@@ -49,21 +49,21 @@ git push -u origin master
 **-u** option automatically sets uo tracking between local and remote branch. [Ref](http://mislav.uniqpath.com/2010/07/git-tips/)
 
 [Pusing to a remote](https://help.github.com/articles/pushing-to-a-remote/)
-![Before pushing](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/04.svg)
-![After pushing](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/04.svg)
+![Before/After pushing](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/04.svg)
+
 ```
 git pull origin master
 ```
 #### pull=fetch( Get all of branches from the repository) + [merge](https://www.atlassian.com/git/tutorials/using-branches/git-checkout)
 
 [**Pull**](https://www.atlassian.com/git/tutorials/syncing/git-pull)
-![EX](https://www.atlassian.com/git/images/tutorials/collaborating/syncing/02.svg)
+
 
 ####Conflicts in merging
 
-[Before Merging](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/08.svg)
+![Before/After Merging](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/08.svg)
 ** 3-way-merge**:the two branch tips and their common ancestor.
-[After Merging](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/08.svg)
+
 
 [Merge vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/)
 Assume new commits in master is mine.
