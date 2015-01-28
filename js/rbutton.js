@@ -28,7 +28,7 @@ var Rbutton =React.createClass({
 });
 
 var makerbutton=function(urls){
-  for( i=0; i<urls.length;i++){
+  for(var i=0; i<urls.length;i++){
     var tryurl="http://runnable.com/"+urls[i].try;
     console.log("try:"+tryurl);
     var ansurl="http://runnable.com/"+urls[i].ans;
