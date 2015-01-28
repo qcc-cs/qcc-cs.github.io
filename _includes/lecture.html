@@ -6,7 +6,7 @@
       var ext=url.split('.').pop().toLowerCase();
       var ismd= true;
       if($.inArray(ext, ['md','markdown','mdown','mkdn','mkd','mdtxt','mdtext']) == -1) {ismd=false;}
-      $.getJSON(url, function(data) {
+      $.get(url, function(data) {
         if(ismd) {
           $('#my-pagination-content').html(marked(data));
           MathJax.Hub.Queue(["Typeset",MathJax.Hub,"my-pagination-content"]);
@@ -17,7 +17,7 @@
         }
         if(json !== null){
           console.log(json);
-          $.get(json,function(data){
+          $.getJSON(json,function(data){
             var jsonurls=JSON && JSON.parse(data) || $.parseJSON(data); //From http://stackoverflow.com/a/4935684
             console.log(jsonurls);
             makerbutton(jsonurls);
