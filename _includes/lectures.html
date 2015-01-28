@@ -32,7 +32,7 @@
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
       <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%} col-md-2">
-        <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" json-url="{{lecfolder}}{{lec.json}}" data-toggle="tab">
+        <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab">
           {{date}}
         </a>
       </li>
