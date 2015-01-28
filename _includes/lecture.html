@@ -16,9 +16,9 @@
         } else {
           $('#my-pagination-content').html(data);
           MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+          makerbutton(lecbuttons);
         }
-        var data;
-        var result;
+        
         /*
         console.log("json1:"+json);
         if (json !== "lectures/") {
