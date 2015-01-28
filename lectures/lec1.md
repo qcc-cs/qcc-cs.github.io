@@ -19,7 +19,7 @@ int main() {
 }
 ```
 
-<div id="rbutton-1-1-1"></div>
+<div id="rbutton-1-1-1" data-try="VMdcefZPp39Aqk68" data-ans="VMdhBgwrvLI4e1VA"></div>
 
 ####Check 2. Make a function g(n) such that
 
@@ -41,7 +41,7 @@ int g(int n) {
 }
 ```
 
-<div id="rbutton-1-2-1"></div>
+<div id="rbutton-1-2-1" data-try="VMfUxbSaqhl5tXMJ" data-ans="VMgN7HnnkR5Nl7fs"></div>
 
 #### Check 3. Make above function \\( g(x)\\) without the recursion.
 
@@ -58,7 +58,7 @@ int g(int n) {
 }
 ```
 
-<div id="rbutton-1-3-1"></div>
+<div id="rbutton-1-3-1" data-try="VMgPIoFjlw9TxK4a" data-ans="VMgPuRaubcVGrlkv"></div>
 
 #### Check 4. Get n inputs (assume integers) and store them into an array. Calculate the average.
 ```c++
@@ -77,4 +77,4 @@ int main() {
 }
 
 ```
-<div id="rbutton-1-4-1"></div>
+<div id="rbutton-1-4-1" data-try="VMiH5eFcLRURBt4" data-ans="VMiMMVPay30V5EZQ"></div>
