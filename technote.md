@@ -22,3 +22,8 @@ http://www.tutorialspoint.com/bootstrap/bootstrap_navbar.htm
 dynamic pagination 
 
 http://botmonster.com/jquery-bootpag/#docs 
+
+put two buttton each side pull-left or pull-right 
+
+http://stackoverflow.com/a/20962593
+
