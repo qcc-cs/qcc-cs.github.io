@@ -19,7 +19,7 @@
         }
         var data;
         var result;
-        if (json !== null) {
+        if (typeof json !== "undefined") {
           $.ajax({
             dataType: "json",
             url: json,
