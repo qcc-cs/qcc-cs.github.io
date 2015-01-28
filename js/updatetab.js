@@ -7,18 +7,17 @@ function updatetab(url, pane, json) {
       }
  
       $.get(url, function(data) {
-        if (ismd) {
-          $('#my-pagination-content').html(marked(data));
-          MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
-        } else {
-            $('#my-pagination-content').html(data);
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+            if (ismd) {
+                  $('#my-pagination-content').html(marked(data));
+                  MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+            } else {
+                  $('#my-pagination-content').html(data);
+                  MathJax.Hub.Queue(["Typeset", MathJax.Hub, "my-pagination-content"]);
+            }
             if (json !== "lectures/") {
                   console.log("run makerbutton");
                   makerbutton(lecbuttons);
             }
-        }
-        
         /*
         console.log("json1:"+json);
         if (json !== "lectures/") {
