@@ -7,7 +7,7 @@
 </style>
 <div role="tabpanel">
   <!-- Nav papignation-->
-  <div class="text-center">
+  <nav class="text-center">
       <ul role="tablist" id="event-tab" class=" pagination pagination-sm" > <!--http://stackoverflow.com/a/19777253  -->
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign i=0 %}
@@ -31,7 +31,7 @@
       {% endfor %}
       {% endfor %}
       </ul>
-  </div>
+  </nav>
   <!-- Tab panes -->
   {%include lecture.html%}
 </div>
