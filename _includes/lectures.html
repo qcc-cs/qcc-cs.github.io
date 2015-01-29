@@ -28,7 +28,7 @@
         </li>
       {%if index==0%}</ul>{%endif%}
       {%assign index={{ index | plus: 1 }}%}
-      {%if {{ index | modulo: 5 }}%}{%assign index=0%}{%endif}
+      {%if {{ index | modulo: 5 }}%}{%assign index=0%}{%endif%}
       {% endfor %}
       {% endfor %}
     
