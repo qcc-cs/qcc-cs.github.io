@@ -21,7 +21,7 @@
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
       {%if index == 0%}<ul class="list-unstyled">{%endif%} <!--http://stackoverflow.com/a/19777253  -->
-        <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%} col-sx-2 col-md-2">
+        <li role="presentation" class="{%if btn btn-default parentloop.first and forloop.first %}active{%endif%} col-sx-2 col-md-2">
           <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab">
             {{date}}
           </a>
@@ -29,6 +29,7 @@
       {%if index==0%}</ul>{%endif%}
       {%capture index%}{{ index | plus: 1 }}{%endcapture%}
       {%capture quo%}{{ index | modulo: 5 }}{%endcapture%}
+      quo={{quo}}
       {%if quo==0%}{%assign index=0%}{%endif%}
       {% endfor %}
       {% endfor %}
