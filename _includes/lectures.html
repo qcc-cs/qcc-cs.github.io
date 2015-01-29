@@ -7,7 +7,8 @@
 </style>
 <div role="tabpanel">
   <!-- Nav papignation-->
-  <div class="text-center" role="tablist" id="event-tab" class="bg-{{color}} pagination" >
+  <div class="text-center">
+      <ul role="tablist" id="event-tab" class="bg-{{color}} pagination" > <!--http://stackoverflow.com/a/19777253  -->
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign i=0 %}
       {% for lecture in site.data.lectures reverse %}
@@ -20,19 +21,19 @@
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
-      {%if i== 0%}<ul>{%endif%} <!--http://stackoverflow.com/a/19777253  -->
+      
         <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%} btn btn-success   col-sx-2 col-md-2">
           <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab">
             {{date}}
           </a>
         </li>
-      {%if i==0%}</ul>{%endif%}
+      
       {%capture i%}{{ i | plus: 1 }}{%endcapture%}
       i={{i}}
       {%if i==5%}{%assign i=0%}{%endif%}
       {% endfor %}
       {% endfor %}
-    
+      </ul>
   </div>
   <!-- Tab panes -->
   {%include lecture.html%}
