@@ -128,7 +128,7 @@ hr {
   padding-left:10px;
 }
 /* kwang-end */	
-nav {
+nav .top{  /*KWANG .top*/
   font-size:15px;
   width:100%;
   position:fixed;
