@@ -28,8 +28,9 @@
           </a>
         </li>
       {%capture i%}{{ i | plus: 1 }}{%endcapture%}
-      {%if i==5%}{%assign i=0%}{%endif%}
+      {%if i==5%}{%break%}{%endif%}
       {% endfor %}
+      {%if i==5%}{%break%}{%endif%}
       {% endfor %}
       </ul>
   </div>
