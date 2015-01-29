@@ -128,7 +128,7 @@ hr {
   padding-left:10px;
 }
 /* kwang-end */	
-nav .top{  /*KWANG .top*/
+nav {
   font-size:15px;
   width:100%;
   position:fixed;
@@ -138,7 +138,7 @@ nav .top{  /*KWANG .top*/
   background:#2e2e2e;
 }
 
-nav ul .top { /*KWANG .top*/
+nav ul {
   list-style:none;
   text-align:center;
   padding:0;
@@ -146,7 +146,7 @@ nav ul .top { /*KWANG .top*/
   letter-spacing:-4px;
 }
 
-nav ul li .top { /*KWANG .top*/
+nav ul li {
   display:inline-block;
   border-top:{{navborder}}px solid;
   padding: {{navborder}}px 0;
@@ -160,7 +160,7 @@ nav ul li .top { /*KWANG .top*/
   margin:0;
 }
 
-nav ul li a, nav ul li a:visited .top{ /*KWANG .top*/
+nav ul li a, nav ul li a:visited {
   display:block;
   color:#fff;
   text-decoration:none;
@@ -168,10 +168,10 @@ nav ul li a, nav ul li a:visited .top{ /*KWANG .top*/
   opacity:.75;
 }
 
-nav ul li a:hover .top { /*KWANG .top*/
+nav ul li a:hover {
   opacity:1
 }
-nav ul li:hover, nav ul li.active .top {/*KWANG .top*/
+nav ul li:hover, nav ul li.active {
   border-top-width: {{navborder_active}}px;
   padding-top: 0;
 }
