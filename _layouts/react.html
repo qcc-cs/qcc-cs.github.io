@@ -27,13 +27,13 @@
 <body>
   <div id="main">
     <nav class="top">
-      <ul class="text-left inlineblock">
-        <li id="committee-name" class="toptitle">{{site.course.semester}}<br>{{site.course.short}}</li>
+      <ul class="top text-left inlineblock">
+        <li id="committee-name" class="top toptitle">{{site.course.semester}}<br>{{site.course.short}}</li>
       </ul>
-      <ul class="inlineblock">
+      <ul class="inlineblock top">
         {% for node in site.posts reversed %}
          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-         <li class="p-{{id}} text-center"><a class="navscroller" href="#{{id}}">{{node.title}}</a></li>
+         <li class="top p-{{id}} text-center"><a class="top navscroller" href="#{{id}}">{{node.title}}</a></li>
         {% endfor %}
       </ul>
     </nav>
