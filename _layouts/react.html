@@ -26,14 +26,14 @@
 </head>
 <body>
   <div id="main">
-    <nav class="top">
-      <ul class="text-left inlineblock top">
-        <li id="committee-name" class="toptitle top">{{site.course.semester}}<br>{{site.course.short}}</li>
+    <nav class="">
+      <ul class="text-left inlineblock ">
+        <li id="committee-name" class="toptitle ">{{site.course.semester}}<br>{{site.course.short}}</li>
       </ul>
-      <ul class="inlineblock top">
+      <ul class="inlineblock ">
         {% for node in site.posts reversed %}
          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-         <li class="tp-{{id}} text-center top"><a class="navscroller top" href="#{{id}}">{{node.title}}</a></li>
+         <li class="tp-{{id}} text-center "><a class="navscroller" href="#{{id}}">{{node.title}}</a></li>
         {% endfor %}
       </ul>
     </nav>
