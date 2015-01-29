@@ -27,7 +27,7 @@
           </a>
         </li>
       {%if index==0%}</ul>{%endif%}
-      {%capture index%}{{ index | plus: 1 }}{%endcapture}
+      {%capture index%}{{ index | plus: 1 }}{%endcapture%}
       {%capture quo%}{{ index | modulo: 5 }}{%endcapture%}
       {%if quo==0%}{%assign index=0%}{%endif%}
       {% endfor %}
