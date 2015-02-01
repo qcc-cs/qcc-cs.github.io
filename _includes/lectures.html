@@ -19,7 +19,7 @@
   <!-- Nav papignation-->
   <div class="text-center">
       <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >--> <!--http://stackoverflow.com/a/19777253  -->
-    <table role="tablist" id="event-tab" class="pager">
+    <table role="tablist" id="event-tab" class="pager table">
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign i=0 %}
       {% for lecture in site.data.lectures reverse %}
