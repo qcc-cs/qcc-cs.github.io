@@ -32,7 +32,7 @@
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
-      {%capture imod%}{{i| modulo: 5}}{{%endcapture%}
+      {%capture imod%}{{i| modulo: 5}}{%endcapture%}
       {%if imod==0%}
       <tr>
       {%endif%}
