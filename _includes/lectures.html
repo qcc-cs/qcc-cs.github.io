@@ -23,12 +23,9 @@
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
       {% assign imod = i| modulo: 5  %}
-      {{i}}-{{imod}}
-      {%if imod==0%}
+      {%if imod == 0%}
       <tr>
-      hi
       {%endif%}
-      bye-
         <td id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%} button  col-sx-2 col-md-1">
           <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
             {{date}}
