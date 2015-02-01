@@ -23,7 +23,7 @@
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
       {%capture imod%}{{i| modulo: 5}}{%endcapture%}
-      {{imod}}
+      {{i}}-{{imod}}
       {%if imod==0%}
       <tr>
       {%endif%}
@@ -33,9 +33,9 @@
           </a>
         </td>
       {%if imod==0%}
-      {%capture i%}{{ i | plus: 1 }}{%endcapture%}
       </tr>
       {%endif%}
+      {%capture i%}{{ i | plus: 1 }}{%endcapture%}
       {% endfor %}
       {% endfor %}
     </table>
