@@ -10,7 +10,7 @@
       var pane = $(this);
       updatetab(url, pane);
       $('#event-tab a').removeClass("active");
-      e.addClass("active");
+      $(e).addClass("active");
     });
     updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
 </script> 
