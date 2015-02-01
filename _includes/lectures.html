@@ -1,7 +1,7 @@
 {% assign lecfolder="lectures/" %}
 <style>
-  .pagination>li>a,
-  .pagination>li>a:focus {
+  .pagination>td>a,
+  .pagination>td>a:focus {
     background-color: inherit;
   }
 </style>
@@ -9,7 +9,7 @@
   <!-- Nav papignation-->
   <div class="text-center">
       <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >--> <!--http://stackoverflow.com/a/19777253  -->
-    <table role="tablist" id="event-tab" class="table">
+    <table role="tablist" id="event-tab" class="table pagination">
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign i=0 %}
       {% for lecture in site.data.lectures reverse %}
@@ -22,7 +22,7 @@
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
-      {% assign imod={{i| modulo: 5}} %}
+      {% caputure imod%}{{i| modulo: 5}}{%endcapture %}
       {{i}}-{{imod}}
       {%if imod==0%}
       <tr>
