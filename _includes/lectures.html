@@ -23,6 +23,7 @@
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
       {%capture imod%}{{i| modulo: 5}}{%endcapture%}
+      {{imod}}
       {%if imod==0%}
       <tr>
       {%endif%}
