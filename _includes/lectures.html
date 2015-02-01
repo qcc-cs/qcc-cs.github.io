@@ -5,10 +5,21 @@
     background-color: inherit;
   }
 </style>
+<script>
+  // From https://github.com/kwangkim/jquery-bootpag/blob/master/lib/jquery.bootpag.js
+  var tabsetting={
+    maxvisible: 5;
+  };
+  var pagenumbers={
+    start:1;
+    end:1;
+  }
+</script>
 <div role="tabpanel">
   <!-- Nav papignation-->
   <div class="text-center">
-      <ul role="tablist" id="event-tab" class=" pagination pagination-sm" > <!--http://stackoverflow.com/a/19777253  -->
+      <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >--> <!--http://stackoverflow.com/a/19777253  -->
+      <ul role="tablist" id="event-tab" class="" >
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign i=0 %}
       {% for lecture in site.data.lectures reverse %}
@@ -16,13 +27,12 @@
       {% for lec in lecture.lecs %}
       {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
       {%if forloop.length == 1%}
-      {%capture date %}{{lecture.date| date: "%b, %d" }}{% endcapture %}
+      {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %}
       {%else%}
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
-      
-        <li role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
+        <li id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
           <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
             {{date}}
           </a>
