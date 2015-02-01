@@ -19,7 +19,7 @@
   <!-- Nav papignation-->
   <div class="text-center">
       <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >--> <!--http://stackoverflow.com/a/19777253  -->
-      <ul role="tablist" id="event-tab" class="pager" >
+    <table role="tablist" id="event-tab" class="pager">
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign i=0 %}
       {% for lecture in site.data.lectures reverse %}
@@ -32,16 +32,22 @@
       {% assign ch=char[forloop.index0]%}
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
       {%endif%}
-        
-        <li id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
+      {%capture imod%}{{i| modulo: 5}}{{%endcapture%}
+      {%if imod==0%}
+      <tr>
+      {%endif%}
+        <td id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
           <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
             {{date}}
           </a>
-        </li>
+        </td>
+      {%if imod==0%}
       {%capture i%}{{ i | plus: 1 }}{%endcapture%}
+      </tr>
+      {%endif%}
       {% endfor %}
       {% endfor %}
-      </ul>
+    </table>
   </div>
   <!-- Tab panes -->
   {%include lecture.html%}
