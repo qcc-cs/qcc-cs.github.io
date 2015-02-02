@@ -4,8 +4,19 @@
   </div>
 </div>
 <script>
+    var total={{include.total}};
+    
     $('#event-tab a').click(function(e) {
       e.preventDefault();
+      
+      if($(e).attr('id')=='pg-left'){
+        
+        return true;
+      }
+      if($(e).attr('id')=='pg-right'){
+        
+        return true;
+      }
       var url = $(this).attr("data-url");
       var pane = $(this);
       updatetab(url, pane);
