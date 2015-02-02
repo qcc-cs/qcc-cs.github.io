@@ -90,7 +90,7 @@ void array_print(int a[], int n){
   //For loop
 }  
 ```
-<div id="rbutton-2-3-1" data-try="VM8omdoggyI0PcEj" data-ans="VM8wVYi3AgRAGSWa"></div>
+<div id="rbutton-2-3-1" data-try="VM8omdoggyI0PcEj" data-ans="VM81sYi3AgRAGSb0"></div>
 
 * Remark 1 When you pass an array to a function, you **pass a pointer** pointing to the array.
 So it is equivalent to
