@@ -25,10 +25,11 @@
     {% capture dateunix %}{{lecture.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
     i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}  diff={{dateunix|minus:nowunix}}<br>
-    {% if dateunix >= nowunix and found==false%}
+    {% assign diff=dateunix|minus:nowunix%}
+    {% if diff>0 and found==false%}
       
       Eureka!<br>
-      
+
       {%assign activei=i%}
       {%assign foundactive=true %}
       {% if i==0%}
