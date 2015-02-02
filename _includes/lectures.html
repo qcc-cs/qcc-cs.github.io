@@ -24,7 +24,7 @@
     {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% capture dateunix %}{{lecture.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
-    i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}  diff={{dateunix:minus:nowunix}}<br>
+    i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}  diff={{dateunix|minus:nowunix}}<br>
     {% if dateunix >= nowunix and found==false%}
       
       Eureka!<br>
