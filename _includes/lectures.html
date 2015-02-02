@@ -1,7 +1,7 @@
 {% assign lecfolder="lectures/" %}
 <style>
-  .pagination>td>a,
-  .pagination>td>a:focus {
+  .pagination>li>a,
+  .pagination>li>a:focus {
     background-color: inherit;
   }
 </style>
@@ -21,7 +21,7 @@
     {%endif%} 
     {% assign imod = i| modulo: MAXCOL %} 
     {%if imod == 0%}
-    <ul>
+    <ul class="pagination">
     {%endif%}
       <li id="pg-{{id}}" role="presentation" class="button {%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
         <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab" class="small">
