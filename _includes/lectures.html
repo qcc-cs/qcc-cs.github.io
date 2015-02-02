@@ -22,6 +22,7 @@
     {%for lec in lecture.lecs %}
     {% capture dateunix %}{{lec.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
+    i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}<br>
     {% if dateunix >= nowunix and foundactive==false%}
       {%assign activei=i%}
       {%assign foundactive=true %}
