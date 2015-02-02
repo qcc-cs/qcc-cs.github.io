@@ -9,7 +9,7 @@
   <!-- Nav papignation-->
   <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >-->
   <!--http://stackoverflow.com/a/19777253  -->
-  <ul role="tablist" id="event-tab" class="button">
+  <ul role="tablist" id="event-tab" class="">
     {% assign char="A|B|C|D|E|F|G" |split:"|"%} 
     {% assign MAXCOL= 5 %} {% assign i=0 %} 
     {% for lecture in site.data.lectures reverse %} 
@@ -23,7 +23,7 @@
     {%if imod == 0%}
     <tr>
     {%endif%}
-      <td id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
+      <td id="pg-{{id}}" role="presentation" class="button {%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
         <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab" class="small">
             {{date}}
           </a>
