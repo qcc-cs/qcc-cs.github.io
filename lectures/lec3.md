@@ -73,7 +73,38 @@ Later, we will study swap function again with the **reference**.
 Actually, you can make swap function with a temporary variable, but practically less useful.
 [swap without temporary variable](http://en.wikipedia.org/wiki/XOR_swap_algorithm)
 
-### How to pass C-array(s) to a function/ return C-array(s) from a function?
-Check3. 
+### How to pass C-array(s) to a function
+#### Check3  Make a function which print values of a given int array and the size n.
+```
+void array_print(int a[],int n){
+// Using loop
+
+
+}
+
+
+```
+Remark: When you pass an array to a function, you **pass a pointer** pointing to the array.
+#### Name of the array.
+Name of an array looks like a pointer since it contains the address(`&Name[0]`) of a given array and allows pointer arithmetic.( Consider name of an array as a label or an **alias**.) 
+```
+\\point arithmetic
+\\a[5] is equivalent to *(a+5)
+int a[5]=={1,2,3,4,5};
+int *p=a;
+```
+Unfortunately, there are some differences between name of an array
+```
+int b[5];
+a=&b;\\ a is fixed.
+cout<<sizeof(a);//
+cout<<sizeof(p);
+```
+<div id="rbutton-2-3-1" data-try="VM8omdoggyI0PcEj" data-ans=""></div>
+
+
+For more, please check [Are pointers and arrays equivalent in  C?](http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c).
+
+
 
 
