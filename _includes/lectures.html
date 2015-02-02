@@ -5,41 +5,25 @@
     background-color: inherit;
   }
 </style>
-<div role="">
+<div role="tappanel">
   <!-- Nav papignation-->
-  <div>
-      <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >--> <!--http://stackoverflow.com/a/19777253  -->
-    <table role="tablist" id="event-tab" class=" ">
-      {% assign char="A|B|C|D|E|F|G" |split:"|"%}
-      {% assign MAXCOL= 10 %}
-      {% assign i=0 %}
-      {% for lecture in site.data.lectures reverse %}
-      {% assign parentloop=forloop %}
-      {% for lec in lecture.lecs %}
-      {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{% endcapture %}
-      {%if forloop.length == 1%}
-      {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %}
-      {%else%}
-      {% assign ch=char[forloop.index0]%}
-      {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %}
+  <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >-->
+  <!--http://stackoverflow.com/a/19777253  -->
+  <table role="tablist" id="event-tab" class=" ">
+    {% assign char="A|B|C|D|E|F|G" |split:"|"%} {% assign MAXCOL= 10 %} {% assign i=0 %} {% for lecture in site.data.lectures reverse %} {% assign parentloop=forloop %} {% for lec in lecture.lecs %} {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%
+    endcapture %} {%if forloop.length == 1%} {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %} {%else%} {% assign ch=char[forloop.index0]%} {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} {%endif%} {% assign imod
+    = i| modulo: MAXCOL %} {%if imod == 0%}
+    <tr>
       {%endif%}
-      {% assign imod = i| modulo: MAXCOL  %}
-      {%if imod == 0%}
-      <tr>
-      {%endif%}
-        <td id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
-          <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
+      <td id="pg-{{id}}" role="presentation" class="{%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
+        <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab" class="small">
             {{date}}
           </a>
-        </td>
+      </td>
       {%if imod==0%}
-      </tr>
-      {%endif%}
-      {%capture i%}{{ i | plus: 1 }}{%endcapture%}
-      {% endfor %}
-      {% endfor %}
-    </table>
-  </div>
+    </tr>
+    {%endif%} {%capture i%}{{ i | plus: 1 }}{%endcapture%} {% endfor %} {% endfor %}
+  </table>
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
@@ -47,14 +31,14 @@
   </div>
 </div>
 <script>
-    $('#event-tab a').click(function(e) {
-      e.preventDefault();
-      var url = $(this).attr("data-url");
-      var pane = $(this);
-      updatetab(url, pane);
-      //$('#event-tab a').removeClass("active");
-      //$(e).addClass("active");
-    });
-    //updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
-</script> 
+  $('#event-tab a').click(function(e) {
+    e.preventDefault();
+    var url = $(this).attr("data-url");
+    var pane = $(this);
+    updatetab(url, pane);
+    //$('#event-tab a').removeClass("active");
+    //$(e).addClass("active");
+  });
+  //updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
+</script>
 </div>
