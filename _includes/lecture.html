@@ -8,7 +8,7 @@
     
     $('#event-tab a').click(function(e) {
       e.preventDefault();
-      
+      /*
       if($(e).attr('id')=='pg-left'){
         
         return true;
@@ -17,11 +17,12 @@
         
         return true;
       }
+      */
       var url = $(this).attr("data-url");
       var pane = $(this);
       updatetab(url, pane);
       //$('#event-tab a').removeClass("active");
       //$(e).addClass("active");
     });
-    //updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
+    updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
 </script> 
