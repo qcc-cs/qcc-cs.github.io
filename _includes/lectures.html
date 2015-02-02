@@ -11,7 +11,7 @@
   <!--http://stackoverflow.com/a/19777253  -->
   <ul role="tablist" id="event-tab" class="pagination small text-left">
     {% assign char="A|B|C|D|E|F|G" |split:"|"%} 
-    {% capture nowunix %}{{'now' |date:'%s'|minus:604800}}{%endcapture%}
+    {% capture nowunix %}{{'now' |date:'%s'}}{%endcapture%}
     {% assign nowunix=nowunix |plus:0%}
     {% assign i=-1 %} 
     {% assign starti=0 %}
