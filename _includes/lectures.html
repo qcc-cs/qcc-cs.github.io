@@ -9,7 +9,7 @@
   <!-- Nav papignation-->
   <div role="tablist" id="event-tab">
       <!--<ul role="tablist" id="event-tab" class=" pagination pagination-sm" >--> <!--http://stackoverflow.com/a/19777253  -->
-    <table  class=" ">
+    <div  class=" ">
       {% assign char="A|B|C|D|E|F|G" |split:"|"%}
       {% assign MAXCOL= 10 %}
       {% assign i=0 %}
@@ -38,7 +38,7 @@
       {%capture i%}{{ i | plus: 1 }}{%endcapture%}
       {% endfor %}
       {% endfor %}
-    </table>
+    </div>
   </div>
   <!-- Tab panes -->
   {%include lecture.html%}
