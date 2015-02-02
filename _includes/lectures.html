@@ -43,6 +43,11 @@
     {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% endfor %}
     {% endfor %}
+    {%if found==false%}
+      {%assign starti=i-1%}
+      {%assign endi=i-1%}
+      {%assign activei=i-1%}
+     {%endif%} 
     starti={{starti}}
     
     endi={{endi}}
