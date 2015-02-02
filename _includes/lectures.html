@@ -25,11 +25,8 @@
     {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% capture dateunix %}{{lecture.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
-    i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}  
     {% assign diff=dateunix|minus:nowunix %}
-    diff={{diff}} {{diff>0}}<br>
     {% if diff > 0 and track  %}
-      Eureka!<br>
       {%assign activei=i%}
       {%assign track=false %}
       {% if i==0%}
