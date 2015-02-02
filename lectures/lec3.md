@@ -41,7 +41,7 @@ int main ()
   return 0;
 }
 ```
-<div id="rbutton-2-1-1" data-try="VM8SSho8-qgTEtyX" data-ans="VM8STzdyKNsSRNaq"></div>
+<div id="rbutton-3-1-1" data-try="VM8SSho8-qgTEtyX/cs203-lec3-check1-for-c%2B%2B" data-ans="VM8VCz4vlVwTVJHe/cs203-lec3-check1-ans-for-c%2B%2B"></div>
 
 -------------
 ### Why do we need a pointer?
@@ -62,7 +62,7 @@ int main() {
 	return 0;
 }
 ```
-<div id="rbutton-2-2-1" data-try="VM8bIxlvz4UgUHkN" data-ans="VM8gkhlvz4UgUHp6">
+<div id="rbutton-2-2-1" data-try="VM8bIxlvz4UgUHkL/cs203-lec3-check2-for-c%2B%2B" data-ans="VM8bmqIrSsIgqYcJ/cs203-lec3-check2-ans-for-c%2B%2B">
 </div>
 
 It looks good, isn’t it?  But **it does not work**.
