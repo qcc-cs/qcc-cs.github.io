@@ -76,15 +76,22 @@ Actually, you can make swap function with a temporary variable, but practically 
 ### How to pass C-array(s) to a function
 #### Check3  Make a function which print values of a given int array and the size n.
 ```
-void array_print(int a[],int n){
-// Using loop
-
-
-}
-
-
+void array_print(int a[], int n){
+  //For loop
+}  
 ```
-Remark: When you pass an array to a function, you **pass a pointer** pointing to the array.
+<div id="rbutton-2-3-1" data-try="VM8omdoggyI0PcEj" data-ans="VM8wVYi3AgRAGSWa"></div>
+Remark 1: When you pass an array to a function, you **pass a pointer** pointing to the array.
+So it is equivalent to
+```
+void array_print(int * a,int n){
+}
+```
+Remark 2: Array and pointer has out of address problem.
+```
+int a[5]={1,2,3,4,5};
+cout<<a[100]; //????
+```
 #### Name of the array.
 Name of an array looks like a pointer since it contains the address(`&Name[0]`) of a given array and allows pointer arithmetic.( Consider name of an array as a label or an **alias**.) 
 ```
@@ -100,7 +107,7 @@ a=&b;\\ a is fixed.
 cout<<sizeof(a);//
 cout<<sizeof(p);
 ```
-<div id="rbutton-2-3-1" data-try="VM8omdoggyI0PcEj" data-ans=""></div>
+<div id="rbutton-2-4-1" data-try="VM8omdoggyI0PcEj" data-ans=""></div>
 
 
 For more, please check [Are pointers and arrays equivalent in  C?](http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c).
