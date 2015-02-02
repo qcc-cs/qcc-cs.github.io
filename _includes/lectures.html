@@ -72,12 +72,13 @@
     {%if activei==i %}
       {% assign active='active'%}
     {%endif%}
-    <li id="pg-{{id}}" role="presentation" class="{{active}} col-sx-2 col-md-2 ">
-      <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small {{hide}}">
+    <li id="pg-{{id}}" role="presentation" class="{{active}} {{hide}} col-sx-2 col-md-2 ">
+      <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small ">
         {{date}}
       </a>
     </li>
     {% endfor %} 
     {% endfor %}
   </ul>
+  {% include lecture.html%}
 </div>
