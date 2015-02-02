@@ -19,13 +19,12 @@
     {% assign foundactive=false%}
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
-    {%assign parentlooplast=forloop.last%}
     {% for lec in lecture.lecs %}
     {%capture dateunix%}{{lecture.date|date:'%s'}}{%endcapture%}
-    {% if dateunix>= nowunix and foundactive==false%}
+    {% if dateunix >= nowunix and foundactive==false%}
       {%assign activei=i%}
       {%assign foundactive=true %}
-      {% if i== 0%}
+      {% if i==0%}
         {%assign starti=i%}
       {%else%}
         {%assign starti=i-1%}
