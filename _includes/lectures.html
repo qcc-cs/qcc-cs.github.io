@@ -20,6 +20,7 @@
     {% assign track=true %}
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
+    {%assign parentlooplast = forloop.last%}
     {%for lec in lecture.lecs %}
     {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% capture dateunix %}{{lecture.date|date:'%s'}}{%endcapture%}
