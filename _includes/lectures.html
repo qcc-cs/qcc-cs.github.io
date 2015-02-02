@@ -51,11 +51,6 @@
     {%assign endi=endi|plus:0%}
     {%assign activei=activei|plus:0%}
     {% assign i=-1 %}
-     <!-- <li id="pg-left" role="presentation" class=" col-sx-2 col-md-2 ">
-      <a href="#lecture-left" role="tab" data-url="{{i}}"  data-toggle="tab" class="small ">
-        <
-      </a>
-    </li>-->
     {%for lecture in site.data.lectures reverse %}
     {%assign parentloop=forloop %} 
     {% for lec in lecture.lecs %} 
@@ -85,5 +80,5 @@
     {% endfor %} 
     {% endfor %}
   </ul>
-  {% include lecture.html total="{{i}}"%}
+  {% include lecture.html %}
 </div>
