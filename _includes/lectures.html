@@ -35,8 +35,7 @@
       {% if i==0%}
         {%assign starti=i%}
       {%else%}
-        hello start!<br>
-        {%assign starti=i|minus: 1%}
+        {%assign starti=i|minus:1%}
       {%endif%}
       {% if parentlooplast and forloop.last %}
         {%assign endi=i%}
@@ -51,9 +50,42 @@
       {%assign endi=i%}
       {%assign activei=i%}
     {%endif%} 
-    starti={{starti}}
-    
-    endi={{endi}}
-    
-    activei={{activei}}
-    </ul></div>
+    {% assign i=-1 %}
+    {%for lecture in site.data.lectures reverse %}
+    {%assign parentloop=forloop%} 
+    {% for lec in lecture.lecs %} 
+    {%capture i%}{{ i | plus: 1 }}
+    {% assign hide="hide" %}
+    {% assign active="" %}
+    {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%endcapture %}
+    {%if forloop.length == 1%} {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %} 
+    {%else%} {% assign ch=char[forloop.index0]%} {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
+    {%endif%} 
+    {%if starti <= i and i<= endi %}{% assign hide=""%}{%endif%}
+    {%if activei==i%}{% assign active="active"%}{%endif%}
+        <li id="pg-{{id}}" role="presentation" class="{{active}} {{hide}} col-sx-2 col-md-2 ">
+          <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
+            {{date}}
+          </a>
+        </li>
+    {%endcapture%} 
+    {% endfor %} 
+    {% endfor %}
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
+    </div>
+  </div>
+</div>
+<script>
+  $('#event-tab a').click(function(e) {
+    e.preventDefault();
+    var url = $(this).attr("data-url");
+    var pane = $(this);
+    updatetab(url, pane);
+    //$('#event-tab a').removeClass("active");
+    //$(e).addClass("active");
+  });
+  //updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
+</script>
