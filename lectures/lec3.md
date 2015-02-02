@@ -26,7 +26,7 @@ To assign a value to the int pointed to by p
 ```
 Here `*`(asterisk)  is  the **dereference operator** which can be read as "value pointed to by".
 
-####Check 1. Declare a point p and point p to the variable a.
+#### Check 1. Declare a point p and point p to the variable a.
 
 Assign 5 to a using pointer p and print the value of a using pointer p.
 ```
@@ -42,7 +42,7 @@ int main ()
 }
 ```
 <div id="rbutton-2-1-1" data-try="VM8SSho8-qgTEtyX" data-ans="VM8STzdyKNsSRNaq"></div>
-
+-------------
 ### Why do we need a pointer?
 
 #### Check2. Let us make a swap function which swap values of a and b.
@@ -127,7 +127,7 @@ cout<<sizeof(p);
 <div id="rbutton-2-4-1" data-try="VM8omdoggyI0PcEj" data-ans=""></div>
 
 
-For more, please check [Are pointers and arrays equivalent in  C?](http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c).
+For more, please check [**Are pointers and arrays equivalent in  C?**](http://eli.thegreenplace.net/2009/10/21/are-pointers-and-arrays-equivalent-in-c).
 
 
 
