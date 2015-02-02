@@ -13,13 +13,14 @@
     {% assign char="A|B|C|D|E|F|G" |split:"|"%} 
     {% capture nowunix %}{{'now' |date:'%s'|minus:604800}}{%endcapture%}
     {% assign nowunix=nowunix |plus:0%}
-    {% assign i=0 %} 
+    {% assign i=-1 %} 
     {% assign starti=0 %}
     {% assign activei=0 %}
     {% assign found=false %}
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
     {%for lec in lecture.lecs %}
+    {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% capture dateunix %}{{lecture.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
     i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}<br>
@@ -40,14 +41,13 @@
         {%assign endi=i+1%}
       {%endif%}
     {%endif%}
-    {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% endfor %}
     {% endfor %}
     {%if found==false%}
-      {%assign starti=i-1%}
-      {%assign endi=i-1%}
-      {%assign activei=i-1%}
-     {%endif%} 
+      {%assign starti=i%}
+      {%assign endi=i%}
+      {%assign activei=i%}
+    {%endif%} 
     starti={{starti}}
     
     endi={{endi}}
