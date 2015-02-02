@@ -11,20 +11,50 @@
   <!--http://stackoverflow.com/a/19777253  -->
   <ul role="tablist" id="event-tab" class="pagination small text-left">
     {% assign char="A|B|C|D|E|F|G" |split:"|"%} 
-    {% assign MAXCOL= 5 %} {% assign i=0 %} 
-    {% for lecture in site.data.lectures reverse %} 
-    {% assign parentloop=forloop %} 
+    {% capture nowunix %}{{'now'|date:'%s'}}{%endcapture%}
+    {% assign MAXCOL= 5 %} 
+    {% assign i=0 %} 
+    {% assign starti=0 %}
+    {% assign activei=0 %}
+    {% assign foundactive=false%}
+    <!-- To find the center (today or next to today or last day)-->
+    {%for lecture in site.data.lectures reverse %}
+    {%assign parentlooplast=forloop.last%}
+    {% for lec in lecture.lecs %}
+    {% if dateunix>=nowunix and foundactive==false%}
+      {%assign activei=i%}
+      {%assign foundactive=true %}
+      {% if i==0%}
+        {%assign starti=i%}
+      {%else%}
+        {%assign starti=i-1%}
+      {%endif%}
+      {% if parentlooplast and forloop.last %}
+        {%assign starti=i%}
+      {%else%}
+        {%assign starti=i-1%}
+      {%endif%}
+    {%endif%}
+    {%capture i%}{{ i | plus: 1 }}{%endcapture%}
+    {% endfor %}
+    {% endfor %}
+    {% assign i=0 %}
+    {%for lecture in site.data.lectures reverse %}
+    {%assign parentloop=forloop%} 
     {% for lec in lecture.lecs %} 
+    {% assign hide="hide" %}
+    {% assign active="" %}
     {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%endcapture %}
     {%if forloop.length == 1%} {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %} 
     {%else%} {% assign ch=char[forloop.index0]%} {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
     {%endif%} 
-    {% assign imod = i| modulo: MAXCOL %} 
-      <li id="pg-{{id}}" role="presentation" class="button {%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
-        <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab" class="small">
+    {%if starti <= i and i<= endi %}{% assign hide=""%}{%endif%}
+    {%if activei==i%}{% assign active="active"%}{%endif%}
+        <li id="pg-{{id}}" role="presentation" class="{{active}} {{hide}} col-sx-2 col-md-2 ">
+          <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
             {{date}}
-        </a>
-      </li>
+          </a>
+        </li>
     {%capture i%}{{ i | plus: 1 }}
     {%endcapture%} 
     {% endfor %} 
