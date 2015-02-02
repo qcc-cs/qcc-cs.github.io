@@ -57,6 +57,7 @@ int main() {
 	return 0;
 }
 ```
+<div id="rbutton-2-2-1" data-try="VM8bIxlvz4UgUHkN" data-ans="/VM8bmxlvz4UgUHk5"></div>
 It looks good, isn’t it?  But **it does not work**.
 Why? 
 Variables a,b in swap and variables in main function **are not same**.
@@ -67,6 +68,6 @@ So there is no way to swap values of a,b in main function.
 Now it is time to use pointer.
 Fix above function with pointers.
 
-
+Later, we will study swap function again with the reference.
 Actually, you can make swap function with a temporary variable, but practically less useful. 
 [swap without temporary variable](http://en.wikipedia.org/wiki/XOR_swap_algorithm)
