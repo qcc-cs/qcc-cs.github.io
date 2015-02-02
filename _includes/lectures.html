@@ -13,15 +13,14 @@
     {% assign char="A|B|C|D|E|F|G" |split:"|"%} 
     {% capture nowunix %}{{'now' |date:'%s'|minus:604800}}{%endcapture%}
     {% assign nowunix=nowunix |plus:0%}
-    {% assign MAXCOL= 5 %} 
     {% assign i=0 %} 
     {% assign starti=0 %}
     {% assign activei=0 %}
-    {% assign foundactive=false%}
+    {% assign found=false %}
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
-    {% for lec in lecture.lecs %}
-    {% capture dateunix %}{{'2015-2-2'|date:'%s'}}{%endcapture%}
+    {%for lec in lecture.lecs %}
+    {% capture dateunix %}{{lec.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
     {% if dateunix >= nowunix and foundactive==false%}
       {%assign activei=i%}
@@ -40,42 +39,9 @@
     {%capture i%}{{ i | plus: 1 }}{%endcapture%}
     {% endfor %}
     {% endfor %}
-    {% assign i=0 %}
-    {%for lecture in site.data.lectures reverse %}
-    {%assign parentloop=forloop%} 
-    {% for lec in lecture.lecs %} 
-    {% assign hide="hide" %}
-    {% assign active="" %}
-    {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%endcapture %}
-    {%if forloop.length == 1%} {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %} 
-    {%else%} {% assign ch=char[forloop.index0]%} {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
-    {%endif%} 
-    {%if starti <= i and i<= endi %}{% assign hide=""%}{%endif%}
-    {%if activei==i%}{% assign active="active"%}{%endif%}
-        <li id="pg-{{id}}" role="presentation" class="{{active}} {{hide}} col-sx-2 col-md-2 ">
-          <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
-            {{date}}
-          </a>
-        </li>
-    {%capture i%}{{ i | plus: 1 }}
-    {%endcapture%} 
-    {% endfor %} 
-    {% endfor %}
-  </ul>
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
-    </div>
-  </div>
-</div>
-<script>
-  $('#event-tab a').click(function(e) {
-    e.preventDefault();
-    var url = $(this).attr("data-url");
-    var pane = $(this);
-    updatetab(url, pane);
-    //$('#event-tab a').removeClass("active");
-    //$(e).addClass("active");
-  });
-  //updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
-</script>
+    starti={{starti}}
+    
+    endi={{endi}}
+    
+    activei={{activei}}
+    </ul></div>
