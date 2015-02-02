@@ -41,3 +41,32 @@ int main ()
 
 ```
 <div id="rbutton-2-1-1" data-try="VM8SSho8-qgTEtyX" data-ans="VM8STzdyKNsSRNaq"></div>
+### Why do we need a pointer?
+#### Check2. Let us make a swap function which swap values of a and b.
+```
+#include <iostream>
+using namespace std;
+void swap(int a, int b){
+	int temp;
+	temp=a;a=b;b=a;	           
+}
+int main() {
+	int a=2,b=3;
+	swap(a,b);
+	cout<<"a="<<a<<",b="<<b;
+	return 0;
+}
+```
+It looks good, isn’t it?  But **it does not work**.
+Why? 
+Variables a,b in swap and variables in main function **are not same**.
+#### **call-by-value**
+Swap function only **duplicates values of a,b** from main function.
+So there is no way to swap values of a,b in main function.
+
+Now it is time to use pointer.
+Fix above function with pointers.
+
+
+Actually, you can make swap function with a temporary variable, but practically less useful. 
+[swap without temporary variable](http://en.wikipedia.org/wiki/XOR_swap_algorithm)
