@@ -11,7 +11,8 @@
   <!--http://stackoverflow.com/a/19777253  -->
   <ul role="tablist" id="event-tab" class="pagination small text-left">
     {% assign char="A|B|C|D|E|F|G" |split:"|"%} 
-    {% capture nowunix %}{{'now'|date:'%s'}}{%endcapture%}
+    {% capture nowunix %}{{'now' |date:'%s'|minus:604800}}{%endcapture%}
+    {% assign nowunix=nowunix |plus:0%}
     {% assign MAXCOL= 5 %} 
     {% assign i=0 %} 
     {% assign starti=0 %}
@@ -20,7 +21,8 @@
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
     {% for lec in lecture.lecs %}
-    {%capture dateunix%}{{lecture.date|date:'%s'}}{%endcapture%}
+    {% capture dateunix %}{{'2015-2-2'|date:'%s'}}{%endcapture%}
+    {% assign dateunix=dateunix |plus:0%}
     {% if dateunix >= nowunix and foundactive==false%}
       {%assign activei=i%}
       {%assign foundactive=true %}
