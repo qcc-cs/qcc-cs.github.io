@@ -61,7 +61,11 @@
       {% assign ch=char[forloop.index0]%} 
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
     {%endif%} 
-    
+    <li id="pg-{{id}}" role="presentation" class="{{active}} {{hide}} col-sx-2 col-md-2 ">
+      <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
+        {{date}}
+      </a>
+    </li>
     {% endfor %} 
     {% endfor %}
   </ul>
