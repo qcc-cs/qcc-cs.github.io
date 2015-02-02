@@ -41,8 +41,11 @@ int main ()
 
 ```
 <div id="rbutton-2-1-1" data-try="VM8SSho8-qgTEtyX" data-ans="VM8STzdyKNsSRNaq"></div>
+
 ### Why do we need a pointer?
+
 #### Check2. Let us make a swap function which swap values of a and b.
+
 ```
 #include <iostream>
 using namespace std;
@@ -58,9 +61,11 @@ int main() {
 }
 ```
 <div id="rbutton-2-2-1" data-try="VM8bIxlvz4UgUHkN" data-ans="VM8gkhlvz4UgUHp6"></div>
+
 It looks good, isn’t it?  But **it does not work**.
 Why? 
 Variables a,b in swap and variables in main function **are not same**.
+
 #### **call-by-value**
 Swap function only **duplicates values of a,b** from main function.
 So there is no way to swap values of a,b in main function.
@@ -73,34 +78,45 @@ Later, we will study swap function again with the **reference**.
 Actually, you can make swap function with a temporary variable, but practically less useful.
 [swap without temporary variable](http://en.wikipedia.org/wiki/XOR_swap_algorithm)
 
-### How to pass C-array(s) to a function
+### How to pass C-array(s) to a function.
+
 #### Check3  Make a function which print values of a given int array and the size n.
+
 ```
 void array_print(int a[], int n){
   //For loop
 }  
 ```
 <div id="rbutton-2-3-1" data-try="VM8omdoggyI0PcEj" data-ans="VM8wVYi3AgRAGSWa"></div>
-Remark 1: When you pass an array to a function, you **pass a pointer** pointing to the array.
+
+* Remark 1 When you pass an array to a function, you **pass a pointer** pointing to the array.
 So it is equivalent to
+
 ```
 void array_print(int * a,int n){
 }
 ```
-Remark 2: Array and pointer has out of address problem.
+
+* Remark 2: Array and pointer has out of address problem.
+
 ```
 int a[5]={1,2,3,4,5};
 cout<<a[100]; //????
 ```
+
 #### Name of the array.
+
 Name of an array looks like a pointer since it contains the address(`&Name[0]`) of a given array and allows pointer arithmetic.( Consider name of an array as a label or an **alias**.) 
+
 ```
 \\point arithmetic
 \\a[5] is equivalent to *(a+5)
 int a[5]=={1,2,3,4,5};
 int *p=a;
 ```
-Unfortunately, there are some differences between name of an array
+
+Unfortunately, there are some differences between name of an array and a pointer.
+
 ```
 int b[5];
 a=&b;\\ a is fixed.
