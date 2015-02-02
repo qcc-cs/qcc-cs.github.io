@@ -36,12 +36,12 @@
         {%assign starti=i%}
       {%else%}
         hello start!<br>
-        {%assign starti=i-1%}
+        {%assign starti=i|minus: 1%}
       {%endif%}
       {% if parentlooplast and forloop.last %}
         {%assign endi=i%}
       {%else%}
-        {%assign endi=i+1%}
+        {%assign endi=i|plus:1%}
       {%endif%}
     {%endif%}
     {% endfor %}
