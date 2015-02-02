@@ -47,6 +47,9 @@
       {%assign endi=i%}
       {%assign activei=i%}
     {%endif%} 
+    {%assign starti=starti|plus:0%}
+      {%assign endi=endi|plus:0%}
+      {%assign activei=activei|plus:0%}
     {% assign i=-1 %}
     {%for lecture in site.data.lectures reverse %}
     {%assign parentloop=forloop %} 
