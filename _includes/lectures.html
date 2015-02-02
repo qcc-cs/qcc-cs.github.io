@@ -21,15 +21,15 @@
     {%endif%} 
     {% assign imod = i| modulo: MAXCOL %} 
     {%if imod == 0%}
-    <tr>
+    <ul>
     {%endif%}
-      <td id="pg-{{id}}" role="presentation" class="button {%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
+      <li id="pg-{{id}}" role="presentation" class="button {%if parentloop.first and forloop.first %}active{%endif%}   col-sx-2 col-md-1">
         <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}" data-toggle="tab" class="small">
             {{date}}
-          </a>
-      </td>
+        </a>
+      </li>
     {%if imod==0%}
-    </tr>
+    </ul>
     {%endif%} 
     {%capture i%}{{ i | plus: 1 }}
     {%endcapture%} 
