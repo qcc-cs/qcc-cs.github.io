@@ -20,10 +20,10 @@
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
     {%for lec in lecture.lecs %}
-    {% capture dateunix %}{{lec.date|date:'%s'}}{%endcapture%}
+    {% capture dateunix %}{{lecture.date|date:'%s'}}{%endcapture%}
     {% assign dateunix=dateunix |plus:0%}
     i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}<br>
-    {% if dateunix >= nowunix and foundactive==false%}
+    {% if dateunix >= nowunix and found==false%}
       {%assign activei=i%}
       {%assign foundactive=true %}
       {% if i==0%}
