@@ -8,6 +8,7 @@ Ex.Pointer p points the variable a.
 ![pointer-p](http://qcc-cs203.github.io/lectures/img/lec3-pointp-a.png)
 
 To declare a pointer use *    
+
 ```
 int *p;
 ```
@@ -26,6 +27,7 @@ To assign a value to the int pointed to by p
 Here `*`(asterisk)  is  the **dereference operator** which can be read as "value pointed to by".
 
 ####Check 1. Declare a point p and point p to the variable a.
+
 Assign 5 to a using pointer p and print the value of a using pointer p.
 ```
 #include <iostream>
@@ -38,7 +40,6 @@ int main ()
   // print the value of a using pointer p.
   return 0;
 }
-
 ```
 <div id="rbutton-2-1-1" data-try="VM8SSho8-qgTEtyX" data-ans="VM8STzdyKNsSRNaq"></div>
 
