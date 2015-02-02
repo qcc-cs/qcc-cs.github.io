@@ -17,7 +17,7 @@
     {% assign starti=0 %}
     {% assign endi=0 %}
     {% assign activei=0 %}
-    {% assign found=false %}
+    {% assign track=true %}
     <!-- To find the center (today or next to today or last day)-->
     {%for lecture in site.data.lectures reverse %}
     {%for lec in lecture.lecs %}
@@ -27,10 +27,10 @@
     i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}  
     {% assign diff=dateunix|minus:nowunix %}
     diff={{diff}} {{diff>0}}<br>
-    {% if diff > 0  %}
+    {% if diff > 0 and track  %}
       Eureka!<br>
       {%assign activei=i%}
-      {%assign found=true %}
+      {%assign track=true %}
       {% if i==0%}
         {%assign starti=i%}
       {%else%}
@@ -44,7 +44,7 @@
     {%endif%}
     {% endfor %}
     {% endfor %}
-    {%if found==false%}
+    {%if  !track %}
       {%assign starti=i%}
       {%assign endi=i%}
       {%assign activei=i%}
