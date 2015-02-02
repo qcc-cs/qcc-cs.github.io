@@ -52,17 +52,24 @@
     {%endif%} 
     {% assign i=-1 %}
     {%for lecture in site.data.lectures reverse %}
-    {%assign parentloop=forloop%} 
+    {%assign parentloop=forloop %} 
     {% for lec in lecture.lecs %} 
     {%capture i%}{{ i | plus: 1 }}
     {% assign hide="hide" %}
     {% assign active="" %}
     {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%endcapture %}
-    {%if forloop.length == 1%} {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %} 
-    {%else%} {% assign ch=char[forloop.index0]%} {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
+    {%if forloop.length == 1%} 
+      {%capture date%}{{lecture.date| date: "%b, %d" }}{% endcapture %} 
+    {%else%} 
+      {% assign ch=char[forloop.index0]%} 
+      {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
     {%endif%} 
-    {%if starti <= i and i<= endi %}{% assign hide=""%}{%endif%}
-    {%if activei==i%}{% assign active="active"%}{%endif%}
+    {%if starti <= i and i<= endi %}
+      {% assign hide=""%}
+    {%endif%}
+    {%if activei==i%}
+      {% assign active="active"%}
+    {%endif%}
     <li id="pg-{{id}}" role="presentation" class="{{active}} {{hide}} col-sx-2 col-md-2 ">
       <a href="#lecture-{{id}}" role="tab" data-url="{{lecfolder}}{{lec.url}}"  data-toggle="tab" class="small">
         {{date}}
