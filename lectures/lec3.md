@@ -100,7 +100,7 @@ void array_print(int * a,int n){
 }
 ```
 
-* Remark 2: Array and pointer has out of address problem.
+* Remark 2: Array and pointer has **out of address** problem. You may use STL or smart pointer.
 
 ```
 int a[5]={1,2,3,4,5};
