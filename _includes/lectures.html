@@ -51,7 +51,7 @@
     {%for lecture in site.data.lectures reverse %}
     {%assign parentloop=forloop %} 
     {% for lec in lecture.lecs %} 
-    {%capture i%}{{ i | plus: 1 }}
+    {%capture i%}{{ i | plus: 1 }}{{%endcapture%}
     {% assign hide="hide" %}
     {% assign active="" %}
     {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%endcapture %}
