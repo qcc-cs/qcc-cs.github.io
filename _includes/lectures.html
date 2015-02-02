@@ -26,12 +26,10 @@
     {% assign dateunix=dateunix |plus:0%}
     i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}  diff={{dateunix|minus:nowunix}}<br>
     {% assign diff=dateunix|minus:nowunix%}
-    {% if diff>0 and found==false%}
-      
+    {% if diff > 0 and found==false %}
       Eureka!<br>
-
       {%assign activei=i%}
-      {%assign foundactive=true %}
+      {%assign found=true %}
       {% if i==0%}
         {%assign starti=i%}
       {%else%}
