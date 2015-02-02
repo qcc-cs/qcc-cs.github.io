@@ -64,7 +64,9 @@
       {% assign ch=char[forloop.index0]%} 
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
     {%endif%}
-    {%if starti < i|plus:1 and endi > i|minus:1  %}
+    {%assign low=i|plus:1%}
+    {%assign high=i|minus:1%}
+    {%if starti < low and endi > high  %}
       {% assign hide='' %}
     {%endif%}
     {%if activei==i %}
