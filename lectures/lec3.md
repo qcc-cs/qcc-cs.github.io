@@ -5,7 +5,7 @@ Roughly speaking, pointer is a variable which contains the address  information.
 
 Ex.Pointer p points the variable a.
 
-![pointer-p](img/lec3-pointp-a.png)
+![pointer-p](http://qcc-cs203.github.io/lectures/img/lec3-pointp-a.png)
 
 To declare a pointer use *    
 ```
