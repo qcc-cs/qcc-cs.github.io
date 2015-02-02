@@ -55,7 +55,7 @@
     {%assign parentloop=forloop %} 
     {% for lec in lecture.lecs %} 
     {%capture i %}{{ i | plus: 1 }}{%endcapture%}
-    {% assign hide="" %}
+    {% assign hide='hide' %}
     {% assign active="" %}
     {%capture id %}{{lecture.date | replace : '/','-'}}_{{forloop.index}}{%endcapture %}
     {%if forloop.length == 1%} 
@@ -63,7 +63,12 @@
     {%else%} 
       {% assign ch=char[forloop.index0]%} 
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
-    {%endif%} 
+    {%endif%}
+    {%if starti < i or starti ==i  %}
+      {%if endi >i or endi==i %}
+        {% assign hide=''%}
+      {%endif}
+    {%endif%}
     {%if activei==i %}
       {% assign active='active'%}
     {%endif%}
