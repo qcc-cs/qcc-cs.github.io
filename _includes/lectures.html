@@ -61,13 +61,7 @@
       {% assign ch=char[forloop.index0]%} 
       {%capture date %}{{lecture.date| date: "%b, %d"}}{{ch}}{% endcapture %} 
     {%endif%} 
-    {%if starti <= i and i<= endi %}
-      {% assign hide=""%}
-    {%endif%}
-    {%if activei==i%}
-      {% assign active="active"%}
-    {%endif%}
-
+    
     {% endfor %} 
     {% endfor %}
   </ul>
