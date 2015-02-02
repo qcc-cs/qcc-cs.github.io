@@ -24,6 +24,9 @@
     {% assign dateunix=dateunix |plus:0%}
     i={{i}}  dateunix={{dateunix}} nowunix={{nowunix}}<br>
     {% if dateunix >= nowunix and found==false%}
+      
+      Eureka!<br>
+      
       {%assign activei=i%}
       {%assign foundactive=true %}
       {% if i==0%}
@@ -32,9 +35,9 @@
         {%assign starti=i-1%}
       {%endif%}
       {% if parentlooplast and forloop.last %}
-        {%assign starti=i%}
+        {%assign endi=i%}
       {%else%}
-        {%assign starti=i-1%}
+        {%assign endi=i+1%}
       {%endif%}
     {%endif%}
     {%capture i%}{{ i | plus: 1 }}{%endcapture%}
