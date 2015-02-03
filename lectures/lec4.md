@@ -9,8 +9,6 @@ A reference variable is an **alias**, that is, another name for an already exist
 2.  Cannot be changed.
 3.  must be initialized when it is create.
 
-
-
 To declare a reference  use &    
 
 ```
