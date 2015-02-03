@@ -79,7 +79,7 @@ int main() {
 For 1 st step, we swap 8 and 4 only. it means we can guarantee at least 8< 9<11<13 are well-ordered.
 So we only consider 1,3,4.
 
-#### Check2. Improve your bubble sort function
+#### Check3. Improve your bubble sort function
 
 ```
 #include <iostream>
