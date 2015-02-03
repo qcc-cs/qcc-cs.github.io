@@ -12,60 +12,49 @@ A reference variable is an **alias**, that is, another name for an already exist
 To declare a reference  use &    
 
 ```
-int *p;
+int n=5;
+int &r=n; //must be initialized  when it is create.
+```
+To change a value of n using r,
+
+```
+r=1;
 ```
 
-To point a variable use & (**address operator**)
-p=&n;
 
-```
-int a=3;
-int *p=&a;
-```
-To assign a value to the int pointed to by p
-```
-*p=5;
-```
-Here `*`(asterisk)  is  the **dereference operator** which can be read as "value pointed to by".
-
-#### Check 1. Declare a point p and point p to the variable a.
-
-Assign 5 to a using pointer p and print the value of a using pointer p.
-```
-#include <iostream>
-using namespace std;
-int main ()
-{
-  int a=3;
-  // declare a point p and point p to a.
-  // assign 5 to a using pointer p.
-  // print the value of a using pointer p.
-  return 0;
-}
-```
-<div id="rbutton-3-1-1" data-try="VM8SSho8-qgTEtyX" data-ans="VM8VCz4vlVwTVJHe"></div>
-
--------------
-### Why do we need a pointer?
-
-#### Check2. Let us make a swap function which swap values of a and b.
+#### Check1. Let us make a swap function which swap values of a and b using references.
 
 ```
 #include <iostream>
 using namespace std;
-void swap(int a, int b){
-	int temp;
-	temp=a;a=b;b=a;	           
+void swap(int , int ){
+	
+	
+	      
 }
 int main() {
 	int a=2,b=3;
-	swap(a,b);
+	swap(    ,     );
 	cout<<"a="<<a<<",b="<<b;
 	return 0;
 }
 ```
 <div id="rbutton-2-2-1" data-try="VM8bIxlvz4UgUHkL/cs203-lec3-check2-for-c%2B%2B" data-ans="VM8bmqIrSsIgqYcJ/cs203-lec3-check2-ans-for-c%2B%2B">
 </div>
+
+### [Sort](http://en.wikipedia.org/wiki/Sorting_algorithm)
+**A sorting algorithm** is an algorithm that hat puts elements of a list in a certain **order**.
+There are many different sorting algorithms, like  bubble-sort, quick-sort, merge-sort, heap-sort, insertion sort, shell sort...
+[Visual sort comparision](http://www.sorting-algorithms.com/)
+
+Here we will study [bubble sort](http://en.wikipedia.org/wiki/Bubble_sort).
+#### Bubble sort
+Very easy, but very impractical.
+
+
+
+
+
 
 It looks good, isn’t it?  But **it does not work**.
 Why? 
