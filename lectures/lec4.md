@@ -51,6 +51,8 @@ Here we will study [bubble sort](http://en.wikipedia.org/wiki/Bubble_sort).
 #### Bubble sort
 Very easy, but very impractical.
 
+Main idea: find the max or min using swapping. and repeat it.
+![Bubble](http://www.programiz.com/sites/tutorial2program/files/Bubble-sort-algorithm-programming.jpg)
 
 
 
