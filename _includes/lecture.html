@@ -2,25 +2,19 @@
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active in" id="my-pagination-content">
   </div>
+  <div role="tabpanel" style="display:none;
+              position:absolute; 
+              top:0; left: 0" class="tab-pane active in" id="my-pagination-buffer">
+  </div>
 </div>
 <script>
+    Latexdown.Init('my-pagination-content','my-pagination-buffer','event-tab');
     $('#event-tab a').click(function(e) {
       e.preventDefault();
-      /*
-      if($(e).attr('id')=='pg-left'){
-        
-        return true;
-      }
-      if($(e).attr('id')=='pg-right'){
-        
-        return true;
-      }
-      */
       var url = $(this).attr("data-url");
+      console.log("url:"+url);
       var pane = $(this);
-      updatetab(url, pane);
-      //$('#event-tab a').removeClass("active");
-      //$(e).addClass("active");
+      Latexdown.Update();
+      Latexdown.UpdateTab(url, pane);
     });
-    updatetab($('#event-tab .active a').attr("data-url"), $('#event-tab .active a'));
 </script> 
