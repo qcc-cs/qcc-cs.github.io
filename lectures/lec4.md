@@ -238,7 +238,7 @@ and we only need to do bubble sort with
 So if the last pair which is swapped is a[k] and  a[k+1]
 then we only need to do bubble sort with
 
-a[0] a[1] .... a[k]
+a[0] a[1] .... a[k]  |
 
 a[0] a[1] .... a[n-1]
 
@@ -246,7 +246,7 @@ k=n-1 => n=k+1
 
 #### Check4. Improve your bubble sort function
 
-```
+```C++
 #include <iostream>
 using namespace std;
 void array_print(int a[],int n)
@@ -267,10 +267,11 @@ void bubble2(int a[] , int n ){
         for(int i=0;i<n-1;i++){
             if(a[i]>a[i+1]){
                 swap(a[i],a[i+1]);
+                k=i; //Record the index of the last swap.
             }
         }
-        n=k+1; //Get smaller.
-    }	
+        n=k+1; //Jump!
+    }
 }
 int main() {
 	int a[10]={7,4,2,8,9,3,11,17,5,16};
@@ -279,6 +280,7 @@ int main() {
 	return 0;
 }
 ```
+[Run](http://cpp.sh/6idq)
 
 Remark1: TEXTBOOK USES THE MIN and use a little bit different idea to reduce the number of swap.
 Instead of swap each iteration, we just find the the min of each step. We only swap once if a given number of each step is not min. **Please, think how to use above improvement to textbook code.**
