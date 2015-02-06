@@ -71,41 +71,51 @@ Let's use the max.
 ![Bubble](http://www.programiz.com/sites/tutorial2program/files/Bubble-sort-algorithm-programming.jpg)
 
 #### Using Max
-Step1.
-Find the max of the following 5 numbers using the swapping.
+Step1. Find the max of the following 5 numbers using the swapping.
 (Keep larger one to the right.)
+
 **1** **5** 2 4 3
+
 a. Compare 1 and 5. Since 1<5, do not swap.
+
 1 **5** **2** 4 3
-b. 5>2 => swap!.
+
+b. 5>2 => swap!
 1 2 **5** **4** 3
+
 c. 5>4 => swap!
+
 1 2 4 **5** **3**
+
 d. 5>3 => swap!
+
 1 2 4 3 **5**
+
 We can guarantee **5** is the max.
-Step2. 
-Repeat Step1 with 
+
+Step2. Repeat Step1 with 
 **1** **2** 4 3
 
 1 **2** **4** 3
+
 1 2 **4** **3**
+
 1 2 3 **4**
+
 Step 3.
 **1** **2** 3
+
 1 **2** **3**
+
 1 2 **4**
+
 Step 4.
+
 **1** **2**
+
 1 **2**
 
 Conclusion: **1 2 3 4 5**
-
-
-
-
-
-
 
 ### One improvement
 
