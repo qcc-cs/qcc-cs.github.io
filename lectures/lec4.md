@@ -81,6 +81,7 @@ a. Compare 1 and 5. Since 1<5, do not swap.
 1 **5** **2** 4 3
 
 b. 5>2 => swap!
+
 1 2 **5** **4** 3
 
 c. 5>4 => swap!
@@ -102,19 +103,22 @@ Step2. Repeat Step1 with
 
 1 2 3 **4**
 
+We can guarantee **4** is the max.
 Step 3.
 **1** **2** 3
 
 1 **2** **3**
 
-1 2 **4**
+1 2 **3**
 
+We can guarantee **3** is the max.
 Step 4.
 
 **1** **2**
 
 1 **2**
 
+We can guarantee **2** is the max.
 Conclusion: **1 2 3 4 5**
 
 ### One improvement
