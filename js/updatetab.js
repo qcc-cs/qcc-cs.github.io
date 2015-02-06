@@ -37,8 +37,8 @@ var Latexdown={
   PreviewMark: function () {
     this.mjRunning = false;
     text = this.buffer.innerHTML;
-    text = text.replace(/^&lt;/mg, '<');
-    text = text.replace(/^&gt;/mg, '>');
+    text = text.replace(/&lt;/mg, '<');
+    text = text.replace(/&gt;/mg, '>');
     this.buffer.innerHTML = marked (text);
     this.SwapBuffers();
     
@@ -79,7 +79,7 @@ var Latexdown={
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
-     .replace(/'/g, '&#39;');
+      .replace(/'/g, '&#39;');
   }
 };
 Latexdown.callback=MathJax.Callback(["UpdateTab",Latexdown]);
