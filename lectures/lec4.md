@@ -22,7 +22,6 @@ To change a value of n using r,
 r=1;
 ```
 
-
 #### Check1. Let us make a swap function which swap values of a and b using references.
 
 ```
@@ -40,7 +39,7 @@ int main() {
 
 #### Check2. Let us make a swap function which swap values of a and b using references.
 
-```
+```c++
 #include <iostream>
 using namespace std;
 void swap(int , int ){
