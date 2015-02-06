@@ -15,6 +15,7 @@ To declare a reference  use &
 int n=5;
 int &r=n; //must be initialized  when it is create.
 ```
+
 To change a value of n using r,
 
 ```
@@ -28,9 +29,6 @@ r=1;
 #include <iostream>
 using namespace std;
 void swap(int , int ){
-	
-	
-	      
 }
 int main() {
 	int a=2,b=3;
@@ -39,6 +37,7 @@ int main() {
 	return 0;
 }
 ```
+
 #### Check2. Let us make a swap function which swap values of a and b using references.
 
 ```
