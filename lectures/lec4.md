@@ -123,6 +123,7 @@ Conclusion: **1 2 3 4 5**
 
  Each swap checking sub-step guarantees that  the right element of two elements is the max between first and 
 the right element.
+
 Ex. Assume we **already swapped** if the left element(**a[i]**) is greater than the right(**a[i+1]**).
 
 a[0] a[1] a[2] a[3] ..... **a[i]** **a[i+1]**  .... a[n-2] a[n-1]
