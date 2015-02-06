@@ -131,7 +131,7 @@ a[0] a[1] a[2] a[3] ..... **a[i]** **a[i+1]**  .... a[n-2] a[n-1]
 
 Then
 
-$$ a[i+1] = max\{ a[0],a[1],\ldots, a[i+1] \}$$
+$$ a[i+1] = \max \\{ a[0],a[1],\ldots, a[i+1] \\}$$
 
 #### How to implement
 ##### One step
