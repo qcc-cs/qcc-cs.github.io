@@ -80,7 +80,7 @@ To get size of c-string use, use **strlen**  function. You may need it for gt fu
 If you have any question, please post your question to piazza as a private note.
 If time is available, we can discuss the code using c9.io collaboration tool.
 
-- If you have any question, please ask until 2/11 9PM.
+- If you have any question, please ask until **2/9 9PM**.
 
 -------------------
 ### How to submit your project.
