@@ -1,140 +1,165 @@
-## LEC 5 Memory management.
+#### Remark
 
-###  vector sum function.
-```
-int* vector_sum(int v1[], int v2[], int n){
-}
-```
-Input: two vectors v1,v2 and size of two vectors , n.
-Actually, we get two pointers of vector v1 and v2.
-Output: a pointer of sum of v1 and v2.
-Calc: Add values of each coordinates.
-```
-int* vector_sum(int v1[], int v2[], int n){
-	int sum[n];
-	for(int i=0;i<n;i++){
-	sum[i]=v1[i]+v2[i];		
-	}
-	return sum;
-}
-```
-Unfortunately, this code does not work.
+ Each swap checking sub-step guarantees that  the right element of two elements is the max between first and 
+the right element.
 
-To do this, let us make a function which print a vector.
+Ex. Assume we **already swapped** if the left element(**a[i]**) is greater than the right(**a[i+1]**).
 
-```
-void vector_print(int v[],int n){
-}
+a[0] a[1] a[2] a[3] ..... **a[i]** **a[i+1]**  .... a[n-2] a[n-1]
 
-```
+Then
 
-Answer:
-```
-void vector_print(int v[],int n){
-	cout<<"(";
-	for(int i=0;i<n-1;i++){
-		cout<<v[i]<<",";
-	}
-	cout<<v[n-1]<<")"; // last coordinate does not need comma.
-}
-```
+$$ a[i+1] = \max \{ a[0],a[1],\ldots, a[i+1] \}$$
 
-Now check vector_sum
+#### How to implement
+##### One step
+From the 1st step,
+we start with
+a[0] a[1] .... a[n-2] a[n-1]
+
+We need to pick two elements to compare, and move pair again and again.
+So we can describe a pair as
+
+a[i] a[i+1]
+
+Now we need to find the range of i.
+
+Start:
+
+a[0] a[1]
+a[i] a[i+1]
+
+i=1
+End:
+
+a[n-2] a[n-1]
+a[i]   a[i+1]
+
+i=n-2
+
+The range of i is 1<=i<=n-2
+
+##### Between a step and next step.
+Now let us compare 1st step and 2nd step.
+1st step
+
+a[0] a[1] ............ a[n-2] a[n-1]
+
+2nd step
+
+a[0] a[1] ......a[n-3] a[n-2] 
+
+3rd step
+
+a[0] a[1] ......a[n-3]
+
+We can see the size of array is getting smaller. In other words,
 ```
+n--;
+```
+#### Check4. Improve your bubble sort function
+
+```c++
 #include <iostream>
 using namespace std;
-int* vector_sum(int v1[], int v2[], int n); 
-void vector_print(int v[],int n);
-int main(){
-	int a[5]={1,2,3,4,5};
-	int b[5]={5,4,3,2,1};
-	int c[5];
- 	c=vector_sum(a,b,5);
-	vector_print(c,5);       
+void swap(int *p,int * q){
+    int temp=*p;
+    *p=*q;
+    *q=temp;
+}
+void array_print(int a[], int n){
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+}
+void bubble(int a[], int n){
+    while(n>=2){
+        for(int i=0;i<n-1;i++){
+            if(a[i]>a[i+1]){
+                swap(&a[i],&a[i+1]);
+            }
+        }
+        n--; //Get smaller.
+    }
+}
+int main() {
+    int a[10]={1,3,8,4,7,5,0,9,6,2};
+    bubble(a,10);
+    array_print(a,10);
 }
 ```
+#### One improvement
 
- Error c is fixed!
- 
- ```
+1, 3, 8, 4, 9, 11, 13
+
+The last swapping for first step is
+
+1, 3, **8**, **4**, 9, 11, 13
+
+1, 3, 4, 8, 9, 11, 13
+
+Since there is no more swapping we can guarantee that
+
+1. 8 < 9 < 11 < 13
+2. the final list of this step is still same to
+
+1, 3, 4, 8, 9, 11, 13
+
+From above remark,
+
+$$ 8 = max\{1, 3, 4\}$$
+
+Therefore  8, 9, 11, 13 are already well-ordered 
+and we only need to do bubble sort with 
+1, 3, 4
+
+So if the last pair which is swapped is a[k] and  a[k+1]
+then we only need to do bubble sort with
+
+a[0] a[1] .... a[k]  |
+
+a[0] a[1] .... a[n-1]
+
+k=n-1 => n=k+1
+
+#### Check4. Improve your bubble sort function
+
+```C++
 #include <iostream>
 using namespace std;
-int* vector_sum(int v1[], int v2[], int n); 
-void vector_print(int v[],int n);
-int main(){
-	int a[5]={1,2,3,4,5};
-	int b[5]={5,4,3,2,1};
-	int* c;
- 	c=vector_sum(a,b,5);
-	vector_print(c,5);       
-}
-```
-#### review
-
-```
-int* vector_sum(int v1[], int v2[], int n){
-	int sum[n]; // local variable in vector_sum It may die.
-	for(int i=0;i<n;i++){
-	sum[i]=v1[i]+v2[i];		
-	}
-	return sum;
-}
-```
-One possible solution is using an array of main function.
-```
-void vector_sum(int v1[], int v2[],int sum[], int n){
-	// Now sum array is from main(). It will not die.
-	for(int i=0;i<n;i++){
-	sum[i]=v1[i]+v2[i];		
-	}
-}
-```
-Since we have exact address, we can change values of sum array from the function vector_sum.
-```
-#include <iostream>
-using namespace std;
-int* vector_sum(int v1[], int v2[], int sum[], int n); 
-void vector_print(int v[],int n);
-int main(){
-	int a[5]={1,2,3,4,5};
-	int b[5]={5,4,3,2,1};
-	int c[5]={0};
- 	vector_sum(a,b,c,5);
-	vector_print(c,5);       
-}
-
-```
-Check 1. Make a vector_sub function.
-
-### Dynamic memory.
-
-To allocate a dynamic memory and assign it to a pointer, use **new**.
-```
-int * p=new int[100];
-```
-To delete it, use **delete**. (For an array, use **delete[]**.)
-```
-delete[] p;
-```
-Why do we need it?
-```
-int * vector_add(int v1[],int v2[],int n){
-	int *tmp=new int[n]; // now we make a memory.
-	for(int i=0;i <n;i++){
-	 tmp[i]=v1[i]+v2[i];	
-	}
-	return tmp;
-}
-```
-Check 1. Make a vector_sub function using a dynamic memory.
-```
-int main ()
+void array_print(int a[],int n)
 {
-  	int v1[3]={1,2,3},v2[3]={1,2,3};
-  	int *v3;
-  	v3=vector_add(v1,v2,3);
-  	vector_print(v3,3);
-  	delete[] v3; // deallocation!
-  	return 0;
+  for(int j=0;j<n;j++)
+    cout<<a[j]<<" ";
+}
+void swap(int &a,int &b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+void bubble2(int a[] , int n ){
+    int k;
+    while(n>=2){
+    	k=0; // any number less than 1 to skip steps with n>=2
+        for(int i=0;i<n-1;i++){
+            if(a[i]>a[i+1]){
+                swap(a[i],a[i+1]);
+                k=i; //Record the index of the last swap.
+            }
+        }
+        n=k+1; //Jump!
+    }
+}
+int main() {
+	int a[10]={7,4,2,8,9,3,11,17,5,16};
+	bubble2(a,10);
+	array_print(a,10);
+	return 0;
 }
 ```
+[Run](http://cpp.sh/6idq)
+
+Remark1: TEXTBOOK USES THE MIN and use a little bit different idea to reduce the number of swap.
+Instead of swap each iteration, we just find the the min of each step. We only swap once if a given number of each step is not min. **Please, think how to use above improvement to textbook code.**
+
