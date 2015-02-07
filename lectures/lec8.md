@@ -31,8 +31,10 @@ int main ()
 }
 ```
 [Run](http://cpp.sh/6oe)
-Practice 2. Make a function which return the sum of an array v.
-If $v={1,2,3}, then $sum(v,3)=1+2+3=6$.
+
+#### Practice 2. Make a function which return the sum of an array v.
+If $v={1,2,3}$, then $sum(v,3)=1+2+3=6$.
+
 ```
 #include <iostream>
 using namespace std;
