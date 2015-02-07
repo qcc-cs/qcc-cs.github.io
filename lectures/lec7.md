@@ -67,18 +67,17 @@ int main() {
     delete [] a;
     return 0;
 }
-4. You can swap the array of index a[ ] or a copy of constant string s within bubble function using Heap memory. (Use new command) .
-Here a[] is ={1,2,3,4,5,6,...,n}
+```
 
-5. To get size of c-string use, [strlen](http://www.cplusplus.com/reference/cstring/strlen/) function. (You may need it for gt function.)
+4. To get size of c-string use, [strlen](http://www.cplusplus.com/reference/cstring/strlen/) function. You may need it for gt function.
 
-6. If you have any question, please post your question to piazza as a private note.
+4. If you have any question, please post your question to piazza as a private note.
 If time is available, we can discuss the code using c9.io collaboration tool.
 
 - If you have any question, please ask until 2/11 9PM.
 
 -------------------
-1. Please, accept Github team invitation.
+1. Please, accept Github team invitation.(Check tigermail.)
 2. I already made a private repo for you.
 If your tigermail is hello23@tigermail.qcc.cuny.edu
 name of repo is hello23.
