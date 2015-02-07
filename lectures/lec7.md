@@ -96,12 +96,20 @@ within project1 folder.
 5. To push your code to github,
 
 a] add  files.
+```
 git add *
+```
+
 b] Commit it. (Take a screenshot of your code.)
+```
 git commit -m "Your explanation"
+```
 c] Push to remote.
+```
 git push remote
+```
 d] Type your github id and  password.
+
 e] Go to github and check whether it is upload properly.
 
 I only grade code and document within your github repo, not in your local folder. 
