@@ -94,10 +94,8 @@ void swap(size_t & x,size_t &y){
     y=t;
 }
 size_t * bubble3(const char s[], int n){
-    size_t * a= new size_t[n];
-    for(int i=0; i<n;i++){
-        a[i]=i;
-    }
+    \\ construct a
+    \\ initialize a
     \\ code. Be careful about the index.
     return a;
 }
