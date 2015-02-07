@@ -1,10 +1,13 @@
 ## Lec 7
 
-1. Goal: Make a bubble sort program to solve a given array of c-string.
+### 1. Goal
+
+Make a bubble sort program to solve a given array of c-string.
 
 - Post your code and 1 page a supporting document. Supporting document explains your idea behind your code.
 
-2. Idea: 
+### Idea
+
 a. make gt function which compare two c-strings and return true if first string is greater than second. Otherwise return false.
 
 b. order of string: For simplicity, we only consider lowercase alphabets.
@@ -17,8 +20,28 @@ ab<abc
 
 c. Instead of swapping c-strings, you may swap indexes of c-strings.
 
+EXAMPLE. 
+```
+const char *s[3]={"app","dog","cat"};
+time_t a[3]={1,2,3};
+```
+Since s is const, we cannot swap. Instead, we can swap index array a using bubble function.
+Of course, we need to use gt function to determine whether we swap or not.
+Eventually, we can change the array a
+```
+a[0]=1; a[1]=3; a[2]=2;
+```
+Then
+```
+s[a[0]]="app";s[a[1]]="cat";s[a[2]]="dog";
+```
+
 d. bubble function should return the result as an array.
+
+I would like to see whether you can use a heap memory with **new** command. 
+
 3. Sample structure
+```
 #include <iostream>
 #include <cstring>
 using namespace std;
