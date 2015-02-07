@@ -40,7 +40,7 @@ d. bubble function should return the result as an array.
 
 I would like to see whether you can use a heap memory with **new** command. 
 
-3. Sample structure
+### Sample structure
 ```
 #include <iostream>
 #include <cstring>
@@ -69,14 +69,20 @@ int main() {
 }
 ```
 
-4. To get size of c-string use, [strlen](http://www.cplusplus.com/reference/cstring/strlen/) function. You may need it for gt function.
+### [strlen](http://www.cplusplus.com/reference/cstring/strlen/)
 
-4. If you have any question, please post your question to piazza as a private note.
+To get size of c-string use, use **strlen**  function. You may need it for gt function.
+
+### Any question?
+
+If you have any question, please post your question to piazza as a private note.
 If time is available, we can discuss the code using c9.io collaboration tool.
 
 - If you have any question, please ask until 2/11 9PM.
 
 -------------------
+### How to submit your project.
+
 1. Please, accept Github team invitation.(Check tigermail.)
 2. I already made a private repo for you.
 If your tigermail is hello23@tigermail.qcc.cuny.edu
