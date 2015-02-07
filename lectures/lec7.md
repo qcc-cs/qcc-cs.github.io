@@ -1,5 +1,7 @@
 ## Lec 7
 
+### Project 1: Due 2/11 10AM.
+
 ### 1. Goal
 
 Make a bubble sort program to solve a given array of c-string.
