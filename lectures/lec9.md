@@ -106,11 +106,13 @@ int main()
 {
     int a[4]={1,2,3,4};
     print(a,2);
-}
+}u
 ```
 [Run](http://cpp.sh/8xby)
+
 #### Use a pointer of pointer
 Be careful.
+
 ```
 #include <iostream>
 #include <string>
@@ -123,9 +125,11 @@ int main()
     
 }
 ```
+
 p is a pointer of pointer but a is two dimensional array( array of arrays).
 
 [Check](http://stackoverflow.com/q/5329107)
+
 ```
 #include <iostream>
 #include <string>
@@ -148,6 +152,7 @@ int main()
     delete[] p;    
 }
 ```
+
 [Run](http://cpp.sh/62wj)
 #### C++ template
 Later.
