@@ -8,7 +8,7 @@ Ex:  matrix
 A has n rows and m columns.
 
 $$a_{i,j}$$ is a coefficient  of A.
-![picw200](https://cloud.githubusercontent.com/assets/10469752/6127327/97fdbb66-b0f7-11e4-8e5d-08f3f0d33453.pngg)
+![picw200](https://cloud.githubusercontent.com/assets/10469752/6127327/97fdbb66-b0f7-11e4-8e5d-08f3f0d33453.png)
 
 A has n rows.
 
