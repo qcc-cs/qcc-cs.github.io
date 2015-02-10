@@ -376,4 +376,18 @@ nav ul li:hover, nav ul li.active {
 .mo span{
 	color:inherit !important;	
 }
+
+a[alt=Run]{  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;}
+img[alt=picw100] { width: 100px; }
+img[alt=picw200] { width: 200px; }
+img[alt=picw300] { width: 300px; }
+img[alt=picw400] { width: 400px; }
+img[alt=picw500] { width: 500px; }
+/* markdown image kwang http://stackoverflow.com/a/14747656 */
 /* END KWANG *?
