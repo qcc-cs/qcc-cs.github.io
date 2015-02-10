@@ -145,6 +145,7 @@ int main()
     delete[] p;    
 }
 ```
+[Run](http://cpp.sh/62wj)
 #### C++ template
 Later.
 
