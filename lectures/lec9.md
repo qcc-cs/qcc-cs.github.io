@@ -92,6 +92,61 @@ Since compiler does not have any clue the 2d-size of array, compiler cannot comp
 #### Conversion to 1d
 ![screenshot 2015-02-10 07 11 26](https://cloud.githubusercontent.com/assets/10469752/6127006/3c21be44-b0f4-11e4-84b2-c5f80462b9ad.png)
 ![screenshot 2015-02-10 07 12 35](https://cloud.githubusercontent.com/assets/10469752/6127007/3c23ce00-b0f4-11e4-829e-e18db8d0f69e.png)
+```
+#include <iostream>
+#include <string>
+using namespace std;
+void print(int a[],int n){//fixed size.
+    //code
+}
+int main()
+{
+    int a[4]={1,2,3,4};
+    print(a,2);
+}
+```
+[Run](http://cpp.sh/8xby)
+#### Use a pointer of pointer
+Be careful.
+```
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int a[2][2]={{1,2},{3,4}};
+    int **p;
+    p= a;
+    
+}
+```
+p is a pointer of pointer but a is two dimensional array( array of arrays).
+
+[Check](http://stackoverflow.com/q/5329107)
+```
+#include <iostream>
+#include <string>
+using namespace std;
+void print(int **p,int n){
+    for(int r=0;r<n;r++){
+        for(int c=0;c<n;c++){
+            cout<<p[r][c]<<" ";
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int a[2][2]={{1,2},{3,4}};
+    int **p=new int*[2];
+    p[0]= a[0];
+    p[1]= a[1];
+    print(p,2);
+    delete[] p;    
+}
+```
+#### C++ template
+Later.
 
 
 
