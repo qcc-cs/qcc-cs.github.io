@@ -67,8 +67,37 @@ int main()
     del(p,2);
 }
 ```
-
 [Run](http://cpp.sh/7cdh)
+
+#### Product
+
+```
+int** mul(int **p1,int **p2,int n){
+    int **s = gen(n);
+    for(int r=0;r<n;r++){
+        for(int c=0;c<n;c++){
+            //code (for loop)      
+        }
+    }
+    return s;
+}
+int main()
+{
+    int a[2*2]={1,2,3,4};
+    int b[2*2]={4,3,2,1};
+    int **p1=gen(a,2);
+    int **p2=gen(b,2);
+    int **p3=mul(p1,p2,2);
+    print(p4,2);
+    del(p1,2);
+    del(p2,2);
+    del(p3,2);
+}
+```
+Please, try by yourself.
+
+[Run](http://cpp.sh/4hx7)
+
 
 
 
