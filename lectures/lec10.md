@@ -54,6 +54,18 @@ int** sum(int **p1,int **p2,int n){
     // code
     return s;
 }
+int main()
+{
+    int a[2*2]={1,2,3,4};
+    int b[2*2]={4,3,2,1};
+    int **p1=gen(a,2);
+    int **p2=gen(b,2);
+    int **p= sum(p1,p2,2);
+    print(p,2);
+    del(p1,2);
+    del(p2,2);
+    del(p,2);
+}
 ```
 
 [Run](http://cpp.sh/7cdh)
