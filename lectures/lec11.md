@@ -1,4 +1,4 @@
-##LEC 10.
+##LEC 11
 How to use pointer to pointer for matrix
 #### Construct.
 ```
