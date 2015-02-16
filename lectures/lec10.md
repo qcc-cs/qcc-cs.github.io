@@ -2,6 +2,8 @@
 
 ### Please, do not copy the code from friends.
 
+### I will drop one of lowest projects. 
+
 #### Naive code
 ```
 #include <iostream>
@@ -102,8 +104,28 @@ int main() {
     return 0;
 }
 ```
+[Run](http://cpp.sh/34iy)
 
-#### 
+```
+#include <iostream>
+using namespace std;
+int main() {
+    const char * s[2]= { "apple","zoo"};
+    s[0][0]='b';
+    cout<<s[0];
+    return 0;
+}
+```
+Error!
+[Run](http://cpp.sh/5sp6)
+
+
+It is an array of const c-string. Not constant array!.
+
+
+
+
+
 
 
 
