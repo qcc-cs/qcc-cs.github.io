@@ -48,7 +48,13 @@ void print(int **p,int n){
 }
 ```
 #### sum?
-
+```
+int** sum(int **p1,int **p2,int n){
+    int **s = gen(n);
+    // code
+    return s;
+}
+```
 
 [Run](http://cpp.sh/7cdh)
 
