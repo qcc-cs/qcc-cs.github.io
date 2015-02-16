@@ -120,6 +120,8 @@ Error!
 [Run](http://cpp.sh/5sp6)
 
 It is an array of const c-string. Not constant array!.
+
+#### Jinze He's code.
 ```
 #include<iostream>
 #include<cstring>
