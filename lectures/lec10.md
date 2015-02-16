@@ -93,9 +93,15 @@ bool gt(const char * x,const char * y){
 
 #### const !!
 ```
-
+#include <iostream>
+using namespace std;
+int main() {
+    const char * s[2]= { "apple","zoo"};
+    s[0]="bee";
+    cout<<s[0];
+    return 0;
+}
 ```
-
 
 #### 
 
