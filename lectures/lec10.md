@@ -1,5 +1,7 @@
 ##LECT 10. PROJECT 1 REVIEW
 
+### Please, do not copy the code from friends.
+
 #### Naive code
 ```
 #include <iostream>
@@ -75,6 +77,31 @@ int main() {
 }
 ```
 [Run](http://cpp.sh/972i)
+
+[strcmp](http://opensource.apple.com/source/Libc/Libc-262/ppc/gen/strcmp.c)
+
+#### gt function
+```
+bool gt(const char * x,const char * y){
+        for ( ;*x == *y; x++, y++)
+	if (*x == '\0')
+	    return false;
+    return ((*(unsigned char *)x < *(unsigned char *)y) ? false : true);
+}
+```
+[Run](http://cpp.sh/6tbj)
+
+#### const !!
+```
+
+```
+
+
+#### 
+
+
+
+
 
 
 
