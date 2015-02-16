@@ -88,7 +88,7 @@ int main()
     int **p1=gen(a,2);
     int **p2=gen(b,2);
     int **p3=mul(p1,p2,2);
-    print(p4,2);
+    print(p3,2);
     del(p1,2);
     del(p2,2);
     del(p3,2);
