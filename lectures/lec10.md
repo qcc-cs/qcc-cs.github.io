@@ -1,7 +1,80 @@
 ##LECT 10. PROJECT 1 REVIEW
 
-#### Sample code.
+#### Naive code
 ```
+#include <iostream>
+#include <cstring>
+using namespace std;
+void swap(size_t &a,size_t &b){
+    size_t t=a;
+    a=b;
+    b=t;
+}
+bool gt(const char * x,const char * y){
+    size_t lenx=strlen(x);
+    size_t leny=strlen(y);
+    size_t len=0;
+    bool great;
+    if(lenx>leny){
+        len=leny;
+        great=true;
+    }
+    else{
+        len=lenx;
+        great=false;
+    }
+    size_t valx;
+    size_t valy;
+    for(size_t i=0;i<len;i++){
+        valx=(size_t)tolower(x[i]);
+        valy=(size_t)tolower(y[i]);
+        if(valx>valy){
+            return true;
+        }
+        else if(valx<valy){
+            return false;
+        }
+    }
+    return great;
+}
+size_t * bubble(const char *s[],size_t n){
+    size_t * a=new size_t[n];
+    size_t m=n;
+    for(size_t i=0;i<n;i++){
+        a[i]=i;
+    }
+    size_t  nn=0;
+    while(n>=2){
+        for(size_t i=0;i<n-1;i++){
+            if(gt(s[ a[i] ], s[ a[i+1] ])){
+                cout<<s[a[i]]<<">"<<s[a[i+1]]<<endl;//debug 
+                swap(a[i],a[i+1]);
+                nn=i+1;
+            }
+            else{
+                cout<<s[a[i]]<<"=<"<<s[a[i+1]]<<endl; //debug
+            }
+        }
+        for(size_t i=0;i<m;i++){
+            cout<<s[a[i]]<<" ";
+        }
+        cout<<endl;
+        n=nn;
+    }
+    return a;
+}
+int main() {
+    const char * s[8]= { "apple","zoo","bee","beacon","jane","june","bee","app"};
+    size_t n=8;
+    size_t * a=bubble(s,n);
+    for(size_t i=0;i<n;i++){
+        cout<<s[a[i]]<<" ";
+    }
+    delete [] a;
+    return 0;
+}
+```
+[Run](http://cpp.sh/972i)
 
-```
+
 
