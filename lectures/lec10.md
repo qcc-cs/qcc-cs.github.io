@@ -119,9 +119,50 @@ int main() {
 Error!
 [Run](http://cpp.sh/5sp6)
 
-
 It is an array of const c-string. Not constant array!.
+```
+#include<iostream>
+#include<cstring>
+using namespace std;
 
+void swap(char *a, char *b )
+{
+	char *temp = a;
+	a=b;
+	b=temp;
+}
+void sort(const char *s[], int n)
+{
+	while (n>=2)
+	{
+		for (int i=0; i<n-1;i++)
+		{
+			if(strcmp(s[i],s[i+1])>0)
+			{
+				swap(s[i],s[i+1]);
+			}
+		}
+		n--;
+	}
+}
+void print(const char *s[], int n )
+{
+   int i;
+   for( i = 0; i < n; i++ )
+   {
+	cout << s[i]<<"  ";
+   }	 
+}
+	int main()
+{
+   const char* s[11] = { "zoney", "pear", "nectar", "starfruit", "blueberry", "pineapple", "gojiberry", "guava", "nectarine", "honeycomb", "grapefruit" };
+   int  n = 11;
+   sort(s,n);
+   print(s,n );
+   return 0;
+}
+```
+[Run](http://cpp.sh/8nuc)
 
 
 
