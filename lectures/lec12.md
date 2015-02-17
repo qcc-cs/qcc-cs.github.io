@@ -42,6 +42,15 @@ Point pt1;
 pt1.x=1;
 pt1.y=2;
 ```
+#### Remark `ptr->member`
+For a pointer `ptr`, we can use
+```
+ptr->member
+```
+which is equivalent to
+```
+(*ptr).member
+```
 #### Example 1
 ```
 #include <iostream>
