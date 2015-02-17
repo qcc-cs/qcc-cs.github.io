@@ -81,7 +81,7 @@ int main()
 }
 ```
 There is a reason why private is default.
-Google  **Encapsulation**  in class c++.
+Google  [**Encapsulation**](http://en.wikipedia.org/wiki/Encapsulation_%28object-oriented_programming%29)  in class c++.
 
 #### Example3.
 ```
