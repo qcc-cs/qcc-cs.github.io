@@ -9,7 +9,7 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-void swap(size_t &a,size_t &b){
+void swap(size_t & a,size_t & b){
     size_t t=a;
     a=b;
     b=t;
