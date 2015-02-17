@@ -9,7 +9,7 @@ Fraction type??
 $$
 \frac{1}{2}+\frac{1}{3}=?
 $$
-```
+```c++
 Fraction a(1,2), b(1,3);
 Fraction c=a+b;
 cout<<"The total of 1/2 and 1/3 is "<<c;
@@ -17,7 +17,7 @@ cout<<"The total of 1/2 and 1/3 is "<<c;
 
 #### a 2D-Point class
 You may use an array for a 2D-point.
-```
+```c++
 int a[2]={1,2}; //(1,2);
 ```
 But there is a better way.
@@ -52,7 +52,7 @@ which is equivalent to
 (*ptr).member
 ```
 #### Example 1
-```
+```c++
 #include <iostream>
 using namespace std;
 class Point{
