@@ -62,8 +62,18 @@ Please read the following article.
 [How Non-Member Functions Improve Encapsulation](http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197)
 
 #### Sample code
+Update the class first.
 ```
-
+class Fraction{
+  private:
+    int num,den;
+  public:
+    void set(int n,int d){ num=n; den=d;normalize();}
+    int get_num(){return num;}
+    int get_den(){return den;}
+    Fraction add(Fraction other); // new!
+    void normalize();
+}; //Do not forget;
 
 ```
 
