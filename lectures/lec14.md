@@ -19,8 +19,10 @@ Therefore normalization is necessary.
 lcm function may also return a negative number. Answer could be zero but LCD is not 1. So the normalization is necessary. Use set function to setup a fraction.
 #### Two implementations
 ##### 1. Using a member function
-Input: Fraction other
-Output: fract
+
+a. Input: Fraction other
+b. Output: fract
+
 ```c++
 Fraction Fraction::add(Fraction other){
   Fraction fract;
@@ -32,8 +34,10 @@ Fraction Fraction::add(Fraction other){
 ```
 [Show](http://cpp.sh/3unc)
 #### 2. Using non-member function
-Input: Fraction x , Fraction y
-Output: Fraction z =x+y
+
+a. Input: Fraction x , Fraction y
+b. Output: Fraction z =x+y
+
 We cannot access num and den directly.
 ```
 Fraction Fraction::add(Fraction x,Fraction y){
@@ -56,5 +60,12 @@ Fraction Fraction::add(Fraction x,Fraction y){
 #### Remark 
 Please read the following article.
 [How Non-Member Functions Improve Encapsulation](http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197)
+
+#### Sample code
+```
+
+
+```
+
 
 
