@@ -17,4 +17,6 @@ $$
 Therefore normalization is necessary.
 #### Remark
 lcm function may also return a negative number. Answer could be zero but LCD is not 1. So the normalization is necessary.
+```
 
+```
