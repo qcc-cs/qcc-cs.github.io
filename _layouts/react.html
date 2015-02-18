@@ -20,6 +20,7 @@
 <script  src="js/rbutton.js"></script>
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 <script src="js/updatetab.js"></script>
 <!--<script src="http://cdn.ztx.io/strapdown/strapdown.min.js"></script> -->
@@ -37,6 +38,9 @@ MathJax.Hub.Config({
 });
 // http://kerzol.github.io/markdown-mathjax/editor.html
 marked.setOptions({
+  highlight: function(code) {
+    return hljs.highlightAuto(code).value;
+  },
   renderer: new marked.Renderer(),
   gfm: true,
   tables: true,
