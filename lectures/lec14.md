@@ -132,6 +132,35 @@ Fraction div(Fraction x,Fraction y){
   return z;
 }
 ```
+Main function
+```
+int main()
+{
+  Fraction x,y,a,aa,s,m,d;
+  x.set(3,4);
+  y.set(1,3);
+  a=x.add(y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" + "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << a.get_num()<<"/"<<a.get_den()<<endl;
+  aa=add(x,y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" + "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << aa.get_num()<<"/"<<aa.get_den()<<endl;
+  s=sub(x,y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" - "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << s.get_num()<<"/"<<s.get_den()<<endl;
+  m=mul(x,y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" * "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << m.get_num()<<"/"<<m.get_den()<<endl;
+  d=div(x,y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" / "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << d.get_num()<<"/"<<d.get_den()<<endl;
+}
+```
 [Full code](http://cpp.sh/6w7b)
 
 
