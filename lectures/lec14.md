@@ -45,9 +45,9 @@ Fraction Fraction::add(Fraction x,Fraction y){
   Fraction Fraction::add(Fraction x,Fraction y){
   Fraction z;
   int xnum=x.get_num();
-  int xden=x.get_dem();
+  int xden=x.get_den();
   int ynum=y.get_num();
-  int yden=y.get_dem();
+  int yden=y.get_den();
   //1. Find the lcd.
   //2. Find the numerator of z
   //3. use set function of z to initialize.
@@ -55,7 +55,7 @@ Fraction Fraction::add(Fraction x,Fraction y){
 }
 }
 ```
-[Show](http://cpp.sh/8vov)
+[Show](http://cpp.sh/2wjj)
 
 #### Remark 
 Please read the following article.
@@ -74,8 +74,66 @@ class Fraction{
     Fraction add(Fraction other); // new!
     void normalize();
 }; //Do not forget;
-
 ```
+Main function
+```
+int main()
+{
+  Fraction x,y,z,w;
+  x.set(1,2);
+  y.set(1,3);
+  z=x.add(y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" + "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << z.get_num()<<"/"<<z.get_den()<<endl;
+  w=add(x,y);
+  cout<<x.get_num()<<"/"<<x.get_den()<<" + "
+  <<y.get_num()<<"/"<<y.get_den()<<" = "
+  << w.get_num()<<"/"<<w.get_den()<<endl;
+}
+```
+[Full code](http://cpp.sh/9pu6)
+
+#### Practice1 - Make a subtraction function **sub**.
+```
+Fraction sub(Fraction x,Fraction y){
+  Fraction z;
+  int xnum=x.get_num();
+  int xden=x.get_den();
+  int ynum=y.get_num();
+  int yden=y.get_den();
+  int lcd=lcm(xden,yden);
+  // code
+  z.set(znum,lcd);
+  return z;
+}
+```
+#### Practice2 - Make a multiplication function **mul**
+```
+Fraction mul(Fraction x,Fraction y){
+  Fraction z;
+  int xnum=x.get_num();
+  int xden=x.get_den();
+  int ynum=y.get_num();
+  int yden=y.get_den();
+  // z.set 
+  return z;
+}
+```
+#### Practice3 - Make a division function **div**
+```
+Fraction div(Fraction x,Fraction y){
+  Fraction z;
+  int xnum=x.get_num();
+  int xden=x.get_den();
+  int ynum=y.get_num();
+  int yden=y.get_den();
+  // z.det
+  return z;
+}
+```
+[Full code](http://cpp.sh/6w7b)
+
 
 
 
