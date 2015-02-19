@@ -40,19 +40,16 @@ b. Output: Fraction z =x+y
 
 We cannot access num and den directly.
 ```
-Fraction Fraction::add(Fraction x,Fraction y){
-  Fraction z;
-  Fraction Fraction::add(Fraction x,Fraction y){
+Fraction add(Fraction x,Fraction y){
   Fraction z;
   int xnum=x.get_num();
   int xden=x.get_den();
   int ynum=y.get_num();
   int yden=y.get_den();
-  //1. Find the lcd.
-  //2. Find the numerator of z
-  //3. use set function of z to initialize.
+  int l=lcd(xden,yden);
+  int n=(l/xden)*xnum+(l/yden)*ynum;
+  z.set(n,l);
   return z;
-}
 }
 ```
 [Show](http://cpp.sh/2wjj)
