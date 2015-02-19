@@ -259,6 +259,7 @@ Check this [link](http://en.wikipedia.org/wiki/Default_constructor).
 
 ### Example 2.
  Construct Date class with following members;
+ ```
  private:
   int month,day, year;
  public: 
@@ -270,7 +271,7 @@ Check this [link](http://en.wikipedia.org/wiki/Default_constructor).
  int get_y();// Get a year.
  void print(); //print date like Feb-1-2015
  // Hint: Use datelist[12]={Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec};
- 
+ ```
  
 
 
