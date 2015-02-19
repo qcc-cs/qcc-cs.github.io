@@ -257,6 +257,20 @@ Fraction f3=Fraction{1,2};
 If the constructor does have one or more parameters, but they all have default values, then it is still a default constructor. 
 Check this [link](http://en.wikipedia.org/wiki/Default_constructor). 
 
+### Example 2.
+ Construct Date class with following members;
+ private:
+  int month,day, year;
+ public: 
+ Date();// default constructor. Set the date as 02-19-2015
+ Date(int m,int d, int y);// constructor.
+ bool set(int m,int d, int y); //If m,d or d is not valid, return false;
+ int get_m();// Get a month.
+ int get_d();// Get a day.
+ int get_y();// Get a year.
+ void print(); //print date like Feb-1-2015
+ // Hint: Use datelist[12]={Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec};
+ 
  
 
 
