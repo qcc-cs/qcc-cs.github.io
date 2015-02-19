@@ -188,11 +188,12 @@ Then the following code does not work any more.
 class Fraction{
   public:
     Fraction(int n, int d){set(n,d);}
-    Fraction(){}
+    Fraction(){} //default constructor
   //
 }
 ```
-We can also reuse previous constructor to declare a new constructor.(**Delegation**).
+[Run](http://runnable.com/VOVTx5BYtpcWXYPj/cs203-lec15-initialization-with-class-for-c%2B%2B)
+[c++11] We can also reuse previous constructor to declare a new constructor.(**Delegation**).
 ```
 class Fraction{
   public:
@@ -201,13 +202,14 @@ class Fraction{
   //
 }
 ```
+[RUN](http://runnable.com/VOVTT5BYtpcWXYPJ/cs203-lec15-delegating-constructor-for-c%2B%2B)
 Then the default constructor will initialize a given Fraction object as 0/1.
-Actually, you can initialize it within class.
+[c++11] Actually, you can initialize it within class.
 ```
 class Fraction{
   private:
-  int num=0;
-  int den=1;
+  int num=0; //c++11
+  int den=1; //c++11
   //
   public:
     Fraction(int n, int d){set(n,d);}
