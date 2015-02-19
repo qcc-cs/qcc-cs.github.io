@@ -158,13 +158,6 @@ class Fraction{
   //
 }
 ```
-#### Example 1. 
-Declare a constructor Fraction(int n).
-```
-Fraction::Fraction(int n){
-  // code
-}
-```
 #### The default Constructor
 If we do not provide a constuctor, the compiler automatically provides a **defacult constructor** which is trivial.
 But once we declare a constructor, default constructor does not exist any more.
@@ -184,7 +177,7 @@ Then the following code does not work any more.
  ```
  ##### How to fix it?
  Declare the default operator by yourself.
-  ```
+```
 class Fraction{
   public:
     Fraction(int n, int d){set(n,d);}
@@ -192,7 +185,26 @@ class Fraction{
   //
 }
 ```
-[Run](http://runnable.com/VOVTx5BYtpcWXYPj/cs203-lec15-initialization-with-class-for-c%2B%2B)
+Or assign 0/1
+```
+class Fraction{
+  public:
+    Fraction(int n, int d){set(n,d);}
+    Fraction(){set(0,1);} //default constructor
+  //
+}
+```
+Or
+```
+class Fraction{
+  public:
+    Fraction(int n, int d){set(n,d);}
+    Fraction(){num=0,den=1;} //default constructor
+  //
+}
+```
+[Run](http://runnable.com/VOVVv5BYtpcWXYRp/cs203-lec15-default-constructor-for-c%2B%2B)
+
 [c++11] We can also reuse previous constructor to declare a new constructor.(**Delegation**).
 ```
 class Fraction{
@@ -204,6 +216,7 @@ class Fraction{
 ```
 [RUN](http://runnable.com/VOVTT5BYtpcWXYPJ/cs203-lec15-delegating-constructor-for-c%2B%2B)
 Then the default constructor will initialize a given Fraction object as 0/1.
+
 [c++11] Actually, you can initialize it within class.
 ```
 class Fraction{
@@ -217,6 +230,16 @@ class Fraction{
   //
 }
 ```
+[Run](http://runnable.com/VOVTx5BYtpcWXYPj/cs203-lec15-initialization-with-class-for-c%2B%2B)
+
+#### Example 1. 
+Declare a constructor Fraction(int n) which convert an integer n into a fraction.
+```
+Fraction::Fraction(int n){
+  // code
+}
+```
+
 
 #### initialization by { }
 ```
@@ -233,6 +256,7 @@ Fraction f3=Fraction{1,2};
 ##### Remark
 If the constructor does have one or more parameters, but they all have default values, then it is still a default constructor. 
 Check this [link](http://en.wikipedia.org/wiki/Default_constructor). 
+
  
 
 
