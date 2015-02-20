@@ -57,7 +57,7 @@ We can see the size of array is getting smaller. In other words,
 ```
 n--;
 ```
-#### Check4. Improve your bubble sort function
+#### Check1. Make your bubble sort function
 
 ```c++
 #include <iostream>
@@ -122,7 +122,7 @@ a[0] a[1] .... a[n-1]
 
 k=n-1 => n=k+1
 
-#### Check4. Improve your bubble sort function
+#### Check2. Improve your bubble sort function
 
 ```C++
 #include <iostream>
