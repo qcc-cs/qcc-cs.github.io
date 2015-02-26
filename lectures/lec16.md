@@ -170,7 +170,7 @@ It may not work since s is const.
 #include <cstring>
 Fraction::Fraction(const char *ss){
   int len=strlen(ss);
-  char s[len];
+  char s[len+1]; //len+1 for escape code '\0'.
   strcpy(s,ss);
   int n=0; int d=0;//default
   char *p1=strtok(s,"/, "); //First
