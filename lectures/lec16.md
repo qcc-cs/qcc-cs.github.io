@@ -232,7 +232,7 @@ class Email{
 // code
 int main(){
   Email email1("happy@person.com");
-  Email email2=email;
+  Email email2=email1;
   email1.set("boy@app.com");
   email1.print();cout<<endl;
   cout<<email2.getid();
