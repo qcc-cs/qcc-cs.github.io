@@ -227,18 +227,19 @@ class Email{
     Email(const Email & email); //copy constructor
     ~Email();//delete.
     void print();
-
+    void changeid(char * newid){id=newid;}
 };
 // code
 int main(){
   Email email1("happy@person.com");
   Email email2=email1;
-  email1.set("boy@app.com");
-  email1.print();cout<<endl;
-  cout<<email2.getid();
+  char sad[4]="sad";
+  email1.changeid(sad);
+  cout<<email1.getid();cout<<endl;
+  email2.print();cout<<endl;
 }
-//boy@app.com
-//happy
+//sad
+//happy@person.com
 ```
 1. set function.
   - Use new command for id and domain.
