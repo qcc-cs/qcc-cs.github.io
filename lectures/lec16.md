@@ -220,8 +220,8 @@ class Email{
     char *id;
     char *domain;
   public:
-    set(const char* ss); // Use new command.
-    Email(const char* ss); // constructor
+    void set(const char* ss); // Use new command.
+    Email(const char* ss){set(ss);} // constructor
     char * getid(){return id;}
     char * getdomain(){return ;}
     Email(const Email & email); //copy constructor
@@ -239,6 +239,17 @@ int main(){
 }
 //boy@app.com
 //happy
+```
+1. set function.
+  - Use new command for id and domain.
+  - split a string into id and domain.
+2. Copy constructor.
+  - Duplicate id and domain.
+3. Destructor. Delete dynamic memories.
+4. print function. 
+```
+Email email("kim12@qcc.com");
+email.print(); // Output: kim12@qcc.com
 ```
 
 
