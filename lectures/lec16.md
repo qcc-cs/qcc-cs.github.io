@@ -207,21 +207,27 @@ Fraction::Fraction(const char *ss){
 
 #### Practice
 Email address can be splitted into id and domain.
-For example, id is hello and domain is company.com for "hello@company.com"
+For example, id is hello and domain is company.com for "hello@company.com".
+
 Construct Email class.
 ```
+class Email{
+ #include<iostream>
+#include<cstring>
+using namespace std;
 class Email{
   private:
     char *id;
     char *domain;
   public:
-    set(const char* ss);
+    set(const char* ss); // Use new command.
     Email(const char* ss); // constructor
     char * getid(){return id;}
     char * getdomain(){return ;}
-    Email &Email(const Email & email); //copy constructor
-    ~Email();
-    
+    Email(const Email & email); //copy constructor
+    ~Email();//delete.
+    void print();
+
 };
 // code
 int main(){
