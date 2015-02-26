@@ -159,3 +159,80 @@ int main( )
 ```
 What do you expect?
 [Run](http://cpp.sh/46ie)
+
+#### A constructor String to Fraction
+I want to initialize the fraction with a cstring.
+```
+Fraction a("1/2");
+Fraction b("2,3");
+Fraction c("4,5");
+```
+Of course, we need to add '#include <cstring>'
+Use [strtok](http://www.cplusplus.com/reference/cstring/strtok/) function.
+```
+#include <cstring>
+Fraction::Fraction(const char *s){
+  int n=0; int d=0;//default
+  char *p1=strtok(s,"/, "); //First
+  char *p2=strtok(NULL,"/, "); //Next
+  if(p1!=NULL){
+    n=atoi(p1);
+  }
+  if(p2!=NULL){
+    d=atoi(p1);
+  }
+  set(n,d);
+}
+```
+It may not work since s is const.
+```
+#include <cstring>
+Fraction::Fraction(const char *ss){
+  int len=strlen(ss);
+  char s[len];
+  strcpy(s,ss);
+  int n=0; int d=0;//default
+  char *p1=strtok(s,"/, "); //First
+  char *p2=strtok(NULL,"/, "); //Next
+  if(p1!=NULL){
+    n=atoi(p1);
+  }
+  if(p2!=NULL){
+    d=atoi(p2);
+  }
+  set(n,d);
+}
+```
+[Run](http://cpp.sh/55hg)
+
+#### Practice
+Email address can be splitted into id and domain.
+For example, id is hello and domain is company.com for "hello@company.com"
+Construct Email class.
+```
+class Email{
+  private:
+    char *id;
+    char *domain;
+  public:
+    set(const char* ss);
+    Email(const char* ss); // constructor
+    char * getid(){return id;}
+    char * getdomain(){return ;}
+    Email &Email(const Email & email); //copy constructor
+    ~Email();
+    
+};
+// code
+int main(){
+  Email email1("happy@person.com");
+  Email email2=email;
+  email1.set("boy@app.com");
+  email1.print();cout<<endl;
+  cout<<email2.getid();
+}
+//boy@app.com
+//happy
+```
+
+
