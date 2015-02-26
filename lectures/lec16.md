@@ -64,26 +64,7 @@ void Vector::set(int size){
 }
 ```
 We used the heap memory for vec. So we need to delete it later.
-```
-class Vector{
-    private:
-        int n;
-        int *vec;
-    public:
-        void set(int size);
-        void set(int *vect1,int size);
-        Vector();
-        Vector(int size){set(size);}
-        Vector(int *vec1, int size){set(vec1,size);}
-        Vector fmul( Vector v1);
-        int box(Vector v1);
-        void print();
-};
-void Vector::set(int size){
-    n=size;
-    vec= new int[n]; //Heap memory!!!
-}
-```
+
 So we need to delete vec.
 Let me introduce a destructor.
 ```
@@ -179,7 +160,7 @@ Fraction::Fraction(const char *s){
     n=atoi(p1);
   }
   if(p2!=NULL){
-    d=atoi(p1);
+    d=atoi(p2);
   }
   set(n,d);
 }
@@ -223,10 +204,10 @@ class Email{
     void set(const char* ss); // Use new command.
     Email(const char* ss){set(ss);} // constructor
     char * getid(){return id;}
-    char * getdomain(){return ;}
+    char * getdomain(){return domain ;}
     Email(const Email & email); //copy constructor
     ~Email();//delete.
-    void print();
+    void print(){cout<<id<<"@"<<domain;}
 };
 // code
 int main(){
