@@ -15,7 +15,7 @@ int main(){
 }
 ```
 
-#### More than constructor.
+### More than a constructor.
 
 ```
 class X{
@@ -108,8 +108,54 @@ class Vector{
 Use delete command.
 ```
 Vector v(2);
-delete v;
+delete v; // Call destructor!!
 ```
+#### Copy constructor
+We use the copy constructor
 
+1. To initialize one object from another
+2. Copy an object to pass it as an argument to a function or to return it from a function
 
+```
+Point v1=Point(1,2); //  constructor
+Point v2(2,1); // constructor
+Point v3=v2; // Copy constructor
+```
+[Run](http://cpp.sh/6ijp)
 
+```
+class Name{
+  Name(const Name & objname);
+};
+```
+**We usually need to construct a copy constructor for a pointer especially when we use new command (Heap memory).**
+
+```
+#include <iostream>
+using namespace std;
+class A
+{
+   public:
+        void set(int a){*p=a;}
+        void print(){cout<<*p<<endl;}
+        A( int a ){
+            p = new int;
+            *p = a;
+        } 
+        ~A(){
+            delete p;
+        } 
+   private:
+      int *p;
+};
+int main( )
+{
+   A e(1);
+   A f=e;
+   e.set(2);
+   f.print();
+   return 0;
+}
+```
+What do you expect?
+[Run](http://cpp.sh/46ie)
