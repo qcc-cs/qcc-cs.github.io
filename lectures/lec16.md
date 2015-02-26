@@ -236,7 +236,7 @@ int main(){
   cout<<email1.getid();cout<<endl;
   email2.print();cout<<endl;
 }
-//sad
+//Happy
 //happy@person.com
 ```
 1. set function.
