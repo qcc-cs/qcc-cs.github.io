@@ -227,14 +227,12 @@ class Email{
     Email(const Email & email); //copy constructor
     ~Email();//delete.
     void print();
-    void changeid(char * newid){id=newid;}
 };
 // code
 int main(){
   Email email1("happy@person.com");
   Email email2=email1;
-  char sad[4]="sad";
-  email1.changeid(sad);
+  email1.getid()[0]='H';
   cout<<email1.getid();cout<<endl;
   email2.print();cout<<endl;
 }
