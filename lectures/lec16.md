@@ -231,5 +231,8 @@ int main(){
 Email email("kim12@qcc.com");
 email.print(); // Output: kim12@qcc.com
 ```
+[Run](http://cpp.sh/9b2n)
+
+[A Little update](http://cpp.sh/6lyr)
 
 
