@@ -28,10 +28,10 @@ Make a Copy constructor.
 Point p1,p2,p3;
 p1=p2+p3;
 ```
-Compiler will call 'p2.+operator(p3)' from  'p2+p3'. 
-Let's overload +operator.
+Compiler will call 'p2.operator+(p3)' from  'p2+p3'. 
+Let's overload operator+.
 ```
-Point Point::+operator(Point pt){
+Point Point::operator+(Point pt){
     Point npt;
     npt.x=x+pt.x;
     npt.y=y+pt.y;
@@ -40,7 +40,7 @@ Point Point::+operator(Point pt){
 ```
 Or
 ```
-Point Point::+operator(Point pt){
+Point Point::operator+(Point pt){
     return Point(x+pt.x,y+pt.y);
 }
 ```
@@ -167,7 +167,6 @@ bool Fraction::operator==(const Fraction &f){
 //code
 }
 ```
-
 #### Print
 Goal
 ```
@@ -185,7 +184,7 @@ ostream & operator<<(ostream & os,const Fraction & f){
 #### Practice
 Overload < and >
 
-[Run](http://cpp.sh/855l)
+[Run]http://cpp.sh/7eie)
 
 #### Overload << operator for the Point class.
 
