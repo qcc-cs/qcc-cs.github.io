@@ -47,7 +47,7 @@ Point Point::+operator(Point pt){
 [Run](http://cpp.sh/232l)
 #### As a global funciton
 ```
-Point Point::+operator(Point pt1,Point pt2){
+Point +operator(Point pt1,Point pt2){
     return Point(pt1.x+pt2.x,pt1.y+pt2.y);
 }
 ```
