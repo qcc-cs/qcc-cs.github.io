@@ -112,7 +112,7 @@ overload +,-,*,/ using add,sub,mul,div member functions.
 
 [Optimized](http://cpp.sh/5kf7)
 
-#### Type conversion
+#### With other types
 Dream
 ```
 Fraction f1;f2(1,2);
@@ -133,3 +133,60 @@ But it will not cover
 Fraction f1,f2(1,2);
 f1=1+f2;
 ```
+Make the following global function to compute '1+f2'.
+```
+friend Fraction operator+(int n, Fraction &f){return Fraction(n)+f;}
+```
+[Run](http://cpp.sh/5vb5)
+Continue to extend -,*,/.
+
+[Run](http://cpp.sh/8ver)
+
+
+#### assginement operator
+```
+class_name & operator=(const class_name & source)
+```
+Assignment operator should not return new object.
+
+#### this keyword
+** this** is a pointer pointing to an object.
+
+```
+Fraction & Fraction::operator=(const Fraction &src){
+    num=src.num; den=src.den;
+    return *this;
+}
+```
+[Run](http://cpp.sh/3if4)
+
+#### Equality(==)
+Overload equality operator for Fraction class.
+```
+bool Fraction::operator==(const Fraction &f){
+//code
+}
+```
+
+#### Print
+Goal
+```
+Fraction f;
+cout<<f;
+```
+We need overload << and use (friend) global function since we cannot modify cout which an object of **ostream** class.
+```
+ostream & operator<<(ostream & os,const Fraction & f){
+    //code
+}
+```
+[Run](http://cpp.sh/3b6y)
+
+#### Practice
+Overload < and >
+
+[Run](http://cpp.sh/855l)
+
+#### Overload << operator for the Point class.
+
+[Run](http://cpp.sh/9fts)
