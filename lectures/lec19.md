@@ -91,7 +91,7 @@ int main(){
 ```
 [See](http://cpp.sh/8p3of)
 
-#### Comparison
+#### Practice - Comparison
 
 Recall [strcmp function](http://www.cplusplus.com/reference/cstring/strcmp/).
 Using strcmp function make ==, >, < operator.
@@ -106,3 +106,91 @@ bool String::operator<(const String & st){
     //code
 }
 ```
+[Run](http://cpp.sh/4n5n)
+
+#### [Type conversion.](http://www.cplusplus.com/doc/tutorial/typecasting/)
+Implicit conversion - conversion by compiler.
+
+For class, implicit conversion can be controlled by means of three member function.
+1. Single argument constructors.
+```
+Fraction(int n); // From integer -> Fraction
+String(const char * s); // char * -> String
+```
+2. Assignment operator
+```
+String operator=(const char * s); From char * to String by =(assigment)
+```
+3. Type cast operator
+```
+operator char*();  //From String to char*.
+```
+In general,
+```
+operator type();
+```
+Let's make 'operator char*()'
+
+```
+String::operator char*(){// Type cast operator. To char*
+    return str;
+}
+```
+What is the benefit?
+```
+String s("12");
+cout<<s; // Works well by conversion to char* .
+```
+[Run](http://cpp.sh/2fml)
+Sometimes compiler do work convert type correctly. 
+```
+Vector(int n); // Constructor fotsize n vector.
+Vector v=1; // Compiler will call  Vector(int n) to convert.
+```
+If you want to avoid such implicit conversion, use 'explicit' keyword.
+```
+explicit Vector(int n);
+```
+Compare [No explicit](http://cpp.sh/5vb5) with [Explicit](http://cpp.sh/4uuv)
+
+#### [] operator for each element in String.
+```
+char & String::operator[](size_t n){
+    // if(n>=size() || n < 0) throw std::out_of_range("Out of bound for String []");
+    return str[n];
+}
+```
+#### Practice 
+Using friend operator+, allow the following computation.
+```
+String s1("1");
+String s2="2"+s1;
+```
+
+
+
+We may try this.
+```
+friend String operator+(const char * s, const String & st){return String(s)+st;}
+```
+[Error](https://ideone.com/kBclxL)
+
+Why? To debug, use the following code.
+```
+friend String operator+(const char * s, const String & st){cout<<"debug"<<endl;return String(s)+st;}
+```
+[Error](https://ideone.com/eeltFP)
+Compiler tries to convert String(s) to const char *. So we have infinite loop.
+To solve this,
+```
+friend String operator+(const char * s, const String & st){return String(s)+st.str;}//Call operator+(const char * s)
+```
+or introduce a new operator+(cons String st) to avoid an infinite loop.
+```
+String String::operator+(const String & stt){
+    String st(str);
+    st.cat(stt.str);
+    return st;//Return a new String.
+}
+```
+[Run](http://cpp.sh/8pmi)
