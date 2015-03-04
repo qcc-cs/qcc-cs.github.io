@@ -90,3 +90,19 @@ int main(){
 }
 ```
 [See](http://cpp.sh/8p3of)
+
+#### Comparison
+
+Recall [strcmp function](http://www.cplusplus.com/reference/cstring/strcmp/).
+Using strcmp function make ==, >, < operator.
+```
+bool String::operator==(const String & st){
+    //code
+}
+bool String::operator>(const String & st){
+    //code
+}
+bool String::operator<(const String & st){
+    //code
+}
+```
