@@ -195,3 +195,7 @@ String String::operator+(const String & stt){
 }
 ```
 [Run](http://cpp.sh/8pmi)
+
+or
+
+[Run](http://cpp.sh/2ynj)
