@@ -183,7 +183,8 @@ friend String operator+(const char * s, const String & st){cout<<"debug"<<endl;r
 Compiler tries to convert String(s) to const char *. So we have infinite loop.
 To solve this,
 ```
-friend String operator+(const char * s, const String & st){return String(s)+st.str;}//Call operator+(const char * s)
+friend String operator+(const char * s, const String & st){return String(s)+st.str;}
+//Call operator+(const char * s)
 ```
 or introduce a new operator+(cons String st) to avoid an infinite loop.
 ```
