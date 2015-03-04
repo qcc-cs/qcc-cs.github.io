@@ -65,7 +65,7 @@ String & String::operator=(const char * s){
     return *this;
 }
 ```
-[See](http://cpp.sh/9itl)
+[See](http://cpp.sh/5ktr)
 
 #### Concatenation member function
 ```
