@@ -432,9 +432,19 @@ int main(){
     cout<<"2*v2"<<2*v2<<endl;
 }    
 ```
-[Start](http://goo.gl/6998wD)
+[Start](http://goo.gl/GNbnw6)
 
 
+#### Quick discussion on exception
+```
+#include<exception>
+void Vector::set(int size){
+    n=size;
+    vec= new int[n];
+}
+```
+'new' may throw bad_alloc if we do not have enough memory.
+Best way to handle dynamic memory is using smart pointer.
 
 
 
