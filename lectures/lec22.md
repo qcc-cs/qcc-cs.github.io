@@ -107,7 +107,7 @@ int main()
   cout <<b;
 }
 ```
-[Run](http://cpp.sh/2qc)
+[Run](http://goo.gl/0HCG5z)
 
 
 ####  Divide by zero (Zero denominator)
