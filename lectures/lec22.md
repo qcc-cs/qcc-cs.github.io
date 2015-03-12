@@ -366,6 +366,73 @@ int main(){
 }
 ```
 [RUN](http://goo.gl/DPvhyK)
+---------
+#### Vector class
+
+```
+#include <iostream>
+#include <stdexcept>
+using namespace std;
+class Vector{
+    private:
+        int n;
+        int *vec;
+    public:
+        void set(int size);
+        void set(int * vect1,int size);
+        Vector();
+        Vector(int size){set(size);}
+        Vector(int *vec1, int size){set(vec1,size);}
+        // Destructor!!
+        // Copy constructor
+        // Assignment constructor
+        Vector add(const Vector & v1);
+        Vector sub(const Vector & v1);
+        // Constant multiple cmul function.
+        int dot(const Vector & v1);
+        // + operator from add
+        // - operator from sub
+        // * operator from dot
+        // overload << operator 
+        void print();
+};
+void Vector::set(int size){
+    n=size;
+    vec= new int[n];
+}
+void Vector::set(int *vec1, int size){
+    set(size);
+    for(int i=0;i<n;i++){
+        vec[i]=vec1[i];
+    }
+}
+int Vector::dot(Vector v1){
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum+=vec[i]*v1.vec[i];
+    }
+    return sum;
+}
+void Vector::print(){
+    cout<<"(";
+    for(int i=0;i<n-1;i++){
+        cout<<vec[i]<<",";
+    }
+    cout<<vec[n-1]<<")";
+}
+int main(){
+    int a[3]={1,2,3};
+    int b[3]={1,3,5};
+    Vector v1(a,3);
+    Vector v2(b,3);
+    a[2]=10;
+    cout<<"v1+v2"<<v1+v2<<endl;
+    cout<<"v1-v2"<<v1-v2<<endl;
+    cout<<"dot(v1,v2)="<<v1*v2<<endl;
+    cout<<"2*v2"<<2*v2<<endl;
+}    
+```
+[Start](http://goo.gl/9cF3zF)
 
 
 
