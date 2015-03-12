@@ -85,14 +85,16 @@ You may use one of two headers from C++ standard.
 #include<exception> // standard
 #include<stdexcept> // More specific from exception 
 ```
+
 [exception header](http://www.cplusplus.com/reference/exception/exception/)
-[stdexcept header] (http://www.cplusplus.com/reference/stdexcept/)
+[stdexcept header](http://www.cplusplus.com/reference/stdexcept/)
 
 Reconsider Fraction class.
 Consider possible errors again..
 
 1. Divide by Zero (Zero denominator)
 2. overflow if the result is over the limits.
+
 ```
 #include <iostream>
 #include <limits>
@@ -107,17 +109,21 @@ int main()
   cout <<b;
 }
 ```
+
 [Run](http://goo.gl/0HCG5z)
 
 
 ####  Divide by zero (Zero denominator)
 We put a exception code within a division function.
 It is usually better to handle it within constructor since  the desctructor is called when it throws an exception. [RAII](http://en.wikibooks.org/wiki/C%2B%2B_Programming/RAII)
+
 ```
 void set(int n,int d){num=n;den=d;normalize();}
 ```
+
 We used a set function for constructor. It is better to implement directly into constrcutor and delegate if you want to make another constructor since you may use the set function for other functions.
 (It is ok since we do not use resources like dynamic memory or file, etc. But it is not recommended.)
+
 ```
 Fraction(){num=0;den=1;}
 Fraction(int n){num=n;den=1;}
@@ -142,13 +148,16 @@ void Fraction::normalize(){
     }
 }
 ```
+
 We recommend you throw object instead of primitive types, since you can catch it differently by object types.
 Here we use the overflow class form the stdexcept header. You can construct your own exception class.
 (Unfortunately, there is no standard divide by zero exception. Some people may use runtime_error class for divide by zero.)
+
 #### Remark 1 Exception handling is a not magic. You need to think how to implement seriously.
+
 #### For a simplicity, we do not check overflow when we assigns or initialize.
-Since addition(subtraction), multiplication may cause overflow, we need to make a secure addtion and multiplication functions for integers which throw exceptions.\\
-One simple trick is using 'long long' type to do the validation.
+Since addition(subtraction), multiplication may cause overflow, we need to make a secure addtion and multiplication functions for integers which throw exceptions. One simple trick is using 'long long' type to do the validation.
+
 ```
 int intadd(int a, int b){
     long long aa=a,bb=b,c=aa+bb;//a+b 
@@ -158,11 +167,13 @@ int intadd(int a, int b){
     return static_cast<int>(c);
 }
 ```
+
 #### Practice Make intmul(int a,int b) function.
 
 #### Practice Update lcm function.
 
 Now update add function.
+
 ```
 Fraction Fraction::add( const Fraction &f2){       
     int tnum, tden,l;
@@ -171,6 +182,7 @@ Fraction Fraction::add( const Fraction &f2){
     return Fraction(tnum,tden);
 }
 ```
+
 #### Practice Update sub function.
 
 #### Practice Update mul function.
@@ -181,6 +193,7 @@ Fraction Fraction::add( const Fraction &f2){
 
 
 Now check this.
+
 ```
 #include <iostream>
 #include <stdexcept>
@@ -365,6 +378,7 @@ int main(){
   }    
 }
 ```
+
 [RUN](http://goo.gl/DPvhyK)
 ---------
 #### Vector class
@@ -432,6 +446,7 @@ int main(){
     cout<<"2*v2"<<2*v2<<endl;
 }    
 ```
+
 [Start](http://goo.gl/GNbnw6)
 
 
@@ -443,6 +458,7 @@ void Vector::set(int size){
     vec= new int[n];
 }
 ```
+
 'new' may throw bad_alloc if we do not have enough memory.
 Best way to handle dynamic memory is using smart pointer.
 
