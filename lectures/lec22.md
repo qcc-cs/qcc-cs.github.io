@@ -62,7 +62,7 @@ class Fraction{
         int num,den;
     public:
     // codes
-        Fraction div(const Fraction & f2,Error & err);
+        Fraction div(const Fraction & f2);
 };
 Fraction Fraction::div( const Fraction &f2,Error & err){
     if(f2.dem==0) {throw overflow_error("Divide by zero"; } //Report
@@ -71,7 +71,7 @@ Fraction Fraction::div( const Fraction &f2,Error & err){
 int main(){
   Fraction f1(1,0),f2(0,1);
   try{
-    Fraction f3=f1.div(f2,err);
+    Fraction f3=f1.div(f2;
     cout<<f3;
   }
   catch(overflow_error & e){
