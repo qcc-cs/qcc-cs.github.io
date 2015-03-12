@@ -432,7 +432,7 @@ int main(){
     cout<<"2*v2"<<2*v2<<endl;
 }    
 ```
-[Start](http://goo.gl/9cF3zF)
+[Start](http://goo.gl/6998wD)
 
 
 
