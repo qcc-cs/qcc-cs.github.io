@@ -32,4 +32,24 @@ int main(){
 Too messy!
 ![picw100](http://i.forbesimg.com/media/lists/people/lionel-messi_416x416.jpg)
 
+Use exception!
 
+```
+void f(){
+    if(something is wrong) throw Exception-object;
+}
+int main(){
+    try{
+        f();
+    }
+    catch (Exception-object & e){
+    //Handle error here
+    }
+    catch (Exception-object2 & e){
+    //Handle error here
+    }
+    //...
+}
+
+```
+When you throw a exception object, try catch block will catch it and handle error.
