@@ -395,7 +395,7 @@ class Vector{
         void set(int size);
         void set(int * vect1,int size);
         Vector();
-        Vector(int size){set(size);}
+        explicit Vector(int size){set(size);}// avoid conversion.
         Vector(int *vec1, int size){set(vec1,size);}
         // Destructor!!
         // Copy constructor
@@ -460,7 +460,7 @@ void Vector::set(int size){
 ```
 
 'new' may throw bad_alloc if we do not have enough memory.
-Best way to handle dynamic memory is using smart pointer.
+Best way to handle dynamic memory is using a smart pointer.
 
 
 
