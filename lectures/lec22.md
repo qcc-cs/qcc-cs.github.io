@@ -64,7 +64,7 @@ class Fraction{
     // codes
         Fraction div(const Fraction & f2);
 };
-Fraction Fraction::div( const Fraction &f2,Error & err){
+Fraction Fraction::div( const Fraction &f2){
     if(f2.num==0) {throw overflow_error("Divide by zero"); } //Report
     return Fraction(num*f2.den,den*f2.num);;
 }
