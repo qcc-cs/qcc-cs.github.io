@@ -107,3 +107,5 @@ void insertionsort(int *a, int n){
 }
 ```
 [Run](http://www.cpp.sh/8uo5)
+#### linked list
+![link](http://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
