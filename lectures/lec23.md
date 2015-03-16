@@ -107,5 +107,24 @@ void insertionsort(int *a, int n){
 }
 ```
 [Run](http://www.cpp.sh/8uo5)
-#### linked list
+#### linked list(http://en.wikipedia.org/wiki/Linked_list)
+[Singly linked list]
 ![link](http://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+ The linked list is a data structure consisting of a group of **nodes** which together represent a sequence.
+ 
+Benefit over array
+ - insert easily
+ - remove easily
+ 
+Problem
+ - No random access.
+ - No efficient indexing.
+
+#### Implementation(Singly(simple) linked list)
+```
+class node{
+
+}
+```
+
+ 
