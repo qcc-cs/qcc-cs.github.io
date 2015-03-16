@@ -123,8 +123,17 @@ Problem
 #### Implementation(Singly(simple) linked list)
 ```
 class node{
+    public:
+    int num;
+    node * next; //link
+    node(int anum){num=anum;next=nullptr;}// For old c++, use NULL instead.
+};
+```
+root->Node->Node->nullptr
+#### Sample Code
+```
 
-}
+
 ```
 
  
