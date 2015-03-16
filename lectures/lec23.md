@@ -93,3 +93,17 @@ void insertionsort(int *a, int n){
 }
 ```
 [Run](http://www.cpp.sh/8nnq)
+We may review first stupid implementation again and reduce the loop using a similar idea.
+```
+void insertionsort(int *a, int n){
+    int i,k;
+    for(i=1;i<n;++i){
+        int temp=a[i];
+        for(k=i;k>0 && a[k-1]>temp ;--k){ //rotate
+            a[k]=a[k-1];
+        }
+        a[k]=temp;
+    }
+}
+```
+[Run](http://www.cpp.sh/8uo5)
