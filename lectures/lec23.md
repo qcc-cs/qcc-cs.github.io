@@ -132,8 +132,32 @@ class node{
 root->Node->Node->nullptr
 #### Sample Code
 ```
-
-
+#include <iostream>
+using namespace std;
+class node{
+    public:
+    int num;
+    node * next; //link
+    //node(){next=nullptr;}
+    node(int anum){num=anum;next=nullptr;}// For old c++, use NULL instead.
+};
+void print(node * nodes){
+    while(nodes != nullptr){
+        cout<<nodes->num<<" ";
+        nodes=nodes->next;
+    }
+    cout<<endl;
+}
+int main(){
+    int a[8]={1,9,2,4,7,6,5,3};
+    node * root=new node(a[0]); //initialize
+    node * last=root;
+    for(int i=1;i<8;++i){ //construct linked list
+        last->next= new node(a[i]);//swap
+        last=last->next;
+    }
+    print(root);
+}
 ```
-
+[RUN](http://cpp.sh/4iz3)
  
