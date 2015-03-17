@@ -243,3 +243,32 @@ void delete_list(node * pnode){
     }
 }
 ```
+#### Practice : A variation
+Rewrite the code for string instead of [int](http://cpp.sh/7qly)
+```
+class node{
+public:
+    string str;
+    node * next; //link
+    //node(){next=nullptr;}
+    node(string astr){str =astr;next=nullptr;}// For old c++, use NULL instead.
+};
+
+//Rewrite other codes.
+
+int main(){
+    string a[4]={"apple","bee","dell","ca"};
+    node * root=new node(a[0]); //initialize
+    node * last=root;
+    for(int i=1;i<4;++i){ //construct linked list
+        last->next= new node(a[i]);//swap
+        last=last->next;
+    }
+    print(root);
+    root=insertsort(root);
+    print(root);
+    delete_list(root);
+}
+```
+
+
