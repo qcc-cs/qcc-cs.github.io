@@ -160,28 +160,64 @@ int main(){
 }
 ```
 [RUN](http://cpp.sh/4iz3)
- #### Insertion Sort with linked list
- Naive code
- ```
- void insertsort(node * nodes){
-    if(nodes==nullptr){return;}
-    node * root=nodes;
-    node * last;
-    
-    for(nodes=nodes->next;nodes->next!=nullptr;){
-        last=root;
-        while(last->next!=nullptr && nodes->next->num > last->next->num){
-            last=last->next;
+####  Insert a node
+To insert yout node, we need the **previous** pointer.(simple linked list)
+We have to cases.
+CASE I) insert a node in the beginning.
+We need to reset the root.
+root->node[1]->node[2]->....->node[k]->nullptr
+
+Insert a NODE.
+
+root->NODE->node[1]->...
+```
+node * ptr=NODE;
+ptr->next=root;
+root=ptr;
+```
+CASE II) Otherwise.
+
+->node[k]->node[k+1]
+
+
+->node[k]->NODE->node[k+1]
+```
+node * r=node[k];//previous pointer
+node * p=NODE;
+p->next=r->next;
+r->next=p;
+```
+#### insertion sort with linked list.
+Idea: From source ---> result
+We reconstruct result list from source list using insertion sorting.
+```
+node * insertsort(node * source){
+    if(source==nullptr){return nullptr;}
+    node * i=source->next;//i=1
+    node * result=source;
+    result->next=nullptr;  // j->source[0]->nullptr
+    while(i!=nullptr){
+        node * tr=result;
+        node * pr=tr;
+        node * ti=i;
+        i=i->next;
+        while(tr!=nullptr  && tr->num < ti->num){
+            pr=tr; // To insert, we need to know the previous one.
+            tr=tr->next; //tj++
         }
-        if(last->next==nodes->next) {nodes=nodes->next;}
+        //Case I: inserting a node in the beginning of the list.
+        if(result==tr){
+            ti->next=result;
+            result=ti;
+        }
+        //Case II: otherwise.
         else{
-         node * temp=nodes->next;
-         nodes->next=nodes->next->next; //remove
-         temp->next=last->next; //insert1
-         last->next=temp; //insert2
+            ti->next=pr->next;
+            pr->next=ti;
         }
     }
+    return result;
 }
- ```
- [Run](http://cpp.sh/7upes)
+```
+[Run]()
  
