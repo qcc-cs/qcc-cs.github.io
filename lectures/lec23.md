@@ -160,4 +160,28 @@ int main(){
 }
 ```
 [RUN](http://cpp.sh/4iz3)
+ #### Insertion Sort with linked list
+ Naive code
+ ```
+ void insertsort(node * nodes){
+    if(nodes==nullptr){return;}
+    node * root=nodes;
+    node * last;
+    
+    for(nodes=nodes->next;nodes->next!=nullptr;){
+        last=root;
+        while(last->next!=nullptr && nodes->next->num > last->next->num){
+            last=last->next;
+        }
+        if(last->next==nodes->next) {nodes=nodes->next;}
+        else{
+         node * temp=nodes->next;
+         nodes->next=nodes->next->next; //remove
+         temp->next=last->next; //insert1
+         last->next=temp; //insert2
+        }
+    }
+}
+ ```
+ [Run](http://cpp.sh/7upes)
  
