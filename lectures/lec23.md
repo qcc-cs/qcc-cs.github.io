@@ -219,5 +219,27 @@ node * insertsort(node * source){
     return result;
 }
 ```
-[Run]()
- 
+[Run](http://cpp.sh/8ve6)
+ #### How to delete
+Unfortunately, it does not delete well since links may have several nodes.
+```
+void delete_list(node * pnode){
+    node * temp;
+    while(pnode!=nullptr){
+        temp=pnode;
+        pnode=pnode->next;//pnode++
+        delete temp;
+    }
+}
+```
+But the following code is not valid.
+```
+void delete_list(node * pnode){
+    node * temp;
+    while(pnode!=nullptr){
+        temp=pnode;
+        delete temp;
+        pnode=pnode->next;//pnode++
+    }
+}
+```
