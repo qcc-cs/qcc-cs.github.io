@@ -29,6 +29,7 @@ private:
     int maxsize; //maximum size of stack
     int top;  //top index
     int * items; //items
+    // Copy constructor , assignment constructor.
 public:
     mystack():mystack(1){}
     mystack(int max):maxsize(max),top(0),items(new int[max]){}
@@ -49,13 +50,15 @@ or
 ```
 void mystack::push(const int & item)
 {
-    items[top++]=item;
+    items[++top]=item;
 }
 ```
-### Practice : make pop function.
+#### Practice : make pop function.
 ```
 
 ```
 [Try](http://cpp.sh/8emf)
 
 [See](http://cpp.sh/64rp)
+
+#### Example
