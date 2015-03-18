@@ -29,12 +29,15 @@ private:
     int maxsize; //maximum size of stack
     int top;  //top index
     int * items; //items
-    // Copy constructor , assignment constructor.
 public:
     mystack():mystack(1){}
-    mystack(int max):maxsize(max),top(0),items(new int[max]){}
-    void push(const int & );
+    mystack(int max):maxsize(max>0 ?max:1),top(-1),items(new int[max>0 ?max:1]){}
+    void push(const int & item);
     int pop();
+    int getsize(){return top+1;}
+    //int getmaxsize(){return maxsize;}
+    //void print();
+    //
 };
 ```
 
@@ -55,10 +58,35 @@ void mystack::push(const int & item)
 ```
 #### Practice : make pop function.
 ```
-
+//Try
 ```
-[Try](http://cpp.sh/8emf)
+[Try](http://cpp.sh/7l4w)
 
-[See](http://cpp.sh/64rp)
+[See](http://cpp.sh/6opb)
 
 #### Example
+```
+int main(){
+    mystack stackme(MAX);
+    int a=1;
+    int i=0;
+    do{
+        cout<<"Type a postive number(To stop type 0):";
+        cin>>a;
+        if(a==0) break;
+        stackme.push(a);
+        i++;
+    }while( i< MAX);
+    while(stackme.getsize()>0){
+        cout<<stackme.pop()<<endl;
+    }
+}
+```
+[RUN](http://cpp.sh/5zoh)
+[Debug](http://cpp.sh/8gba)
+
+#### Practice : Make isfull and isempty function.
+[Try](http://cpp.sh/5d3r)
+
+Answer:http://cpp.sh/7p3z
+
