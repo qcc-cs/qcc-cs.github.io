@@ -20,6 +20,7 @@ public static int sumInts(int n) {
 ```
 ![pic](http://faculty.ycp.edu/~dhovemey/fall2012/cs201/notes/figures/callStackRecursion.png)
 #### implementation with the array
+For a simplicity, we do not consider exceptions like overflow or underflow.
 ```
 #include <iostream>
 using namespace std;
@@ -29,16 +30,32 @@ private:
     int top;  //top index
     int * items; //items
 public:
-    mystack():mystack(1){};
-    mystack(int max);
-    ~destructor(){delete [] items;}
+    mystack():mystack(1){}
+    mystack(int max):maxsize(max),top(0),items(new int[max]){}
     void push(const int & );
     int pop();
 };
 ```
 
-##### Constructor
+##### push
+```
+void mystack::push(const int & item)
+{
+    top++;
+    items[top]=item;
+}
+```
+or
+```
+void mystack::push(const int & item)
+{
+    items[top++]=item;
+}
+```
+### Practice : make pop function.
 ```
 
 ```
+[Try](http://cpp.sh/8emf)
 
+[See](http://cpp.sh/64rp)
