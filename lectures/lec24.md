@@ -83,10 +83,11 @@ int main(){
 }
 ```
 [RUN](http://cpp.sh/5zoh)
+
 [Debug](http://cpp.sh/8gba)
 
 #### Practice : Make isfull and isempty function.
 [Try](http://cpp.sh/5d3r)
 
-Answer:http://cpp.sh/7p3z
+[See](http://cpp.sh/7p3z)
 
