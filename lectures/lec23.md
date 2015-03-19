@@ -278,8 +278,108 @@ int main(){
 
 #### PRACTICE 2. MAKE List Class
 ```
-
+#define NULLPTR nullptr //For old c++, use NULL
+#include <iostream>
+using namespace std;
+class node{
+public:
+    int  data;
+    node * next;
+    node(){};
+    node(int adata){data =adata;next=NULLPTR;}// For old c++, use NULL instead.
+    
+};
+class List{
+private:
+    node * root;
+    void swap(List & list){
+        node * temp=root;
+        root=list.root;
+        list.root=temp;
+    }
+public:
+    List(){root=NULLPTR;}
+    List(int *a, int n):List(){
+        for(int i=0;i<n;i++){
+            Append(a[i]);
+        }
+    }
+    List(const List & list){
+        root=NULLPTR;
+        node * ptr=list.root;
+        while(ptr!=NULLPTR){
+            Append(ptr->data);
+            ptr=ptr->next;
+        }
+    }
+    List & operator=(List list){
+        swap(list);
+        return (*this);
+    }
+    ~List();
+    void Append(int adata); // append in the end of list
+    void Sort(); // Sort in a accending order.
+    //void Delete(int adata);
+    friend ostream &  operator<<(ostream& os, List list); //Use the code of print.
+};
+ostream & operator<<(ostream& os, List list){
+//
+}
+void  List::Append(int adata){
+    node * new_node= new node(adata);
+    if(root==NULLPTR){ //case I : inserting a node in the beginning of the list.
+//
+    }
+    else{ //Case II : otherwise
+//
+    }
+}
+void List::Sort(){
+    if(root==NULLPTR){return;}
+    node * i=root->next;//i=1
+    node * result=root;
+    result->next=NULLPTR;  // result->root[0]->NULLPTR
+    while(i!=NULLPTR){
+        node * tr=result;
+        node * pr=tr;
+        node * ti=i;
+        i=i->next;
+        while(tr!=NULLPTR  && tr->data < ti->data){
+            pr=tr; // To insert, we need to know the previous one.
+            tr=tr->next; //tr++
+        }
+        //Case I: inserting a node in the beginning of the list.
+        if(result==tr){
+            ti->next=result;
+            result=ti;
+        }
+        //Case II: otherwise.
+        else{
+            ti->next=pr->next;
+            pr->next=ti;
+        }
+    }
+    root=result;
+}
+List::~List(){
+    node * ptr=root;
+    node *temp;
+    while(ptr!=NULLPTR){
+        temp=ptr;
+        ptr=ptr->next;
+        delete temp;
+    }
+}
+int main(){
+    int a[4]={5,3,4,6};
+    List list1(a,4);
+    cout<<list1<<endl;
+    list1.Sort();
+    cout<<list1<<endl;
+}
 ```
-[Do not see the answer]()
+[TRY Here](http://cpp.sh/6tzd)
 
-[Updated Version]()
+[Do not see the answer](http://cpp.sh/74xz)
+
+[Updated Version](http://cpp.sh/2vca)
