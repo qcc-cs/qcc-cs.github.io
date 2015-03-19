@@ -272,36 +272,14 @@ int main(){
 ```
 
 [Do not see the answer](http://cpp.sh/7pp7)
+#### [Rule of Three or five(c++11)](http://en.wikipedia.org/wiki/Rule_of_three_%28C%2B%2B_programming%29)
+
+
+
 #### PRACTICE 2. MAKE List Class
 ```
-#include <iostream>
-using namespace std;
-class node{
-public:
-    int  data;
-    node * next;
-    node(){};
-    node(int adata){data =adata;next=nullptr;}// For old c++, use NULL instead.
-};
-class List{
-    public:
-    node * root;
-    List(){root=nullptr;}
-    ~List();
-    void Append(int adata); // append in the end of list
-    void Sort(); // Sort in a accending order.
-    void print();
-};
-\\code
-int main(){
-    int a[4]={5,3,4,6};
-    List list1;
-    for(int i=0;i<4;++i){ //construct linked list
-        list1.Append(a[i]);
-    } 
-    list1.print();
-    list1.Sort();
-    list1.print();
-}
+
 ```
-[Do not see the answer](http://cpp.sh/4auv)
+[Do not see the answer]()
+
+[Updated Version]()
