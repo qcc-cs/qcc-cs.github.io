@@ -91,3 +91,10 @@ int main(){
 
 [See](http://cpp.sh/7p3z)
 
+#### Practice HW: make mystack using List class.
+Use need a pop member function of List class which extract and returns **the last node**.
+```
+Node List::pop();
+```
+[Try](http://cpp.sh/2vca)
+
